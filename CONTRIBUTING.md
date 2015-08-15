@@ -6,6 +6,20 @@ If you’d like to contribute a feature or bug fix, you can fork Riot, commit yo
 
 If the example is static, make it compatible with [Plunker](http://plnkr.co/). If not, create a test for each examples.
 
+### Files
+
+You should include these in each example folder:
+
+- README.md
+- index.html
+
+The files below are optional if compatible with Plunker:
+
+- package.json
+- test/
+
+You could include any tag, css, js and html files, too.
+
 ### Coding Guidelines
 
 Please follow the coding style established in the rest of the codebase.

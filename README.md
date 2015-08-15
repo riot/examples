@@ -5,6 +5,12 @@ This repository is maintained by Riot community.
 
 *Note: we're preparing this repo for next Riot v2.3 release.*
 
+## Playground
+
+This is the simplest example, and also an easy tutorial. Let's start this from [here](#under-construction). Read the comment inside the code, write a few line, then you'll be an expert of Riot.js!
+
+- [Playground](playground)
+
 ## Basics
 
 We have several examples for the beginners. These are relatively well tested by users and collaborators.

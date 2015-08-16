@@ -4,8 +4,8 @@
   <form name="form" method="post" action="http://plnkr.co/edit/?p=preview">
     <input type="hidden" name="description" value={ manifest.title || 'Riot Example' }>
     <input type="hidden" name="private" value="true">
-    <input type="hidden" name="tag[0]" value="riotjs">
-    <input type="hidden" name="tag[1]" value="example">
+    <input type="hidden" name="tags[0]" value="riotjs">
+    <input type="hidden" name="tags[1]" value="example">
     <input each={ files } type="hidden" name="files[{ name }]" value={ content }>
   </form>
 

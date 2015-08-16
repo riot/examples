@@ -2,13 +2,11 @@
 
 This is a simple example for showing how to use Riot Router to handle the URL.
 
-## How to try and edit
+## Have a play
 
-Open this demo page (under construction) and click `edit on Plunker` button to edit.
+[Open this example on Plunker](http://riotjs.com/examples/plunker/?app=router-page-switcher)
 
-## How to try locally
-
-Or, you can try this locally, too. Follow the instruction below.
+## Run locally
 
 Install superstatic if you don't have.
 

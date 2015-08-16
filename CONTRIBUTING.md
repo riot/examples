@@ -30,7 +30,9 @@ Not all of these are required, it will differ between examples.
 Follow the coding style established in the rest of the codebase.
 
 **Semicolons**<br>
-[No](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding) [semicolons](http://inimino.org/~inimino/blog/javascript_semicolons), [please](https://www.youtube.com/watch?v=gsfbh17Ax9I)!
+[No](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding)
+[semicolons](http://inimino.org/~inimino/blog/javascript_semicolons),
+[please](https://www.youtube.com/watch?v=gsfbh17Ax9I)!
 
 **Spacing**<br>
 Use two spaces for indentation. No tabs.

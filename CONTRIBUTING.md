@@ -17,7 +17,6 @@ structure suggestion:
 - example-tag.css
 - example-tag.js
 - example-tag.tag
-- gulp.js
 - index.html
 - README.md
 - package.json

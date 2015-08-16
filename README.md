@@ -15,10 +15,12 @@ This is the simplest example, and also an easy tutorial. Let's start this from [
 
 We have several examples for the beginners. These are relatively well tested by users and collaborators.
 
-- [Todo App](todo-app)
-- [Todo App (pre-compiled)](todo-app-precompiled)
-- Timer
-- [Router - Page switcher](router-page-switcher)
+Source | Demo
+:-- | :--
+[Todo App](todo-app) | [try & edit](http://riotjs.com/examples/plunker/?app=todo-app)
+[Todo App (pre-compiled)](todo-app-precompiled) | [try](http://riotjs.com/examples/todo-app-precompiled/)
+Timer |
+[Router - Page switcher](router-page-switcher) | [try & edit](http://riotjs.com/examples/plunker/?app=router-page-switcher)
 
 and more (maybe soon)
 

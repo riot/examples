@@ -4,7 +4,7 @@ This is a simple example with in-browser compilation.
 
 ## How to try and edit
 
-Open this demo page (under construction) and click `edit on Plunker` button to edit.
+[Open this example on Plunker](http://riotjs.com/examples/plunker/?app=router-page-switcher)
 
 ## How to try locally
 

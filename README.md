@@ -1,31 +1,27 @@
 # Riot Examples
 
-Demos and examples for [Riot](http://riotjs.com/) and submodules.
-This repository is maintained by Riot community.
-
-*Note: we're preparing this repo for next Riot v2.3 release.*
-
-## Playground
-
-This is the simplest example, and also an easy tutorial. Let's start this from [here](#under-construction). Read the comment inside the code, write a few line, then you'll be an expert of Riot.js!
-
-- [Playground](playground)
+This is a series of examples designed to showcase the benefits of
+adopting [Riot](http://riotjs.com). It is made possible by the Riot open source
+community.
 
 ## Basics
 
-We have several examples for the beginners. These are relatively well tested by users and collaborators.
+We have several examples to choose from; each one demonstrates different
+aspects Riot:
 
-- [Todo App](todo-app)
-- [Todo App (pre-compiled)](todo-app-precompiled)
+- [Todo app](todo-app)
+- [Todo app (pre-compiled)](todo-app-precompiled)
 - Timer
 - [Router - Page switcher](router-page-switcher)
 
-and more (maybe soon)
+## Contribute
 
-## More...
+If you have an example that you think others could benefit from and you'd like
+to share it please read the [contributing guidelines](contributing.md) and
+submit a PR.
 
-You may find more examples on this repo. You have a good example? Share it as a PR ;)
+## Bugs
 
-## Bug?
-
-If you find something, send us pull requests. PR is always welcome. If you don't know how to fix it, [report it](https://github.com/riot/examples/issues).
+If you find something that isn't expected please
+[raise an issue](https://github.com/riot/examples/issues) and we'll get on it.
+To make it easier to debug please use the [Bug Reporter](http://riotjs.com/examples/plunker/?app=bug-reporter).

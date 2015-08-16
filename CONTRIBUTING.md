@@ -1,28 +1,33 @@
 # Contributing to Riot Examples
 
-If you’d like to contribute a feature or bug fix, you can fork Riot, commit your changes, & send a pull request. Please make sure to search the issue tracker first.
+If you'd like to contribute an example or bug fix, feel free to send us a pull
+request. Please make sure to search the issue tracker first for duplicates.
 
-### Make it Plunkerable or testable
+### Make it testable
 
-If the example is static, make it compatible with [Plunker](http://plnkr.co/). If not, create a test for each examples.
+Create tests for your examples. This is so we can ensure they don't break
+when future changes are made and it also helps people to understand the
+processes within.
 
-### Files
+### Folder structure
 
-You should include these in each example folder:
+Please follow the standard set by the other examples by using this folder
+structure suggestion:
 
-- README.md
+- example-tag.css
+- example-tag.js
+- example-tag.tag
+- gulp.js
 - index.html
-
-The files below are optional if compatible with Plunker:
-
+- README.md
 - package.json
 - test/
 
-You could include any tag, css, js and html files, too.
+Not all of these are required, it will differ between examples.
 
 ### Coding Guidelines
 
-Please follow the coding style established in the rest of the codebase.
+Follow the coding style established in the rest of the codebase.
 
 **Semicolons**<br>
 [No](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding) [semicolons](http://inimino.org/~inimino/blog/javascript_semicolons), [please](https://www.youtube.com/watch?v=gsfbh17Ax9I)!

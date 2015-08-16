@@ -24,6 +24,12 @@ Timer |
 
 and more (maybe soon)
 
+## Bug reporter
+
+This is a template for bug reporting.
+
+- [Riot Bug Reporter](http://riotjs.com/examples/plunker/?app=bug-reporter)
+
 ## More...
 
 You may find more examples on this repo. You have a good example? Share it as a PR ;)

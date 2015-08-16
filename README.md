@@ -11,10 +11,12 @@ aspects Riot:
 
 Source | Demo
 :-- | :--
-[Todo app](todo-app) | [Plunker](http://riotjs.com/examples/plunker/?app=todo-app)
-[Todo app (pre-compiled)](todo-app-precompiled) | [Plunker](http://riotjs.com/examples/todo-app-precompiled/)
-Timer |
+[Todo](todo-app) | [Plunker](http://riotjs.com/examples/plunker/?app=todo-app)
+[Todo (pre-compiled)](todo-app-precompiled) | [Plunker](http://riotjs.com/examples/todo-app-precompiled/)
 [Router - Page switcher](router-page-switcher) | [Plunker](http://riotjs.com/examples/plunker/?app=router-page-switcher)
+<!---
+Timer |
+-->
 
 ## Contribute
 

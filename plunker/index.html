@@ -4,10 +4,6 @@
   <head>
     <title>Opening Plunker...</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!--[if IE]>
-    <script src="http://cdn.jsdelivr.net/es6-promise/3.0.2/es6-promise.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
@@ -17,10 +13,14 @@
     <script type="riot/tag" src="app.tag"></script>
 
     <!-- scripts we need -->
+    <script src="http://cdn.jsdelivr.net/es6-promise/3.0.2/es6-promise.min.js"></script>
     <script src="http://cdn.jsdelivr.net/g/riot@2.2(riot.min.js+compiler.min.js)"></script>
 
     <!-- mount this app -->
-    <script> riot.mount('app') </script>
+    <script>
+      window.Promise = Promise || ES6Promise
+      riot.mount('app')
+    </script>
   </body>
 
 </html>

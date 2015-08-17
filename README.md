@@ -9,11 +9,11 @@ community.
 We have several examples to choose from; each one demonstrates different
 aspects Riot:
 
-Source | Demo
-:-- | :--
-[Todo](todo-app) | [Plunker](http://riotjs.com/examples/plunker/?app=todo-app)
-[Todo (pre-compiled)](todo-app-precompiled) | [Plunker](http://riotjs.com/examples/todo-app-precompiled/)
-[Router - Page switcher](router-page-switcher) | [Plunker](http://riotjs.com/examples/plunker/?app=router-page-switcher)
+Example | | |
+:-- | :-- | :--
+Todo | [Source](todo-app) | [Demo](http://riotjs.com/examples/plunker/?app=todo-app)
+Todo (pre-compiled) | [Source](todo-app-precompiled) | [Demo](http://riotjs.com/examples/todo-app-precompiled/)
+Router - Page switcher | [Source](router-page-switcher) | [Demo](http://riotjs.com/examples/plunker/?app=router-page-switcher)
 <!---
 Timer |
 -->

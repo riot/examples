@@ -1,16 +1,17 @@
 # Plunker
 
-This is a tool to send the codes to Plunker.
+This is a tool to send code to Plunker.
 
-## How to use this tool
+## Use
 
-Opne the url like this:
+Open the url like this:
 
 ```
 http://riotjs.com/examples/plunker/?app=todo-app
 ```
 
-To work with this tool, the example folder has `plunker.json`. For example:
+To work with this tool, follow the example folder. The `plunker.json` file
+looks like this:
 
 ```json
 {
@@ -24,11 +25,9 @@ To work with this tool, the example folder has `plunker.json`. For example:
 }
 ```
 
-## How to try locally
+## Run locally
 
-Or, you can try this locally, too. Follow the instruction below.
-
-Install superstatic if you don't have.
+Install superstatic if you don't already have it.
 
 ```bash
 $ npm install -g superstatic

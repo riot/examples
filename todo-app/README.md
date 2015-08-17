@@ -2,13 +2,11 @@
 
 This is a simple example with in-browser compilation.
 
-## How to try and edit
+## Have a play
 
 [Open this example on Plunker](http://riotjs.com/examples/plunker/?app=router-page-switcher)
 
-## How to try locally
-
-Or, you can try this locally, too. Follow the instruction below.
+## Run locally
 
 Install superstatic if you don't have.
 

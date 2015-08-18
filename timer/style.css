@@ -1,0 +1,16 @@
+body {
+  font-family: 'myriad pro', sans-serif;
+  font-size: 20px;
+  border: 0;
+}
+
+timer {
+  display: block;
+  max-width: 300px;
+  margin: 5% auto;
+  border: 2px solid #408bc2;
+  border-radius: .4em;
+  color: #408bc2;
+  line-height: 2em;
+  text-align: center;
+}

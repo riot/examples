@@ -1,0 +1,9 @@
+{
+  "title": "Live Editor",
+  "files": [
+    "index.html",
+    "README.md",
+    "live-editor.tag",
+    "sample.tag"
+  ]
+}

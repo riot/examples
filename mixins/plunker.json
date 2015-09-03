@@ -1,8 +1,9 @@
 {
-  "title": "Router - Page switcher",
+  "title": "Mixin",
   "files": [
     "index.html",
     "README.md",
-    "app.tag"
+    "my-tag.tag",
+    "my-second-tag.tag"
   ]
 }

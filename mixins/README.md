@@ -1,10 +1,10 @@
-# Router - Page switcher
+# Mixins
 
-This is a simple example for showing how to use Riot Router to handle the URL.
+This is a simple example for showing how to use Riot Mixins to share functionality between tags.
 
 ## Have a play
 
-[Open this example on Plunker](http://riotjs.com/examples/plunker/?app=router-page-switcher)
+[Open this example on Plunker](http://riotjs.com/examples/plunker/?app=mixins)
 
 ## Run locally
 

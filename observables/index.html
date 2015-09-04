@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Riot Router Example: Observables</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+
+  <body>
+    <car-key></car-key>
+    <car-headlights></car-headlights>
+
+    <!-- riot tags -->
+    <script type="riot/tag" src="car-key.tag"></script>
+    <script type="riot/tag" src="car-headlights.tag"></script>
+
+    <!-- scripts we need -->
+    <script src="https://rawgit.com/riot/riot/master/riot+compiler.js"></script>
+
+    <!-- mount this app -->
+    <script type="text/javascript">
+      function Car(make, model) {
+        var _this = this;
+        _this.make = make;
+        _this.model = model;
+        _this.started = false;
+        riot.observable(this);
+        _this.on('start', function () {
+          _this.started = true;
+        });
+      }
+
+      // make a new Car instance
+      var car = new Car('Ford', 'Focus');
+
+      riot.mount('*');
+    </script>
+  </body>
+
+</html>

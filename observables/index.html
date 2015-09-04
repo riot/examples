@@ -20,13 +20,13 @@
     <!-- mount this app -->
     <script type="text/javascript">
       function Car(make, model) {
-        var _this = this;
-        _this.make = make;
-        _this.model = model;
-        _this.started = false;
+        var self = this;
+        self.make = make;
+        self.model = model;
+        self.started = false;
         riot.observable(this);
-        _this.on('start', function () {
-          _this.started = true;
+        self.on('start', function () {
+          self.started = true;
         });
       }
 

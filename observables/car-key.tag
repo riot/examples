@@ -3,7 +3,9 @@
     <button onclick={ start }>Start engine</button>
   </div>
 
-  start() {
-    car.trigger('start')
-  }
+  <script>
+    start() {
+      car.trigger('start')
+    }
+  </script>
 </car-key>

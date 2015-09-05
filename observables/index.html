@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>Riot Router Example: Observables</title>
+    <title>Observable Example: Observables</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
   </head>
 
@@ -15,25 +15,25 @@
     <script type="riot/tag" src="car-headlights.tag"></script>
 
     <!-- scripts we need -->
-    <script src="https://rawgit.com/riot/riot/master/riot+compiler.js"></script>
+    <script src="https://cdn.jsdelivr.net/g/riot@2.2(riot.min.js+compiler.min.js)"></script>
 
     <!-- mount this app -->
     <script type="text/javascript">
       function Car(make, model) {
-        var self = this;
-        self.make = make;
-        self.model = model;
-        self.started = false;
-        riot.observable(this);
+        var self = this
+        self.make = make
+        self.model = model
+        self.started = false
+        riot.observable(self)
         self.on('start', function () {
           self.started = true;
-        });
+        })
       }
 
       // make a new Car instance
-      var car = new Car('Ford', 'Focus');
+      var car = new Car('Ford', 'Focus')
 
-      riot.mount('*');
+      riot.mount('*')
     </script>
   </body>
 

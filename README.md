@@ -17,7 +17,7 @@ Router - Page switcher | [Source](router-page-switcher) | [Demo](http://riotjs.c
 
 ## Contribute
 
-If you have an example that you think others could benefit from and you'd like to share it please read the [contributing guidelines](contributing.md) and submit a PR.
+If you have an example that you think others could benefit from and you'd like to share it please read the [contributing guidelines](CONTRIBUTING.md) and submit a PR.
 
 ## Bugs
 

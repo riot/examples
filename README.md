@@ -13,6 +13,8 @@ Todo | [Source](todo-app) | [Demo](http://riotjs.com/examples/plunker/?app=todo-
 Todo (pre-compiled) | [Source](todo-app-precompiled) | [Demo](http://riotjs.com/examples/todo-app-precompiled/)
 Mixins | [Source](mixins) | [Demo](http://riotjs.com/examples/plunker/?app=mixins)
 Observables | [Source](observables) | [Demo](http://riotjs.com/examples/plunker/?app=observables)
+ES6 | [Source](es6) | [Demo](http://riotjs.com/examples/plunker/?app=es6)
+Pre-process LESS | [Source](pre-process-less) | [Demo](http://riotjs.com/examples/plunker/?app=pre-process-less)
 Router - Page switcher | [Source](router-page-switcher) | [Demo](http://riotjs.com/examples/plunker/?app=router-page-switcher)
 
 ## Contribute

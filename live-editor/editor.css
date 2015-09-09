@@ -1,0 +1,25 @@
+
+body {
+  margin: 0;
+}
+
+.preview {
+  font-family: "myriad pro", "Tahoma", "sans-serif";
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 1em;
+  color: #333;
+}
+
+.editor {
+  height: 300px;
+}
+
+@media (min-width: 600px) {
+  .editor {
+    height: 800px;
+    height: 100vh;
+    display:inline-block;
+    width: 47%;
+  }
+}

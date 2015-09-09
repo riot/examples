@@ -1,7 +1,8 @@
+
 <sample>
-  <h1>{ message }</h1>
+  <h3>{ message }</h3>
 
   <script>
-    this.message = 'Hello world!'
+    this.message = 'Hello, World!'
   </script>
 </sample>

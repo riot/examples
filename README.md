@@ -2,9 +2,9 @@
 
 This is a series of examples designed to showcase the benefits of adopting [Riot](http://riotjs.com). It is made possible by the Riot open source community.
 
-## Basics
-
 We have several examples to choose from; each one demonstrates different aspects Riot:
+
+## Basics
 
 Example | | |
 :-- | :-- | :--
@@ -14,6 +14,12 @@ Todo (pre-compiled) | [Source](todo-app-precompiled) | [Demo](http://riotjs.com/
 Mixins | [Source](mixins) | [Demo](http://riotjs.com/examples/plunker/?app=mixins)
 Observables | [Source](observables) | [Demo](http://riotjs.com/examples/plunker/?app=observables)
 Router - Page switcher | [Source](router-page-switcher) | [Demo](http://riotjs.com/examples/plunker/?app=router-page-switcher)
+
+## Advanced
+
+Example | | |
+:-- | :-- | :--
+Pre-process LESS | [Source](pre-process-less) | [Demo](http://riotjs.com/examples/plunker/?app=pre-process-less)
 
 ## Contribute
 

@@ -1,24 +1,23 @@
 module.exports = function(config) {
   config.set({
     basePath: '',
-    frameworks: ['mocha'],
+    frameworks: ['mocha', 'riot'],
     plugins: [
       'karma-mocha',
+      'karma-mocha-reporter',
       'karma-phantomjs-launcher',
-      'karma-html2js-preprocessor'
+      'karma-riot'
     ],
     files: [
-      'node_modules/mocha/mocha.js',
       'node_modules/expect.js/index.js',
-      'node_modules/riot/riot+compiler.js',
-      'test/specs.js',
-      '**/*.tag'
+      '**/*.tag',
+      'test/**/*.js'
     ],
     preprocessors: {
-      '**/*.tag': ['html2js']
+      '**/*.tag': ['riot']
     },
     browsers: ['PhantomJS'],
-    reporters: ['progress'],
+    reporters: ['mocha'],
     singleRun: true
   })
 }

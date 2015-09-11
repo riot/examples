@@ -1,15 +1,9 @@
 describe('Application specs', function() {
 
   before(function() {
-    // tag files are loaded as HTML fixtures
-    var tags = __html__
-
     // create mounting points
     var html = document.createElement('app')
     document.body.appendChild(html)
-
-    // compile tags from fixtures
-    riot.compile(tags['app.tag'])
   })
 
   it('mounts the tag', function() {

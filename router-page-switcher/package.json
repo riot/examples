@@ -9,9 +9,10 @@
   "devDependencies": {
     "expect.js": "^0.3.1",
     "karma": "^0.13.9",
-    "karma-html2js-preprocessor": "^0.1.0",
     "karma-mocha": "^0.2.0",
+    "karma-mocha-reporter": "^1.1.1",
     "karma-phantomjs-launcher": "^0.2.1",
+    "karma-riot": "^1.0.0",
     "riot": "^2.2.4"
   },
   "license": "MIT"

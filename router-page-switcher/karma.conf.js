@@ -1,11 +1,10 @@
 module.exports = function(config) {
   config.set({
     basePath: '',
-    frameworks: ['mocha', 'fixture'],
+    frameworks: ['mocha'],
     plugins: [
       'karma-mocha',
       'karma-phantomjs-launcher',
-      'karma-fixture',
       'karma-html2js-preprocessor'
     ],
     files: [

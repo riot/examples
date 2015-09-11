@@ -1,0 +1,19 @@
+{
+  "name": "router-page-switcher",
+  "version": "1.0.0",
+  "description": "Riot example",
+  "private": true,
+  "scripts": {
+    "test": "karma start"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "karma": "^0.13.9",
+    "karma-fixture": "^0.2.5",
+    "karma-html2js-preprocessor": "^0.1.0",
+    "karma-mocha": "^0.2.0",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "riot": "^2.2.4"
+  },
+  "license": "MIT"
+}

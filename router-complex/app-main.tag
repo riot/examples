@@ -66,8 +66,9 @@
     :scope {
       display: block;
       font-family: sans-serif;
+      margin-right: 0;
+      margin-bottom: 130px;
       margin-left: 50px;
-      margin-right: 200px;
       padding: 1em;
       text-align: center;
       color: #666;
@@ -92,6 +93,12 @@
     a:hover {
       background: #eee;
       color: #000;
+    }
+    @media (min-width: 480px) {
+      :scope {
+        margin-right: 200px;
+        margin-bottom: 0;
+      }
     }
   </style>
 

@@ -24,10 +24,12 @@
   <style scoped>
     :scope {
       position: fixed;
-      top: 0;
+      top: auto;
       right: 0;
-      width: 200px;
-      height: 100%;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 130px;
       box-sizing: border-box;
       font-family: sans-serif;
       margin: 0;
@@ -35,6 +37,16 @@
       text-align: center;
       color: #666;
       background: #f7f7f7;
+    }
+    @media (min-width: 480px) {
+      :scope {
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: auto;
+        width: 200px;
+        height: 100%;
+      }
     }
   </style>
 

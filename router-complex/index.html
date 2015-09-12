@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>Riot Router Example: Advanced</title>
+    <title>Riot Router: Complex example</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
   </head>
 
@@ -23,11 +23,10 @@
 
     <!-- mount this app -->
     <script>
-      riot.mount('*')
-      setTimeout(function(){
-        // we need to wait until tags mounted
+      riot.compile(function() {
+        riot.mount('*')
         route.exec()
-      }, 0)
+      })
     </script>
 
     <style>

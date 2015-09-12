@@ -1,8 +1,8 @@
 <app-navi>
 
-  <a href="#">H</a>
-  <a href="#first">F</a>
-  <a href="#second">S</a>
+  <a href="/">H</a>
+  <a href="/first">F</a>
+  <a href="/second">S</a>
 
   <style scoped>
     :scope {

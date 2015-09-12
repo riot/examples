@@ -24,6 +24,7 @@
     <!-- mount this app -->
     <script>
       riot.compile(function() {
+        route.base('/')
         riot.mount('*')
         route.exec()
       })

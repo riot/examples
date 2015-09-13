@@ -2,7 +2,7 @@
   "title": "Riot Bug Reporter",
   "files": [
     "index.html",
-    "my-tag.tag",
+    "my-tag.html",
     "README.md"
   ]
 }

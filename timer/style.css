@@ -2,15 +2,23 @@ body {
   font-family: 'myriad pro', sans-serif;
   font-size: 20px;
   border: 0;
+  background: rgba(64, 139, 194, .2);
+  margin: 0;
+  padding: 100px;
 }
 
 timer {
   display: block;
   max-width: 300px;
-  margin: 5% auto;
-  border: 2px solid #408bc2;
-  border-radius: .4em;
-  color: #408bc2;
-  line-height: 2em;
+  margin: 0 auto;
+  border: 1px solid rgba(64, 139, 194, .5);
+  border-radius: 6px;
+  color: rgba(64, 139, 194, 1);
+  height: 100px;
+  line-height: 100px;
   text-align: center;
+  background: white;
+}
+p {
+  margin: 0;
 }

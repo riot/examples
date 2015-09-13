@@ -2,6 +2,6 @@ language: node_js
 node_js:
   - "0.12.0"
 env:
-  - TEST_DIR=route-page-switcher
+  - TEST_DIR=router-page-switcher
   - TEST_DIR=timer
 script: cd $TEST_DIR && npm install && npm test

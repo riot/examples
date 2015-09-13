@@ -2,16 +2,18 @@
 
   <p>Seconds Elapsed: { time }</p>
 
-  this.time = opts.start || 0
+  <script>
+    this.time = opts.start || 0
 
-  tick() {
-    this.update({ time: ++this.time })
-  }
+    tick() {
+      this.update({ time: ++this.time })
+    }
 
-  var timer = setInterval(this.tick, 1000)
+    var timer = setInterval(this.tick, 1000)
 
-  this.on('unmount', function() {
-    clearInterval(timer)
-  })
+    this.on('unmount', function() {
+      clearInterval(timer)
+    })
+  </script>
 
 </timer>

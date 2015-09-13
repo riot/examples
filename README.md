@@ -1,3 +1,5 @@
+[![Build Status][travis-image]][travis-url] [![MIT License][license-image]][license-url]
+
 # Riot Examples
 
 This is a series of examples designed to showcase the benefits of adopting [Riot](http://riotjs.com). It is made possible by the Riot open source community.
@@ -28,3 +30,10 @@ If you have an example that you think others could benefit from and you'd like t
 ## Bugs
 
 If you find something that isn't expected please [raise an issue](https://github.com/riot/examples/issues) and we'll get on it. To make it easier to debug please use the [Bug Reporter](http://riotjs.com/examples/plunker/?app=bug-reporter).
+
+
+[travis-image]:https://img.shields.io/travis/riot/examples.svg?style=flat-square
+[travis-url]:https://travis-ci.org/riot/examples
+
+[license-image]:http://img.shields.io/badge/license-MIT-000000.svg?style=flat-square
+[license-url]:LICENSE

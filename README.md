@@ -22,6 +22,7 @@ Router - Page switcher | [Source](router-page-switcher) | [Demo](http://riotjs.c
 Example | | |
 :-- | :-- | :--
 ES6 | [Source](es6) | [Demo](http://riotjs.com/examples/plunker/?app=es6)
+Pre-process LESS | [Source](pre-process-less) | [Demo](http://riotjs.com/examples/plunker/?app=pre-process-less)
 
 ## Contribute
 

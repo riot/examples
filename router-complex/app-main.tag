@@ -22,7 +22,7 @@
     r('first',   first      )
     r('first/*', firstDetail)
     r('second',  second     )
-    r(           notfound   )
+    r(           home       ) // `notfound` would be nicer!
 
     function home() {
       self.update({
@@ -50,13 +50,6 @@
       self.update({
         title: "Second feature of your app",
         body: "It could be a config page for example.",
-        isFirst: false
-      })
-    }
-    function notfound() {
-      self.update({
-        title: "Page not found",
-        body: "What's going on?",
         isFirst: false
       })
     }

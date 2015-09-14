@@ -22,10 +22,11 @@
   <!-- mount this app -->
   <script>
     riot.parsers.css.less = function(tagName, style) {
+      var css = ''
       less.render(style, {}, function(error, output) {
-        style = output.css
+        css = output.css
       })
-      return style
+      return css
     }
     riot.mount('*')
   </script>

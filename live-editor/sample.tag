@@ -6,8 +6,11 @@
   </script>
 
   <style scoped>
+    :scope {
+      font-size: 4rem;
+    }
     h3 {
-      color: red;
+      color: #444;
     }
   </style>
 </sample>

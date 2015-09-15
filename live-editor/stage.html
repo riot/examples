@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Riot live editor</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="editor.css">
+  </head>
+
+  <body>
+    <sample></sample>
+    <!-- scripts we need -->
+    <script src="https://cdn.rawgit.com/riot/riot/master/riot+compiler.min.js"></script>
+    <script>
+      window.addEventListener('message', function(e){
+        riot.compile(e.data)
+        riot.mount('sample')
+      }, false)
+    </script>
+  </body>
+
+</html>

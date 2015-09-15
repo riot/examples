@@ -18,13 +18,17 @@
       editor.session.setUseWorker(false)
 
       doc.on('change', function(e) { mount(doc.getValue()) })
-      get(opts.src, function(tag) { doc.setValue(tag) })
+      if (window.location.hash)
+        doc.setValue(decodeURIComponent(window.location.hash.substring(1)))
+      else
+        get(opts.src, function(tag) { doc.setValue(tag) })
     })
 
     function mount(tag) {
       // reload the iframe
       self.preview.src = self.preview.src
       self.preview.onload = function() {
+        window.location.hash = tag
         self.preview.contentWindow.postMessage(tag, '*')
       }
     }

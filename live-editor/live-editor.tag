@@ -56,13 +56,15 @@
       padding-left: 1em;
       color: #333;
       border: none;
-      width: 45%;
       height: 100vh;
     }
     section {
-      height: 300px;
+      height: 150px;
     }
     @media (min-width: 500px) {
+      iframe {
+        width: 45%;
+      }
       section {
         height: 100vh;
         display:inline-block;

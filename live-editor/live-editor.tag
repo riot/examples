@@ -28,7 +28,7 @@
       // reload the iframe
       self.preview.src = self.preview.src
       self.preview.onload = function() {
-        window.location.hash = tag
+        window.location.hash = encodeURIComponent(tag)
         self.preview.contentWindow.postMessage(tag, '*')
       }
     }

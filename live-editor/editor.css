@@ -1,14 +1,17 @@
 
 body {
   margin: 0;
+  font-family: "myriad pro", "Tahoma", "sans-serif";
 }
 
 .preview {
-  font-family: "myriad pro", "Tahoma", "sans-serif";
   display: inline-block;
   vertical-align: top;
   padding-left: 1em;
   color: #333;
+  border: none;
+  width: 50%;
+  height: 100vh;
 }
 
 .editor {

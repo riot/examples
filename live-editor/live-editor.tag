@@ -1,11 +1,9 @@
 <live-editor>
 
   <!-- the empty line causes editor start from second line (on purpose) -->
-  <section class="editor">
+  <section class="editor"></section>
 
-  </section>
-
-  <section class="preview"></section>
+  <iframe src="stage.html" name="preview" class="preview"></iframe>
 
   <script>
     var self = this
@@ -14,18 +12,25 @@
       var editor = ace.edit(self.root.querySelector('.editor'))
       var doc = editor.getSession()
 
-      editor.setTheme("ace/theme/monokai")
-      doc.setMode("ace/mode/html")
+      editor.setTheme('ace/theme/monokai')
+      doc.setMode('ace/mode/html')
       doc.setTabSize(2)
       editor.session.setUseWorker(false)
 
       doc.on('change', function(e) { mount(doc.getValue()) })
-      get(opts.src, function(tag) { doc.setValue(tag) })
+      if (window.location.hash)
+        doc.setValue(decodeURIComponent(window.location.hash.substring(1)))
+      else
+        get(opts.src, function(tag) { doc.setValue(tag) })
     })
 
     function mount(tag) {
-      riot.compile(tag)
-      riot.mount(self.root.querySelector('.preview'), 'sample')
+      // reload the iframe
+      self.preview.src = self.preview.src
+      self.preview.onload = function() {
+        window.location.hash = tag
+        self.preview.contentWindow.postMessage(tag, '*')
+      }
     }
 
     function get(url, fn) {

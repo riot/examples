@@ -17,7 +17,7 @@
       { id: 'orange', title: 'Orange', body: "I don't have the word for it..." }
     ]
 
-    var r = route.create()
+    var r = riot.route.create()
     r('/',       home       )
     r('first',   first      )
     r('first/*', firstDetail)

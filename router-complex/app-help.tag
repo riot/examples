@@ -10,7 +10,7 @@
       second: "This is the help for the second page."
     }
 
-    var r = route.create()
+    var r = riot.route.create()
     r('*', function(id) {
       self.helptext = self.data[id] || 'Help not found.'
       self.update()

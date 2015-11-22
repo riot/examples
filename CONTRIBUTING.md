@@ -6,6 +6,15 @@ If you'd like to contribute an example or bug fix, feel free to send us a pull r
 
 Create tests for your examples. This is so we can ensure they don't break when future changes are made and it also helps people to understand the processes within.
 
+### Script tags and external libraries
+
+Please make sure to use always the latest riot releases:
+
+- [riot+compiler.min.js](https://cdn.rawgit.com/riot/riot/master/riot+compiler.min.js)
+- [riot.js](https://cdn.rawgit.com/riot/riot/master/riot.min.js)
+
+For all the other libraries use either [jsdelivr.com](https://www.jsdelivr.com/) or [cdnjs](https://cdnjs.com/)
+
 ### Folder structure
 
 Please follow the standard set by the other examples by using this folder structure suggestion:

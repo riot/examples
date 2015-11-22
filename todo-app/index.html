@@ -19,16 +19,16 @@
     <todo></todo>
 
     <script src="todo.tag" type="riot/tag"></script>
-    <script src="https://cdn.jsdelivr.net/g/riot@2.2(riot.min.js+compiler.min.js)"></script>
+    <script src="https://cdn.rawgit.com/riot/riot/master/riot+compiler.min.js"></script>
 
     <script>
     riot.mount('todo', {
       title: 'I want to behave!',
       items: [
-        { title: 'Avoid excessive coffeine', done: true, hidden: false },
-        { title: 'Hidden item', done: false, hidden: true },
-        { title: 'Be less provocative', done: false, hidden: false  },
-        { title: 'Be nice to people', done: false, hidden: false }
+        { title: 'Avoid excessive coffeine', done: true },
+        { title: 'Hidden item',  hidden: true },
+        { title: 'Be less provocative'  },
+        { title: 'Be nice to people' }
       ]
     })
     </script>

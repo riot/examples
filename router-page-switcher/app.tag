@@ -16,7 +16,6 @@
     self.page = self.data[0]
 
     riot.route(function(id) {
-      console.log(id)
       self.page = self.data.filter(function(r) { return r.id == id })[0] || {}
       self.update()
     })

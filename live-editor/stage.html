@@ -12,7 +12,7 @@
     <!-- scripts we need -->
     <script src="https://cdn.rawgit.com/riot/riot/master/riot+compiler.min.js"></script>
     <script>
-      window.addEventListener('message', function(e){
+      window.addEventListener('message', function(e) {
         riot.compile(e.data)
         riot.mount('sample')
       }, false)

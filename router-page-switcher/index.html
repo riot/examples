@@ -13,10 +13,17 @@
     <script type="riot/tag" src="app.tag"></script>
 
     <!-- scripts we need -->
-    <script src="https://cdn.jsdelivr.net/g/riot@2.2(riot.min.js+compiler.min.js)"></script>
+    <script src="https://cdn.rawgit.com/riot/riot/master/riot+compiler.min.js"></script>
 
     <!-- mount this app -->
-    <script> riot.mount('app') </script>
+    <script>
+
+    riot.compile(function() {
+      riot.mount('app')
+      riot.route.start(true)
+    })
+
+    </script>
   </body>
 
 </html>

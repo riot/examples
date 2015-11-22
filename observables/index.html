@@ -15,7 +15,7 @@
     <script type="riot/tag" src="car-headlights.tag"></script>
 
     <!-- scripts we need -->
-    <script src="https://cdn.jsdelivr.net/g/riot@2.2(riot.min.js+compiler.min.js)"></script>
+    <script src="https://cdn.rawgit.com/riot/riot/master/riot+compiler.min.js"></script>
 
     <!-- mount this app -->
     <script type="text/javascript">
@@ -26,7 +26,7 @@
         self.started = false
         riot.observable(self)
         self.on('start', function () {
-          self.started = true;
+          self.started = true
         })
       }
 

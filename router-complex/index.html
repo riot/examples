@@ -17,15 +17,14 @@
     <script type="riot/tag" src="app-help.tag"></script>
 
     <!-- scripts we need -->
-    <script src="https://cdn.jsdelivr.net/g/riot@2.3(riot.min.js+compiler.min.js)"></script>
+    <script src="https://cdn.rawgit.com/riot/riot/master/riot+compiler.min.js"></script>
 
     <!-- mount this app -->
     <script>
       riot.compile(function() {
         riot.route.base('/')
         riot.mount('*')
-        riot.route.start()
-        riot.route.exec()
+        riot.route.start(true)
       })
     </script>
 

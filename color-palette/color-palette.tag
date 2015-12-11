@@ -21,24 +21,16 @@
     click (e) {
       /** update root's attr, too */
       self.root.value = self.value = e.item.c
-
-      setTimeout(function() {
-        var changeEvent
-        if (typeof Event == 'function') { // Standard browsers
-          changeEvent = new Event('change')
-        } else { // IE 9 ~ 11
-          changeEvent = document.createEvent('Event')
-          changeEvent.initEvent('change', true, true)
-        }
-        /** dispatch an event */
-        self.root.dispatchEvent(changeEvent)
-      }, 0)
+      /** dispatch an event on DOM */
+      self.triggerDomEvent('change')
     }
 
     self.on('update', function() {
       /** if value changed by outer tag */
       if (opts.value != lastValue) self.value = lastValue = opts.value
     })
+
+    self.mixin('domEvent')
   </script>
 
   <style scoped>

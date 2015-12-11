@@ -19,7 +19,6 @@
     ]
 
     click (e) {
-      e.stopPropagation()
       /** update root's attr, too */
       self.root.value = self.value = e.item.c
 

@@ -8,9 +8,9 @@
 
   <script>
     var self = this
-    var lastValue = opts.value
-    self.value = opts.value
-    self.colors = [
+    var flag = false
+    self.value = opts.value || ''
+    self.colors = opts.colors || [
       '#edc951',
       '#eb6841',
       '#cc2a36',
@@ -19,15 +19,17 @@
     ]
 
     click (e) {
-      /** update root's attr, too */
+      // update root's attr, too
       self.root.value = self.value = e.item.c
-      /** dispatch an event on DOM */
+      // dispatch an event on DOM
       self.triggerDomEvent('change')
+      // skip syncing
+      flag = true
     }
 
     self.on('update', function() {
-      /** if value changed by outer tag */
-      if (opts.value != lastValue) self.value = lastValue = opts.value
+      if (!flag) self.value = opts.value
+      flag = false
     })
 
     self.mixin('domEvent')

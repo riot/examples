@@ -10,7 +10,7 @@ module.exports = function(config) {
     ],
     files: [
       'node_modules/expect.js/index.js',
-      '**/*.tag',
+      '*.tag',
       'test/**/*.js'
     ],
     preprocessors: {

@@ -10,8 +10,7 @@ module.exports = function(config) {
     ],
     files: [
       'node_modules/expect.js/index.js',
-      'node_modules/phantomjs-polyfill/bind-polyfill.js',
-      '**/*.tag',
+      '*.tag',
       'test/**/*.js'
     ],
     preprocessors: {

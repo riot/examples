@@ -13,6 +13,7 @@ Example | | |
 Timer | [Source](timer) | [Demo](http://riotjs.com/examples/plunker/?app=timer)
 Todo | [Source](todo-app) | [Demo](http://riotjs.com/examples/plunker/?app=todo-app)
 Todo (pre-compiled) | [Source](todo-app-precompiled) | [Demo](http://riotjs.com/examples/todo-app-precompiled/)
+Live filtering | [Source](live-filtering) | [Demo](http://riotjs.com/examples/plunker/?app=live-filtering)
 Mixins | [Source](mixins) | [Demo](http://riotjs.com/examples/plunker/?app=mixins)
 Observables | [Source](observables) | [Demo](http://riotjs.com/examples/plunker/?app=observables)
 Router - Page switcher | [Source](router-page-switcher) | [Demo](http://riotjs.com/examples/plunker/?app=router-page-switcher)

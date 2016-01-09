@@ -23,7 +23,7 @@ $ ./dev
 
 ## ES6 using Babel
 
-You can add ES6 support as shown in riotjs-loader's example. All you have to do is change webpack's modules to
+You can add ES6 support as shown in riotjs-loader's example. All you have to do is edit `webpack.config.js` and change webpack's modules to
 
 ```js
 module: {

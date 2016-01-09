@@ -8,10 +8,10 @@ require('./logs.tag')
   </button>
 
   <h1>
-    {number}
+    { number }
   </h1>
 
-  <logs logs={logs} onclear={clearLogs}></logs>
+  <logs logs={ logs } onclear={ clearLogs }></logs>
 
   <script>
     this.number = null

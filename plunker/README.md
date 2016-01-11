@@ -37,7 +37,7 @@ Download or clone this repo, then run the command.
 
 ```bash
 $ cd to/parent/dir
-$ ss
+$ superstatic
 ```
 
 Open the URL shown in your browser.

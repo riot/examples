@@ -3,7 +3,7 @@
   <div
     each={ c in colors }
     style="background: { c }"
-    class={ selected: c == parent.value }
+    class={ selected: c == value }
     onclick={ click }></div>
 
   <script>

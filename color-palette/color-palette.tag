@@ -23,13 +23,10 @@
       self.root.value = self.value = e.item.c
       // dispatch an event on DOM
       self.triggerDomEvent('change')
-      // skip syncing
-      flag = true
     }
 
-    self.on('update', function() {
-      if (!flag) self.value = opts.value
-      flag = false
+    self.on('sync', function() {
+      self.value = opts.value
     })
 
     self.mixin('domEvent')

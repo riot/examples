@@ -4,6 +4,7 @@ This is a simple example for showing how to use Riot with [Rollup](https://githu
 
 - Site: http://rollupjs.org
 - Docs: https://github.com/rollup/rollup/wiki
+- rollup-plugin-riot: https://github.com/riot/rollup-plugin-riot
 
 ## Run locally
 
@@ -23,19 +24,6 @@ $ superstatic
 ```
 
 Open the URL shown in your browser.
-
-## Watch
-
-Watch the change of the files:
-
-```bash
-$ npm run watch
-```
-
-See more detail:
-
-- [chokidar](https://github.com/paulmillr/chokidar)
-- [chokidar-cli](https://github.com/kimmobrunfeldt/chokidar-cli)
 
 ## npm and babel
 
@@ -71,3 +59,16 @@ Note: the code below doesn't work. We should declare the module outside the tag 
   </script>
 </md>
 ```
+
+## Watch
+
+Watch the change of the files:
+
+```bash
+$ npm run watch
+```
+
+See more detail:
+
+- [chokidar](https://github.com/paulmillr/chokidar)
+- [chokidar-cli](https://github.com/kimmobrunfeldt/chokidar-cli)

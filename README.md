@@ -25,7 +25,8 @@ Example | | |
 ES6 | [Source](es6) | [Demo](http://riotjs.com/examples/plunker/?app=es6)
 Pre-process LESS | [Source](pre-process-less) | [Demo](http://riotjs.com/examples/plunker/?app=pre-process-less)
 Router - Complex | [Source](router-complex) | [Demo](http://riotjs.com/examples/plunker/?app=router-complex)
-Webpack | [Source](webpack)
+Webpack | [Source](webpack) |
+Rollup | [Source](rollup) |
 
 ## Contribute
 

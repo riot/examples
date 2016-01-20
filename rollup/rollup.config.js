@@ -1,8 +1,7 @@
-import babel            from 'rollup-plugin-babel'
-import npm              from 'rollup-plugin-npm'
-import commonjs         from 'rollup-plugin-commonjs'
-import { createFilter } from 'rollup-pluginutils'
-import compiler         from 'riot-compiler'
+import riot     from 'rollup-plugin-riot'
+import npm      from 'rollup-plugin-npm'
+import commonjs from 'rollup-plugin-commonjs'
+import babel    from 'rollup-plugin-babel'
 
 export default {
   entry: 'src/main.js',
@@ -17,18 +16,4 @@ export default {
     commonjs(),
     babel()
   ]
-}
-
-/**
- * Simple inline-plugin for Riot.js
- */
-function riot() {
-  const frag = "import riot from 'riot';"
-  const filter = createFilter('**/*.tag') // transform tag files only
-  return {
-    transform (code, id) {
-      if (!filter(id)) return null
-      return frag + compiler.compile(code)
-    }
-  }
 }

@@ -10,10 +10,15 @@
     var r = riot.route.create()
     r(highlightCurrent)
 
+    var plunkrRandomUrl = location.pathname.replace(new RegExp('/', 'g'), ''); 
+
     function highlightCurrent(id) {
       var myLinks = self.root.querySelectorAll('a[href]'), // Grab any anchor elements with href attrs
           i, l, thisLink, thisLinkHref, thisLinkIsSelected,      // Iterator variables
           nodesToDeselect = [], nodesToSelect = [];                  // Batch DOM ops
+
+      // Plunker confuses routing initially
+      if ( plunkrRandomUrl == id ) { id = ''; }
 
       for (i=0, l=myLinks.length;i<l;i++) {
         thisLink = myLinks[i];

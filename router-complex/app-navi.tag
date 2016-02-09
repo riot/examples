@@ -1,11 +1,17 @@
 <app-navi>
 
-  <a href="/" class={ selected: this.selectedId === '' }>H</a>
-  <a href="/first" class={ selected: this.selectedId === 'first' }>F</a>
-  <a href="/second" class={ selected: this.selectedId === 'second' }>S</a>
-
+  <a each={ links } href="/{ url }" class={ selected: parent.selectedId === url }>
+    { name }
+  </a>
+  
   <script>
     var self = this
+
+    this.links = [
+      { name: "H", url: "" },
+      { name: "F", url: "first" },
+      { name: "S", url: "second" }
+    ]
 
     var r = riot.route.create()
     r(highlightCurrent)

@@ -4,6 +4,52 @@
   <a href="/first">F</a>
   <a href="/second">S</a>
 
+  <script>
+    var self = this
+
+    var r = riot.route.create()
+    r(highlightCurrent)
+
+    function highlightCurrent(id) {
+      var myLinks = self.root.querySelectorAll('a[href]'), // Grab any anchor elements with href attrs
+          i, l, thisLink, thisLinkHref, thisLinkIsSelected,      // Iterator variables
+          nodesToDeselect = [], nodesToSelect = [];                  // Batch DOM ops
+
+      for (i=0, l=myLinks.length;i<l;i++) {
+        thisLink = myLinks[i];
+        thisLinkHref = thisLink.getAttribute('href').slice(1);
+        thisLinkIsSelected = thisLinkHref == id;
+        if ( thisLinkIsSelected ) {
+          nodesToSelect.push(thisLink);
+        } else {
+          nodesToDeselect.push(thisLink);
+        }
+      }
+      for (i=0, l=nodesToDeselect.length;i<l;i++) {
+        thisLink = nodesToDeselect[i];
+        removeClass(thisLink, "selected");
+      }
+      for (i=0, l=nodesToSelect.length;i<l;i++) {
+        thisLink = nodesToSelect[i];
+        addClass(thisLink, "selected");
+      }
+    }
+
+    function addClass(el, cls) {
+    if (el.classList)
+      el.classList.add(cls);
+    else
+      el.className += ' ' + cls;
+    }
+    
+    function removeClass(el, cls) {
+    if (el.classList)
+      el.classList.remove(cls);
+    else
+      el.className = el.className.replace(new RegExp('(^|\\b)' + cls.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+    }
+  </script>
+
   <style scoped>
     :scope {
       position: fixed;
@@ -34,6 +80,9 @@
     }
     a:hover {
       background: #666;
+    }
+    a.selected {
+      background: teal;
     }
   </style>
 

@@ -4,6 +4,7 @@
     "index.html",
     "README.md",
     "app.tag",
+    "dom-event.js",
     "color-palette.tag"
   ]
 }

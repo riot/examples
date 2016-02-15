@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Color Palette</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+
+  <body>
+    <app></app>
+
+    <!-- riot tags -->
+    <script type="riot/tag" src="color-palette.tag"></script>
+    <script type="riot/tag" src="app.tag"></script>
+
+    <!-- scripts we need -->
+    <script src="https://cdn.rawgit.com/riot/riot/master/riot+compiler.min.js"></script>
+    <script src="dom-event.js"></script>
+
+    <!-- mount this app -->
+    <script>
+      riot.compile(function() {
+        riot.mount('*')
+        riot.route.start(true)
+      })
+    </script>
+
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+  </body>
+
+</html>

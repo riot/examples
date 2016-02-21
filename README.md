@@ -17,6 +17,7 @@ Live filtering | [Source](live-filtering) | [Demo](http://riotjs.com/examples/pl
 Mixins | [Source](mixins) | [Demo](http://riotjs.com/examples/plunker/?app=mixins)
 Observables | [Source](observables) | [Demo](http://riotjs.com/examples/plunker/?app=observables)
 Router - Page switcher | [Source](router-page-switcher) | [Demo](http://riotjs.com/examples/plunker/?app=router-page-switcher)
+Animated list reordering | [Source](animated-list-reordering) | [Demo](http://riotjs.com/examples/plunker/?app=animated-list-reordering)
 
 ## Advanced
 

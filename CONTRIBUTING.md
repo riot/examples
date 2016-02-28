@@ -10,7 +10,7 @@ Create tests for your examples. This is so we can ensure they don't break when f
 
 Please make sure to use always the latest riot releases:
 
-- [riot+compiler.min.js](https://cdn.rawgit.com/riot/riot/master/riot+compiler.min.js)
+- [riot+compiler.min.js](https://rawgit.com/riot/riot/master/riot%2Bcompiler.min.js)
 - [riot.js](https://cdn.rawgit.com/riot/riot/master/riot.min.js)
 
 For all the other libraries use either [jsdelivr.com](https://www.jsdelivr.com/) or [cdnjs](https://cdnjs.com/)

@@ -19,7 +19,6 @@
   </li>
 
   <script>
-
     // some private random variables
     var amount = 50,
       names = [
@@ -50,7 +49,6 @@
         o[i-1] = o[j]
         o[j] = x
       }
-
       return o
     }
 
@@ -58,7 +56,7 @@
     // pay attention that if your collection
     // will add new items you must update
     // the flip instance
-    this.one('mount', function() {
+    this.on('mount', function() {
       // create the flip group
       flip = new FLIP.group(
         this.person.map(function(person) {
@@ -73,28 +71,27 @@
         })
       );
     })
-
-    // cache the elements position
-    // before the DOM gets updated
-    this.on('update', function() {
+    
+    makeFlip() {
+      // cache the elements position
+      // before the DOM gets updated
       flip.first()
-    })
 
-    // run the animation when the DOM
-    // is updated
-    this.on('updated', function() {
-      flip.last()
-      flip.invert()
-      flip.play()
-    })
-
-    // Ui public methods
+      // run the animation when the DOM
+      // is updated
+      this.one('updated', function() {
+        flip.last()
+        flip.invert()
+        flip.play()
+      })
+    }
 
     /**
      * Shuffle the people order without any logic
      */
     shuffle() {
       shuffle(this.people)
+      this.makeFlip()
     }
 
     /**
@@ -109,8 +106,8 @@
           else
             return 0
       })
+      this.makeFlip()
     }
-
   </script>
 
   <style scoped>

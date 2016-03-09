@@ -27,14 +27,12 @@ You can add ES6 support as shown in riotjs-loader's example. All you have to do 
 
 ```js
 module: {
-  loaders: [
     preLoaders: [
       { test: /\.tag$/, exclude: /node_modules/, loader: 'riotjs-loader', query: { type: 'none' } }
     ],
     loaders: [
       { test: /\.js$|\.tag$/, exclude: /node_modules/, loader: 'babel-loader', query: { presets: ['es2015'] } }
     ]
-  ]
 }
 ```
 

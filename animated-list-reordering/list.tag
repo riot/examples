@@ -22,6 +22,8 @@
 
     // some private random variables
     var amount = 50,
+      // this flag variable will be toggle on any update
+      mustAnimate = false,
       names = [
         'Jack', 'Susy', 'Mel', 'Fred', 'George',
         'Bob', 'Roger', 'Lucy', 'Tino', 'Lucy',
@@ -77,15 +79,19 @@
     // cache the elements position
     // before the DOM gets updated
     this.on('update', function() {
+      if (!flip) return // make sure the flip instance got created
+      mustAnimate = true
       flip.first()
     })
 
     // run the animation when the DOM
     // is updated
     this.on('updated', function() {
+      if (!mustAnimate) return
       flip.last()
       flip.invert()
       flip.play()
+      mustAnimate = false
     })
 
     // Ui public methods

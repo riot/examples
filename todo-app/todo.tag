@@ -46,8 +46,8 @@
     }
 
     onlyDone(item) {
-     return item.done
-   }
+      return item.done
+    }
 
     toggle(e) {
       var item = e.item

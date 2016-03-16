@@ -16,7 +16,7 @@
     <li name="person" each={ person in people }>
       { person.name } - { person.age }
     </li>
-  </li>
+  </ol>
 
   <script>
 

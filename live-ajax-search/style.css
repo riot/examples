@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial;
+  font-weight: 300;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: -webkit-radial-gradient(ellipse farthest-corner at top, #661141, #000000);
+  background-image: radial-gradient(ellipse farthest-corner at top, #661141, #000000);
+  color: white;
+}

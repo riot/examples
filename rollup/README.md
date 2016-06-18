@@ -6,6 +6,11 @@ This is a simple example for showing how to use Riot with [Rollup](https://githu
 - Docs: https://github.com/rollup/rollup/wiki
 - rollup-plugin-riot: https://github.com/riot/rollup-plugin-riot
 
+## Notes
+
+- The latest `rollup-plugin-babel` (v2.5.x) has [some issues on ES5 modules](https://github.com/rollup/rollup-plugin-babel/issues/60). So temporally we got to [stick to v2.4.x](https://github.com/riot/examples/blob/gh-pages/rollup/package.json#L18).
+- The name of the plugin was changed: `rollup-plugin-npm` --> `rollup-plugin-node-resolve`
+
 ## Run locally
 
 Install superstatic if you don't have.

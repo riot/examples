@@ -14,8 +14,7 @@ $ npm install
 And then run the server using `webpack-dev-server` or any possible way you know
 
 ```bash
-$ ./dev
-# or $ ./node_modules/.bin/webpack-dev-server --progress --colors -d --port 3000
+$ npm start
 ```
 
 - Open [http://localhost:3000/](http://localhost:3000/)

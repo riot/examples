@@ -53,6 +53,7 @@ import marked from 'marked'
 ```
 
 Note: the code below doesn't work. We should declare the module outside the tag definition.
+__IMPORTANT__: In `riot@2.5.0` the es6 imports can be defined also inside your tags!
 
 ```html
 <md>

@@ -9,15 +9,15 @@
   },
   "dependencies": {
     "marked": "^0.3.5",
-    "riot": "^2.4.1"
+    "riot": "^2.5.0"
   },
   "devDependencies": {
     "babel-preset-es2015-rollup": "1.1.1",
     "chokidar-cli": "^1.2.0",
-    "rollup": "^0.31.2",
-    "rollup-plugin-babel": "2.4.0",
-    "rollup-plugin-commonjs": "^3.0.0",
-    "rollup-plugin-node-resolve": "^1.7.0",
+    "rollup": "^0.33.0",
+    "rollup-plugin-babel": "2.6.1",
+    "rollup-plugin-commonjs": "^3.1.0",
+    "rollup-plugin-node-resolve": "^1.7.1",
     "rollup-plugin-riot": "^0.4.0"
   },
   "license": "MIT"

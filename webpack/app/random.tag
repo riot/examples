@@ -1,5 +1,3 @@
-require('./logs.tag')
-
 <random>
   <h3>{ opts.title }</h3>
 
@@ -14,6 +12,8 @@ require('./logs.tag')
   <logs logs={ logs } onclear={ clearLogs }></logs>
 
   <script>
+    require('./logs.tag')
+
     this.number = null
     this.logs = []
 

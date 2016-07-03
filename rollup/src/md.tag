@@ -1,7 +1,9 @@
-import marked from 'marked'
+
 
 <md>
   <script>
+    import marked from 'marked'
+
     this.root.innerHTML = opts.content ? marked(opts.content) : ''
   </script>
 

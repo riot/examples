@@ -30,6 +30,12 @@ Router - Complex | [Source](router-complex) | [Demo](http://riotjs.com/examples/
 Webpack | [Source](webpack) |
 Rollup | [Source](rollup) |
 
+## Extra
+
+Example | | |
+:-- | :-- | :--
+If, then, elseif | [Source](if-then-elseif) | [Demo](http://riotjs.com/examples/plunker/?app=if-then-elseif)
+
 ## Contribute
 
 If you have an example that you think others could benefit from and you'd like to share it please read the [contributing guidelines](CONTRIBUTING.md) and submit a PR.

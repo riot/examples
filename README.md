@@ -34,7 +34,7 @@ Rollup | [Source](rollup) |
 
 Example | | |
 :-- | :-- | :--
-If, then, elseif | [Source](if-then-elseif) | [Demo](http://riotjs.com/examples/plunker/?app=if-then-elseif)
+If, then, elseif | [Source](if-else-elseif) | [Demo](http://riotjs.com/examples/plunker/?app=if-else-elseif)
 
 ## Contribute
 

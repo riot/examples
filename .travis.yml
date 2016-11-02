@@ -6,10 +6,11 @@ branches:
     - gh-pages
     - /^.*$/
 env:
+  - TEST_DIR=router-history-api
   - TEST_DIR=router-page-switcher
   - TEST_DIR=timer
 
 notifications:
   email: false
-  
+
 script: cd $TEST_DIR && npm install && npm test

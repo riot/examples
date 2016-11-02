@@ -8,7 +8,7 @@
   this.items           = opts.items || []
   this.items_to_render = this.items.slice(0, 250)
   
-	onscroll(e) {
+  onscroll(e) {
    
     var itemheight  = 72  // Height of item
     var chunksize   = 250	// Number of items to render
@@ -18,8 +18,8 @@
       this.items_to_render  = this.items.slice(0, chunksize * (chunk + 1))
       this.lastchunk  = chunk
     } else {
-		  e.preventUpdate = true
-  	}
-	}
+       e.preventUpdate = true
+    }
+  }
 
 </infinite-list>

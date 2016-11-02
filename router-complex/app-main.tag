@@ -4,7 +4,7 @@
     <h1>{ title }</h1>
     <p>{ body }</p>
     <ul if={ isFirst }>
-      <li each={ data }><a href="/first/{ id }">{ title }</a></li>
+      <li each={ data }><a href="#first/{ id }">{ title }</a></li>
     </ul>
   </article>
 
@@ -18,7 +18,7 @@
     ]
 
     var r = riot.route.create()
-    r('/',       home       )
+    r('',        home       )
     r('first',   first      )
     r('first/*', firstDetail)
     r('second',  second     )

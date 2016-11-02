@@ -1,9 +1,9 @@
 <app-navi>
 
-  <a each={ links } href="/{ url }" class={ selected: parent.selectedId === url }>
+  <a each={ links } href="#{ url }" class={ selected: parent.selectedId === url }>
     { name }
   </a>
-  
+
   <script>
     var self = this
 
@@ -16,12 +16,7 @@
     var r = riot.route.create()
     r(highlightCurrent)
 
-    var plunkrRandomUrl = location.pathname.replace(new RegExp('/', 'g'), '')
-
     function highlightCurrent(id) {
-      // Plunker confuses routing initially
-      if ( plunkrRandomUrl == id ) { id = '' }
-      
       self.selectedId = id
       self.update()
     }

@@ -4,7 +4,7 @@
     "index.html",
     "README.md",
     "app.tag",
-    "dom-event.js",
+    "mixin.js",
     "color-palette.tag"
   ]
 }

@@ -23,13 +23,13 @@
       self.root.value = self.value = e.item.c
       // dispatch an event on DOM
       self.triggerDomEvent('change')
+      this.skipSync()
     }
 
+    // set sync event
     self.on('sync', function() {
       self.value = opts.value
     })
-
-    self.mixin('domEvent')
   </script>
 
   <style scoped>

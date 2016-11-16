@@ -1,8 +1,12 @@
+**We're making these examples compatible to v3. If you find something strange, feel free to send PR to our `next` branch :smile:**
+
 [![Build Status][travis-image]][travis-url] [![MIT License][license-image]][license-url]
 
 # Riot Examples
 
 This is a series of examples designed to showcase the benefits of adopting [Riot](http://riotjs.com). It is made possible by the Riot open source community.
+
+**Note**: These examples are basically tested on the latest version of Riot. [Check the older examples here](https://github.com/riot/examples/tree/v2.6.x) for v2.
 
 We have several examples to choose from; each one demonstrates different aspects Riot:
 

@@ -1,42 +1,37 @@
 <if>
   <yield/>
   <script>
-    this.ok = false
-    this.skip = false
-    check () { this.ok = !!opts.cond }
-    this.on('update', this.check)
-    this.check()
+    var self = this
+    self
+      .on('before-mount', check)
+      .on('update', check)
+
+    function check () {
+      self.ok = false
+      self.ok = !!opts.cond
+    }
   </script>
 </if>
 
 <then>
-  <virtual if={ show }><yield/></virtual>
-  <script>
-    check () { this.show = !this.parent.skip && this.parent.ok }
-    this.on('update', this.check)
-    this.check()
-  </script>
+  <virtual if={ !parent.skip && parent.ok }><yield/></virtual>
 </then>
 
 <else>
-  <virtual if={ show }><yield/></virtual>
-  <script>
-    check () { this.show = !this.parent.skip && !this.parent.ok }
-    this.on('update', this.check)
-    this.check()
-  </script>
+  <virtual if={ !parent.skip && !parent.ok }><yield/></virtual>
 </else>
 
 <elseif>
   <yield/>
   <script>
-    this.ok = false
-    this.skip = false
-    check () {
-      this.skip = this.parent.ok
-      this.ok = !!opts.cond
+    var self = this
+    self
+      .on('before-mount', check)
+      .on('update', check)
+
+    function check () {
+      self.skip = self.parent.ok
+      self.ok = !!opts.cond
     }
-    this.on('update', this.check)
-    this.check()
   </script>
 </elseif>

@@ -3,27 +3,27 @@
   <script>
     this.ok = false
     this.skip = false
-    check()
-    this.on('update', check)
-    function check () { this.ok = !!opts.cond }
+    check () { this.ok = !!opts.cond }
+    this.on('update', this.check)
+    this.check()
   </script>
 </if>
 
 <then>
   <virtual if={ show }><yield/></virtual>
   <script>
-    check()
-    this.on('update', check)
-    function check () { this.show = !this.parent.skip && this.parent.ok }
+    check () { this.show = !this.parent.skip && this.parent.ok }
+    this.on('update', this.check)
+    this.check()
   </script>
 </then>
 
 <else>
   <virtual if={ show }><yield/></virtual>
   <script>
-    check()
-    this.on('update', check)
-    function check () { this.show = !this.parent.skip && !this.parent.ok }
+    check () { this.show = !this.parent.skip && !this.parent.ok }
+    this.on('update', this.check)
+    this.check()
   </script>
 </else>
 
@@ -32,11 +32,11 @@
   <script>
     this.ok = false
     this.skip = false
-    check()
-    this.on('update', check)
-    function check () {
+    check () {
       this.skip = this.parent.ok
       this.ok = !!opts.cond
     }
+    this.on('update', this.check)
+    this.check()
   </script>
 </elseif>

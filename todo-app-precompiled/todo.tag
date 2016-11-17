@@ -12,7 +12,7 @@
   </ul>
 
   <form onsubmit={ add }>
-    <input name="input" onkeyup={ edit }>
+    <input ref="input" onkeyup={ edit }>
     <button disabled={ !text }>Add #{ items.filter(whatShow).length + 1 }</button>
 
     <button disabled={ items.filter(onlyDone).length == 0 } onclick={ removeAllDone }>
@@ -30,7 +30,7 @@
     add(e) {
       if (this.text) {
         this.items.push({ title: this.text })
-        this.text = this.input.value = ''
+        this.text = this.refs.input.value = ''
       }
     }
 

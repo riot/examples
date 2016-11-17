@@ -1,5 +1,5 @@
 
-riot.tag2('todo', '<h3>{opts.title}</h3> <ul> <li each="{items.filter(whatShow)}"> <label class="{completed: done}"> <input type="checkbox" __checked="{done}" onclick="{parent.toggle}"> {title} </label> </li> </ul> <form onsubmit="{add}"> <input name="input" onkeyup="{edit}"> <button disabled="{!text}">Add #{items.filter(whatShow).length + 1}</button> <button disabled="{items.filter(onlyDone).length == 0}" onclick="{removeAllDone}"> X{items.filter(onlyDone).length} </button> </form>', '', '', function(opts) {
+riot.tag2('todo', '<h3>{opts.title}</h3> <ul> <li each="{items.filter(whatShow)}"> <label class="{completed: done}"> <input type="checkbox" __checked="{done}" onclick="{parent.toggle}"> {title} </label> </li> </ul> <form onsubmit="{add}"> <input ref="input" onkeyup="{edit}"> <button disabled="{!text}">Add #{items.filter(whatShow).length + 1}</button> <button disabled="{items.filter(onlyDone).length == 0}" onclick="{removeAllDone}"> X{items.filter(onlyDone).length} </button> </form>', '', '', function(opts) {
     this.items = opts.items
 
     this.edit = function(e) {
@@ -9,7 +9,7 @@ riot.tag2('todo', '<h3>{opts.title}</h3> <ul> <li each="{items.filter(whatShow)}
     this.add = function(e) {
       if (this.text) {
         this.items.push({ title: this.text })
-        this.text = this.input.value = ''
+        this.text = this.refs.input.value = ''
       }
     }.bind(this)
 

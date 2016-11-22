@@ -55,7 +55,7 @@
     }
   </script>
 
-  <style scoped>
+  <style>
     :scope {
       display: block;
       font-family: sans-serif;

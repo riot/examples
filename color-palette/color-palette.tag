@@ -32,7 +32,7 @@
     })
   </script>
 
-  <style scoped>
+  <style>
     :scope {
       display: inline-block;
       padding: .5em;

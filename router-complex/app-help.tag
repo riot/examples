@@ -21,7 +21,7 @@
     })
   </script>
 
-  <style scoped>
+  <style>
     :scope {
       position: fixed;
       top: auto;

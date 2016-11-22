@@ -119,7 +119,7 @@
 
   </script>
 
-  <style scoped>
+  <style>
 
     :scope {
       font: 1.2rem 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;

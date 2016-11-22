@@ -86,7 +86,7 @@
 
   </script>
 
-  <style scoped>
+  <style>
     :scope {
       position: absolute;
       top: 2rem;

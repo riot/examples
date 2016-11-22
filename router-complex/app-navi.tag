@@ -13,7 +13,7 @@
       { name: "S", url: "second" }
     ]
 
-    var r = riot.route.create()
+    var r = route.create()
     r(highlightCurrent)
 
     function highlightCurrent(id) {

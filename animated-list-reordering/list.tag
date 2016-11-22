@@ -13,7 +13,7 @@
 
   <h2>People Collection</h2>
   <ol>
-    <li name="person" each={ person in people }>
+    <li ref="person" each={ person in people }>
       { person.name } - { person.age }
     </li>
   </ol>
@@ -22,8 +22,6 @@
 
     // some private random variables
     var amount = 50,
-      // this flag variable will be toggle on any update
-      mustAnimate = false,
       names = [
         'Jack', 'Susy', 'Mel', 'Fred', 'George',
         'Bob', 'Roger', 'Lucy', 'Tino', 'Lucy',
@@ -63,7 +61,7 @@
     this.one('mount', function() {
       // create the flip group
       flip = new FLIP.group(
-        this.person.map(function(person) {
+        this.refs.person.map(function(person) {
           return {
             element: person,
             duration: 750,
@@ -73,25 +71,21 @@
             }
           }
         })
-      );
+      )
     })
 
     // cache the elements position
     // before the DOM gets updated
     this.on('update', function() {
-      if (!flip) return // make sure the flip instance got created
-      mustAnimate = true
       flip.first()
     })
 
     // run the animation when the DOM
     // is updated
     this.on('updated', function() {
-      if (!mustAnimate) return
       flip.last()
       flip.invert()
       flip.play()
-      mustAnimate = false
     })
 
     // Ui public methods

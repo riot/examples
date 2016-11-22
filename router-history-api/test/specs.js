@@ -13,11 +13,11 @@ describe('Application specs', function() {
   })
 
   it('goes to the url to show another tab', function() {
-    riot.route('1')
+    route('1')
     expect(document.querySelector('article > h1').textContent)
       .to.be('First')
 
-    riot.route('2')
+    route('2')
     expect(document.querySelector('article > h1').textContent)
       .to.be('Second')
   })

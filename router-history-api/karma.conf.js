@@ -10,6 +10,7 @@ module.exports = function(config) {
     ],
     files: [
       'node_modules/expect.js/index.js',
+      'node_modules/riot-route/dist/route.js',
       '*.tag',
       'test/**/*.js'
     ],

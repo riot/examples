@@ -15,13 +15,13 @@
     ]
     self.page = self.data[0]
 
-    riot.route(function(id) {
+    route(function(id) {
       self.page = self.data.filter(function(r) { return r.id == id })[0] || {}
       self.update()
     })
 
     /* Note: it could be written simpler like this in ES6 syntax
-    riot.route(id =>{
+    route(id =>{
       this.page = this.data.find(r => r.id == id) || {}
       this.update()
     })

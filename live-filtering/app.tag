@@ -25,7 +25,7 @@
     }
   </script>
 
-  <style scoped>
+  <style>
     :scope {
       display: block;
       text-align: center;

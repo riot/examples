@@ -1,7 +1,7 @@
 <app>
   <p>Now opening Plunker...</p>
 
-  <form name="form" method="post" action="http://plnkr.co/edit/?p=preview">
+  <form ref="form" method="post" action="http://plnkr.co/edit/?p=preview">
     <input type="hidden" name="description" value={ manifest.title || 'Riot Example' }>
     <input type="hidden" name="private" value="true">
     <input type="hidden" name="tags[0]" value="riotjs">
@@ -34,7 +34,7 @@
       })
       .then(function(files) {
         self.files = files
-        self.one('updated', function() { self.form.submit() })
+        self.one('updated', function() { self.refs.form.submit() })
         self.update()
       })
 
@@ -52,7 +52,7 @@
     }
   </script>
 
-  <style scoped>
+  <style>
     :scope {
       display: block;
       font-family: sans-serif;

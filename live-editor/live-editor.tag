@@ -3,7 +3,7 @@
   <!-- the empty line causes editor start from second line (on purpose) -->
   <section></section>
 
-  <iframe src="stage.html" name="preview" scrolling="no"></iframe>
+  <iframe src="stage.html" ref="preview" scrolling="no"></iframe>
 
   <script>
     var self = this
@@ -26,10 +26,10 @@
 
     function mount(tag) {
       // reload the iframe
-      self.preview.src = self.preview.src
-      self.preview.onload = function() {
+      self.refs.preview.src = self.refs.preview.src
+      self.refs.preview.onload = function() {
         window.location.hash = encodeURIComponent(tag)
-        self.preview.contentWindow.postMessage(tag, '*')
+        self.refs.preview.contentWindow.postMessage(tag, '*')
       }
     }
 
@@ -44,7 +44,7 @@
     }
   </script>
 
-  <style scoped>
+  <style>
     :scope {
       display: block;
       height: 100vh;

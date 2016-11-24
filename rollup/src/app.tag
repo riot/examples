@@ -6,7 +6,7 @@
     this.content = `Hello **${ name }**!`
   </script>
 
-  <style scoped>
+  <style>
     :scope {
       display: block;
     }

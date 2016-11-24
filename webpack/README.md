@@ -35,7 +35,7 @@ module: {
 }
 ```
 
-As explained in [riot-examples/es6](/riot/examples/blob/gh-pages/es6), you will lose riot's shorthand syntax. So this:
+As explained in [riot-examples/es6](https://github.com/riot/examples/blob/gh-pages/es6), you will lose riot's shorthand syntax. So this:
 
 ```js
 getMessage() { ... }

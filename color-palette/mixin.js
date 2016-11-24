@@ -1,4 +1,8 @@
-riot.mixin('domEvent', {
+/**
+ * syncEvent
+ * https://github.com/cognitom/riot-mixin-pack/tree/master/sync-event
+ */
+riot.mixin({
   /** Init mixin on each tag */
   init: function() {
     var self = this
@@ -8,7 +12,18 @@ riot.mixin('domEvent', {
       self._shouldSyncFromOpts = true
     })
   },
+  /** Skip sync event once */
+  skipSync: function() {
+    this._shouldSyncFromOpts = false
+    return this // return this for method chain
+  }
+})
 
+/**
+ * domEvent
+ * https://github.com/cognitom/riot-mixin-pack/tree/master/dom-event
+ */
+riot.mixin({
   /**
    * Trigger Event on DOM (root element of the tag)
    * @param { string } eventName - the name of the event. ex: 'change'
@@ -26,7 +41,5 @@ riot.mixin('domEvent', {
       /** dispatch an event */
       self.root.dispatchEvent(e)
     }, 0)
-    // skip sync once
-    self._shouldSyncFromOpts = false
   }
 })

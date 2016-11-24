@@ -21,12 +21,13 @@
 
     <!-- scripts we need -->
     <script src="https://rawgit.com/riot/riot/master/riot%2Bcompiler.min.js"></script>
+    <script src="https://rawgit.com/riot/route/master/dist/route.min.js"></script>
 
     <!-- mount this app -->
     <script>
       riot.compile(function() {
         riot.mount('*')
-        riot.route.start(true)
+        route.start(true)
       })
     </script>
 

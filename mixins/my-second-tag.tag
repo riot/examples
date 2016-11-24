@@ -6,7 +6,7 @@
     this.message = this.getMessage()
   </script>
 
-  <style scoped>
+  <style>
     h1 {
       color: cornflowerblue;
     }

@@ -17,7 +17,7 @@
       { id: 'orange', title: 'Orange', body: "I don't have the word for it..." }
     ]
 
-    var r = riot.route.create()
+    var r = route.create()
     r('',        home       )
     r('first',   first      )
     r('first/*', firstDetail)
@@ -55,7 +55,7 @@
     }
   </script>
 
-  <style scoped>
+  <style>
     :scope {
       display: block;
       font-family: sans-serif;

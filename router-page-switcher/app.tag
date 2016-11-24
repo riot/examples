@@ -15,13 +15,13 @@
     ]
     self.page = self.data[0]
 
-    riot.route(function(id) {
+    route(function(id) {
       self.page = self.data.filter(function(r) { return r.id == id })[0] || {}
       self.update()
     })
   </script>
 
-  <style scoped>
+  <style>
     :scope {
       display: block;
       font-family: sans-serif;

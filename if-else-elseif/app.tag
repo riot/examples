@@ -26,7 +26,6 @@
     }
     click2 () {
       this.carbonated = !this.carbonated
-      console.log('carbonated')
     }
   </script>
 

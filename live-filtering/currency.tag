@@ -4,7 +4,7 @@
   <span class="price">{ opts.price }</span>
   <span class="usd">= 1 USD</span>
 
-  <style scoped>
+  <style>
     :scope {
       display: block;
       border-bottom: 1px dotted #ddd;

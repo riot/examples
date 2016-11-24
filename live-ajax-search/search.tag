@@ -7,7 +7,7 @@
       <input
         oninput={ search }
         onchange={ search }
-        name='s'
+        ref='s'
         placeholder='28 Days Later..'
         type='search' />
     </label>
@@ -50,7 +50,7 @@
         .then(function(data) {
           reset()
 
-          if (this.s.value) {
+          if (this.refs.s.value) {
             if (data.Search) this.results = data.Search
             else this.error = data.Error
           }
@@ -71,7 +71,7 @@
    */
   search(e) {
 
-    var search = this.s.value
+    var search = this.refs.s.value
 
     if (!search) {
       reset()
@@ -86,7 +86,7 @@
 
   </script>
 
-  <style scoped>
+  <style>
     :scope {
       position: absolute;
       top: 2rem;

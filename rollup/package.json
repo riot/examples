@@ -8,17 +8,17 @@
     "watch": "chokidar 'src/**' -c 'npm run build'"
   },
   "dependencies": {
-    "marked": "^0.3.5",
-    "riot": "^2.5.0"
+    "marked": "^0.3.6",
+    "riot": "^3.0.0"
   },
   "devDependencies": {
-    "babel-preset-es2015-rollup": "1.1.1",
+    "babel-preset-es2015-rollup": "1.2.0",
     "chokidar-cli": "^1.2.0",
-    "rollup": "^0.33.0",
-    "rollup-plugin-babel": "2.6.1",
-    "rollup-plugin-commonjs": "^3.1.0",
-    "rollup-plugin-node-resolve": "^1.7.1",
-    "rollup-plugin-riot": "^0.4.0"
+    "rollup": "^0.36.3",
+    "rollup-plugin-buble": "^0.14.0",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-riot": "^1.0.0"
   },
   "license": "MIT"
 }

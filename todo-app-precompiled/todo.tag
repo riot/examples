@@ -32,6 +32,7 @@
         this.items.push({ title: this.text })
         this.text = this.refs.input.value = ''
       }
+      e.preventDefault()
     }
 
     removeAllDone(e) {

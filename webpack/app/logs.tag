@@ -1,7 +1,10 @@
 <logs>
 
   <h4>Logs</h4>
-  <small><a href="#" onclick={opts.onclear}>Clear logs</a></small>
+
+  <button onclick={opts.onclear}>
+    Clear logs
+  </button>
 
   <ul>
     <li each={ opts.logs }>{ text }</li>

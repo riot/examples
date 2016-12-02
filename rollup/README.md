@@ -44,10 +44,9 @@ In this example, [marked](https://github.com/chjj/marked) is used for transformi
 ```html
 <md>
   <script>
-    // This line causes an error while compiling!
     import marked from 'marked'
-
-    this.root.innerHTML = opts.content ? marked(opts.content) : ''
+    
+    // do something with marked
   </script>
 </md>
 ```

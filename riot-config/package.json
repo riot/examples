@@ -1,7 +1,7 @@
 {
-  "name": "riot-postcss-example",
+  "name": "riot-config-example",
   "version": "1.0.0",
-  "description": "Riot with PostCSS",
+  "description": "Riot with riot.config.js",
   "private": true,
   "scripts": {
     "start": "npm run watch & npm run server",

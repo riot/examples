@@ -1,18 +1,23 @@
 {
   "name": "riot-rollup-example",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Riot with Rollup",
   "private": true,
   "scripts": {
+    "start": "npm run watch & npm run server",
     "build": "rollup -c",
-    "watch": "chokidar 'src/**' -c 'npm run build'"
+    "watch": "chokidar 'src/**' -c 'npm run build'",
+    "server": "browser-sync start --files 'dist/*, index.html' --server"
   },
   "dependencies": {
     "marked": "^0.3.6",
     "riot": "^3.0.1"
   },
   "devDependencies": {
+    "browser-sync": "^2.18.2",
     "chokidar-cli": "^1.2.0",
+    "postcss": "^5.2.6",
+    "postcss-cssnext": "^2.9.0",
     "rollup": "^0.36.4",
     "rollup-plugin-buble": "^0.14.0",
     "rollup-plugin-commonjs": "^5.0.5",

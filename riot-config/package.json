@@ -1,0 +1,23 @@
+{
+  "name": "riot-postcss-example",
+  "version": "1.0.0",
+  "description": "Riot with PostCSS",
+  "private": true,
+  "scripts": {
+    "start": "npm run watch & npm run server",
+    "build": "riot --config riot.config.js tag/* dist/",
+    "watch": "riot --config riot.config.js -w tag/* dist/",
+    "server": "browser-sync start --files 'dist/*, index.html' --server"
+  },
+  "dependencies": {
+    "riot": "^3.0.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "buble": "^0.14.2",
+    "postcss": "^5.2.6",
+    "postcss-cssnext": "^2.9.0",
+    "riot": "^3.0.1"
+  },
+  "license": "MIT"
+}

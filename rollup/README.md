@@ -37,6 +37,12 @@ Additionally, we're using PostCSS to compile css. To write in the next standard 
 
 - `postcss-cssnext`: transforms new CSS specs into more compatible CSS
 
+## Flow of transpiling / bundling
+
+Actually, a bit complicated. But I'd like to try to show you in the figure below. Check it out:
+
+![flow](../_assets/rollup.png)
+
 ## Use imported modules
 
 In this example, [marked](https://github.com/chjj/marked) is used for transforming markdown into html.
@@ -45,7 +51,7 @@ In this example, [marked](https://github.com/chjj/marked) is used for transformi
 <md>
   <script>
     import marked from 'marked'
-    
+
     // do something with marked
   </script>
 </md>

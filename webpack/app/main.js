@@ -1,3 +1,5 @@
+var riot = require('riot')
+
 require('./random.tag')
 
 riot.mount('random', {

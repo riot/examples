@@ -8,12 +8,11 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.ProvidePlugin({ riot: 'riot' })
+    new webpack.optimize.OccurenceOrderPlugin()
   ],
   module: {
     loaders: [
-      { test: /\.tag$/, exclude: /node_modules/, loader: 'riotjs-loader' },
+      { test: /\.tag$/, exclude: /node_modules/, loader: 'tag-loader' },
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
     ]
   }

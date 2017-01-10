@@ -12,17 +12,17 @@
   <logs logs={ logs } onclear={ clearLogs }></logs>
 
   <script>
-    require('./logs.tag')
+    import './logs.tag'
 
     this.number = null
     this.logs = []
 
-    generate(e) {
-      this.logs.push({ text: "Generate button clicked. Even type is " + e.type })
+    this.generate = (e) => {
+      this.logs.push({ text: `Generate button clicked. Even type is ${ e.type }` })
       this.number = Math.floor(Math.random()*10000)
     }
 
-    clearLogs(e) {
+    this.clearLogs = (e) => {
       this.logs = []
     }
 

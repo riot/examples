@@ -12,7 +12,15 @@ module.exports = {
   ],
   module: {
     loaders: [
-      { test: /\.tag$/, exclude: /node_modules/, loader: 'tag-loader' }
+      {
+        test: /\.tag$/,
+        exclude: /node_modules/,
+        loader: 'tag-loader',
+        query: {
+          type: 'es6' // transpile the riot tags using babel
+        }
+      },
+      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
     ]
   }
 }

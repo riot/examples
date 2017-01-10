@@ -1,6 +1,6 @@
 # Webpack
 
-This is a simple example of using webpack with riot. It uses webpack loader [riotjs-loader](https://github.com/esnunes/riotjs-loader).
+This is a simple example of using webpack with riot. It uses webpack loader [tag-loader](https://www.npmjs.com/package/tag-loader).
 
 ## Run locally
 
@@ -22,12 +22,12 @@ $ npm start
 
 ## ES6 using Babel
 
-You can add ES6 support as shown in riotjs-loader's example. All you have to do is edit `webpack.config.js` and change webpack's modules to
+You can add ES6 support as shown in tag-loader's example. All you have to do is edit `webpack.config.js` and change webpack's modules to
 
 ```js
 module: {
     preLoaders: [
-      { test: /\.tag$/, exclude: /node_modules/, loader: 'riotjs-loader', query: { type: 'none' } }
+      { test: /\.tag$/, exclude: /node_modules/, loader: 'tag-loader', query: { type: 'none' } }
     ],
     loaders: [
       { test: /\.js$|\.tag$/, exclude: /node_modules/, loader: 'babel-loader', query: { presets: ['es2015'] } }

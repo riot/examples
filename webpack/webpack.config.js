@@ -12,8 +12,7 @@ module.exports = {
   ],
   module: {
     loaders: [
-      { test: /\.tag$/, exclude: /node_modules/, loader: 'tag-loader' },
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
+      { test: /\.tag$/, exclude: /node_modules/, loader: 'tag-loader' }
     ]
   }
 }

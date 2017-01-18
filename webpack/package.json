@@ -22,6 +22,7 @@
     "babel-loader": "^6.2.10",
     "babel-preset-es2015-riot": "^1.1.0",
     "riot": "^3.0.7",
+    "riot-hot-reload": "0.0.2",
     "riot-tag-loader": "0.0.1",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"

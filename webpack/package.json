@@ -10,7 +10,7 @@
     "node": ">=4.0.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --progress --colors -d --port 3000"
+    "start": "webpack-dev-server --inline --watch --hot --colors -d --port 3000"
   },
   "keywords": [
     "riot",
@@ -21,8 +21,8 @@
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
     "babel-preset-es2015-riot": "^1.1.0",
-    "riot": "^3.0.6",
-    "tag-loader": "^0.3.0",
+    "riot": "^3.0.7",
+    "riot-tag-loader": "0.0.1",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   }

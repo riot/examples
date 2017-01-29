@@ -18,12 +18,12 @@
   ],
   "devDependencies": {
     "babel": "^6.5.2",
-    "babel-core": "^6.21.0",
+    "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-preset-es2015-riot": "^1.1.0",
     "riot": "^3.0.7",
     "riot-hot-reload": "0.0.2",
-    "riot-tag-loader": "0.0.1",
+    "riot-tag-loader": "1.0.0",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   }

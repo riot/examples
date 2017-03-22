@@ -15,14 +15,27 @@
 
     self.max = 15
     self.keyword = ''
-    self.filtered = opts.items
+    self.rates = []
+    self.filtered = []
+
+    window.fetch('http://api.fixer.io/latest?base=USD')
+      .then(function(response) { return response.json() })
+      .then(function(data) {
+        var rates = Object.keys(data.rates)
+          .map(function (key) { return { title: key, price: data.rates[key] }})
+          .sort(function(a, b) { return a.price - b.price })
+        self.update({ rates: rates })
+      })
 
     keyup (e) {
       self.keyword  = e.target.value
-      self.filtered = opts.items.filter(function(c) {
+    }
+
+    self.on('update', function() {
+      self.filtered = self.rates.filter(function(c) {
         return !self.keyword || c.title.indexOf(self.keyword.toUpperCase()) == 0
       })
-    }
+    })
   </script>
 
   <style>

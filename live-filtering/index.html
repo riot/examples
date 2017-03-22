@@ -16,17 +16,11 @@
     <script type="riot/tag" src="currency.tag"></script>
 
     <!-- scripts we need -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
     <script src="https://rawgit.com/riot/riot/master/riot%2Bcompiler.min.js"></script>
 
-    <!-- load data from Yahoo! and mount this app -->
-    <script>
-      /** JSONP callback */
-      function bootstrap(data) {
-        riot.mount('app', { items: convert(data) })
-      }
-    </script>
-    <script src="convert.js"></script>
-    <script src="http://finance.yahoo.com/webservice/v1/symbols/allcurrencies/quote?format=json&callback=bootstrap"></script>
+    <!-- mount this app -->
+    <script> riot.mount('app') </script>
   </body>
 
 </html>

@@ -4,7 +4,6 @@
     "index.html",
     "README.md",
     "app.tag",
-    "currency.tag",
-    "convert.js"
+    "currency.tag"
   ]
 }

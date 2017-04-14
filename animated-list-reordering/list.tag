@@ -10,6 +10,12 @@
   <button onclick={ sortBy.bind(this, 'name') }>
     Sort by Name
   </button>
+  <button onclick={ add }>
+    Add person
+  </button>
+  <button onclick={ remove }>
+    Remove person
+  </button>
 
   <h2>People Collection</h2>
   <ol>
@@ -35,10 +41,15 @@
 
     // prepare the items only once
     while (amount--) {
-      this.people.push({
+      this.people.push(createPerson())
+    }
+
+    // helper to create a random entry in the collection
+    function createPerson() {
+      return {
         name: names[~~(Math.random() * names.length)],
         age: ~~(Math.random() * 100) + 1 // avoid 0
-      })
+      }
     }
 
     // helper function to shuffle the items in the array
@@ -54,12 +65,7 @@
       return o
     }
 
-    // create the flip instance
-    // pay attention that if your collection
-    // will add new items you must update
-    // the flip instance
-    this.one('mount', function() {
-      // create the flip group
+    var updateFlip = function() {
       flip = new FLIP.group(
         this.refs.person.map(function(person) {
           return {
@@ -72,11 +78,14 @@
           }
         })
       )
-    })
+    }.bind(this)
 
     // cache the elements position
     // before the DOM gets updated
-    this.on('update', function() {
+    this
+      .on('mount',updateFlip)
+      .on('update', function() {
+      updateFlip()
       flip.first()
     })
 
@@ -99,6 +108,7 @@
 
     /**
      * Sort the people array by a single property
+     * @param {string} prop - property we want use to sort the collection
      */
     sortBy(prop) {
       this.people.sort(function(a, b) {
@@ -109,6 +119,14 @@
           else
             return 0
       })
+    }
+
+    add() {
+      this.people.splice(~~(Math.random() * this.people.length), 0, createPerson())
+    }
+
+    remove() {
+      this.people.splice(~~(Math.random() * this.people.length), 1)
     }
 
   </script>

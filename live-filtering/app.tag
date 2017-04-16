@@ -1,7 +1,7 @@
 <app>
 
   <header>
-    <input type="search" value={ keyword } onkeyup={ keyup } placeholder="search">
+    <input type="search" value={ keyword } oninput={ input } placeholder="search">
   </header>
 
   <currency each={ filtered.slice(0, max) } title={ title } price={ price } />
@@ -27,7 +27,7 @@
         self.update({ rates: rates })
       })
 
-    keyup (e) {
+    input (e) {
       self.keyword  = e.target.value
     }
 

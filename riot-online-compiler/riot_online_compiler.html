@@ -5,11 +5,7 @@
         <title>Riot JS Tag Compiler</title>
         <meta charset="utf-8">
         <style>
-          body
-          {
-            font-family: sans-serif;
-          }
-          textarea{
+          .theTextareas{
             height: 300px;
             width:100%;
             min-width: 100px;
@@ -26,7 +22,9 @@
             margin-left: 10%;
             margin-right: 10%;
             padding-bottom: 6px;
+            font-family: sans-serif;
           }
+            
           #mainHolder h1
           {
             color:white;
@@ -50,18 +48,18 @@
     </head>
     <body>
         <div id="mainHolder">
-        <h1>Riot JS Tag Compiler</h1>
-            <textarea id="textarea1" placeholder="input"></textarea><br>
-            <textarea id="textarea2"></textarea><br>
+            <h1>Riot JS Tag Compiler</h1>
+            <textarea class="theTextareas" id="textarea1" placeholder="input"></textarea><br>
+            <textarea class="theTextareas" id="textarea2"></textarea><br>
             <button class="greenBtn" onclick="UserAction()">compile</button>
         </div>
         <script>
-        function UserAction()
-        {
-            var box1 = document.getElementById("textarea1").value;
-            var compiledTag = riot.compile(box1);
-            document.getElementById("textarea2").innerHTML = compiledTag;
-        }
+            function UserAction()
+            {
+                var box1 = document.getElementById("textarea1").value;
+                var compiledTag = riot.compile(box1);
+                document.getElementById("textarea2").innerHTML = compiledTag;
+            }
         </script>
     </body>
 </html>

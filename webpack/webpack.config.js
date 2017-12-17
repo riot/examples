@@ -8,9 +8,7 @@ module.exports = {
     publicPath: '/public/',
     filename: 'bundle.js'
   },
-  plugins: [
-    new webpack.optimize.OccurenceOrderPlugin()
-  ],
+  devtool: 'inline-source-map',
   module: {
     loaders: [
       {
@@ -19,8 +17,7 @@ module.exports = {
         loader: 'riot-tag-loader',
         query: {
           type: 'es6', // transpile the riot tags using babel
-          hot: true,
-          debug: true
+          hot: true
         }
       },
       {

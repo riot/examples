@@ -8,7 +8,7 @@ module.exports = {
     publicPath: '/public/',
     filename: 'bundle.js'
   },
-  devtool: 'inline-source-map',
+  devtool: 'inline',
   module: {
     rules: [
       {
@@ -16,16 +16,21 @@ module.exports = {
         exclude: /node_modules/,
         use: [{
           loader: 'riot-tag-loader',
-          query: {
-            type: 'es6', // transpile the riot tags using babel
-            hot: true
+          options: {
+            hot: true,
+            type: 'es6'
           }
         }]
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
       }
     ]
   }

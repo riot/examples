@@ -26,12 +26,29 @@ You can add ES6 support as shown in riot-tag-loader's example. All you have to d
 
 ```js
 module: {
-    preLoaders: [
-      { test: /\.tag$/, exclude: /node_modules/, loader: 'riot-tag-loader', query: { type: 'none' } }
-    ],
-    loaders: [
-      { test: /\.js$|\.tag$/, exclude: /node_modules/, loader: 'babel-loader', query: { presets: ['es2015'] } }
-    ]
+  rules: [
+    {
+      test: /\.tag$/,
+      exclude: /node_modules/,
+      use: [{
+        loader: 'riot-tag-loader',
+        options: {
+          hot: true,
+          type: 'es6'
+        }
+      }]
+    },
+    {
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env']
+        }
+      }
+    }
+  ]
 }
 ```
 

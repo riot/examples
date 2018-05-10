@@ -1,3 +1,13 @@
 {
-  "presets": [ "es2015-riot" ]
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false,
+        "browsers": [
+          "last 2 versions"
+        ]
+      }
+    ]
+  ]
 }

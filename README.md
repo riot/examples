@@ -1,5 +1,3 @@
-**We're making these examples compatible to v3. If you find something strange, feel free to send PR :smile:**
-
 [![Build Status][travis-image]][travis-url] [![MIT License][license-image]][license-url]
 
 # Riot Examples

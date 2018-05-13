@@ -1,10 +1,10 @@
 # Pre-process LESS
 
-This demonstrates [how to define your own CSS pre-processor](http://riotjs.com/guide/compiler/#any-language) using the in-browser compiler.
+This demonstrates [how to define your own CSS pre-processor](http://riot.js.org/guide/compiler/#any-language) using the in-browser compiler.
 
 ## Have a play
 
-[Open this example on Plunker](http://riotjs.com/examples/plunker/?app=pre-process-less)
+[Open this example on Plunker](http://riot.js.org/examples/plunker/?app=pre-process-less)
 
 ## Run locally
 

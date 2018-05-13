@@ -4,7 +4,7 @@ This is a simple example with in-browser compilation.
 
 ## Have a play
 
-[Open this example on Plunker](http://riotjs.com/examples/plunker/?app=todo-app)
+[Open this example on Plunker](http://riot.js.org/examples/plunker/?app=todo-app)
 
 ## Run locally
 

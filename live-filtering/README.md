@@ -4,7 +4,7 @@ This is a live filtering example. The UI can interact with user's inputs in real
 
 ## Have a play
 
-[Open this example on Plunker](http://riotjs.com/examples/plunker/?app=live-filtering)
+[Open this example on Plunker](http://riot.js.org/examples/plunker/?app=live-filtering)
 
 ## Run locally
 

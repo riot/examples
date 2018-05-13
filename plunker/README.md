@@ -7,7 +7,7 @@ This is a tool to send code to Plunker.
 Open the url like this:
 
 ```
-http://riotjs.com/examples/plunker/?app=todo-app
+http://riot.js.org/examples/plunker/?app=todo-app
 ```
 
 To work with this tool, follow the example folder. The `plunker.json` file

@@ -11,7 +11,7 @@ This is an example for showing how to create logic brocks.
 
 ## Have a play
 
-[Open this example on Plunker](http://riotjs.com/examples/plunker/?app=if-else-elseif)
+[Open this example on Plunker](http://riot.js.org/examples/plunker/?app=if-else-elseif)
 
 ## Run locally
 

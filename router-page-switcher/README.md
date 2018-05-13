@@ -4,7 +4,7 @@ This is a simple example for showing how to use Riot Router to handle the URL.
 
 ## Have a play
 
-[Open this example on Plunker](http://riotjs.com/examples/plunker/?app=router-page-switcher)
+[Open this example on Plunker](http://riot.js.org/examples/plunker/?app=router-page-switcher)
 
 ## Run locally
 

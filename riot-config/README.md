@@ -1,6 +1,6 @@
 # How to use riot.config.js
 
-This is an example for showing how to use [riot.config.js](http://riotjs.com/guide/compiler/#es6-config-file). It also an example with bublé and cssnext:
+This is an example for showing how to use [riot.config.js](http://riot.js.org/guide/compiler/#es6-config-file). It also an example with bublé and cssnext:
 
 - bublé: https://buble.surge.sh
 - cssnext: http://cssnext.io

@@ -4,7 +4,7 @@ This is a simple example showing how it's simple to create a live ajax search. T
 
 ## Have a play
 
-[Open this example on Plunker](http://riotjs.com/examples/plunker/?app=live-ajax-search)
+[Open this example on Plunker](http://riot.js.org/examples/plunker/?app=live-ajax-search)
 
 ## Run locally
 

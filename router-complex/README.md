@@ -4,7 +4,7 @@ This is a relatively complex example for showing how to use Riot Router to handl
 
 ## Have a play
 
-[Open this example on Plunker](http://riotjs.com/examples/plunker/?app=router-complex)
+[Open this example on Plunker](http://riot.js.org/examples/plunker/?app=router-complex)
 
 ## Run locally
 

@@ -4,7 +4,7 @@ This is a live editor for Riot tag.
 
 ## Have a play
 
-[Open this example on Plunker](http://riotjs.com/examples/plunker/?app=live-editor)
+[Open this example on Plunker](http://riot.js.org/examples/plunker/?app=live-editor)
 
 ## Run locally
 

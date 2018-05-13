@@ -4,7 +4,7 @@ This is a simple example for showing how to use Riot Observables to communicate 
 
 ## Have a play
 
-[Open this example on Plunker](http://riot.js.org/examples/plunker/?app=observables)
+[Open this example on Plunker](https://riot.js.org/examples/plunker/?app=observables)
 
 ## Run locally
 

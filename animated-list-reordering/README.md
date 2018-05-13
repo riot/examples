@@ -5,7 +5,7 @@ It uses [flipjs](https://github.com/GoogleChrome/flipjs) by [Paul Lewis](https:/
 
 ## Have a play
 
-[Open this example on Plunker](http://riot.js.org/examples/plunker/?app=animated-list-reordering)
+[Open this example on Plunker](https://riot.js.org/examples/plunker/?app=animated-list-reordering)
 
 ## Run locally
 

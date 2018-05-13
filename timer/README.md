@@ -4,7 +4,7 @@ This is a simplest timer example on [README](https://github.com/riot/riot#tag-de
 
 ## Have a play
 
-[Open this example on Plunker](http://riot.js.org/examples/plunker/?app=timer)
+[Open this example on Plunker](https://riot.js.org/examples/plunker/?app=timer)
 
 ## Run locally
 

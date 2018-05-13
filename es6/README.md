@@ -1,6 +1,6 @@
 # ES6
 
-This demonstrates [how to use ES6 in your tags](http://riot.js.org/guide/compiler/#pre-processors) using the in-browser compiler.
+This demonstrates [how to use ES6 in your tags](https://riot.js.org/guide/compiler/#pre-processors) using the in-browser compiler.
 
 If you use ES6, TypeScript, CoffeeScript, or any JavaScript pre-processor, **it will override the one built in to Riot**.
 
@@ -22,7 +22,7 @@ this.getMessage = () => { ... }
 
 ## Have a play
 
-[Open this example on Plunker](http://riot.js.org/examples/plunker/?app=es6)
+[Open this example on Plunker](https://riot.js.org/examples/plunker/?app=es6)
 
 ## Run locally
 

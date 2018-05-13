@@ -4,7 +4,7 @@ This is a simple example for showing how to use Riot Mixins to share functionali
 
 ## Have a play
 
-[Open this example on Plunker](http://riot.js.org/examples/plunker/?app=mixins)
+[Open this example on Plunker](https://riot.js.org/examples/plunker/?app=mixins)
 
 ## Run locally
 

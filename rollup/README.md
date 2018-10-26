@@ -2,7 +2,7 @@
 
 This is a simple example to show how to use Riot with [Rollup](https://github.com/rollup/rollup).
 
-- Site: http://rollupjs.org
+- Site: https://rollupjs.org
 - Docs: https://github.com/rollup/rollup/wiki
 - rollup-plugin-riot: https://github.com/riot/rollup-plugin-riot
 

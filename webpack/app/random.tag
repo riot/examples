@@ -18,7 +18,7 @@
     this.logs = []
 
     this.generate = (e) => {
-      this.logs.push({ text: `Generate button clicked. Even type is ${ e.type }` })
+      this.logs.push({ text: `Generate button clicked. Event type is ${ e.type }` })
       this.number = Math.floor(Math.random()*10000)
     }
 

@@ -17,9 +17,9 @@
     "webpack"
   ],
   "devDependencies": {
-    "@babel/core": "7.0.0-beta.46",
-    "@babel/preset-env": "7.0.0-beta.46",
-    "babel-loader": "^8.0.0-beta.0",
+    "@babel/core": "7.1.2",
+    "@babel/preset-env": "7.1.0",
+    "babel-loader": "^8.0.4",
     "riot": "^3.13.0",
     "riot-compiler": "^3.5.1",
     "riot-hot-reload": "1.0.0",

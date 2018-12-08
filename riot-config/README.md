@@ -4,7 +4,7 @@ This is an example for showing how to use [riot.config.js](https://riot.js.org/g
 
 - bublé: https://buble.surge.sh
 - cssnext: http://cssnext.io
-- postcss: http://postcss.org
+- postcss: https://postcss.org
 
 ## Run locally
 

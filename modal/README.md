@@ -1,9 +1,7 @@
-# Riot Bug Reporter
+# Riot Modal
 
-This is a template for bug reporting.
+This a simple modal made with riot and riot-animore
+This demo demonstrates also how to deal with nested `<yield>` tags
 
-## How to report
+[Demo](https://riot.js.org/examples/plunker/?app=modal)
 
-1. [Open this template on Plunker](https://riot.js.org/examples/plunker/?app=bug-reporter)
-2. Edit & save
-3. Share the url

@@ -16,7 +16,7 @@ const reducers = combineReducers({
 })
 
 const middleware = applyMiddleware(
-	thunk,
+  thunk,
   promise()
 )
 

@@ -4,7 +4,7 @@
 
 This is a series of examples designed to showcase the benefits of adopting [Riot](https://riot.js.org). It is made possible by the Riot open source community.
 
-**Note**: These examples are basically tested on the latest version of Riot. [Check the older examples here](https://github.com/riot/examples/tree/v2.6.x) for v2.
+**Note**: These examples are basically tested on the latest version of Riot. [Check the older examples here](https://github.com/riot/examples/tree/v3) for v3.
 
 We have several examples to choose from; each one demonstrates different aspects Riot:
 

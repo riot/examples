@@ -12,20 +12,20 @@
     <todo></todo>
 
     <script src="todo.riot" type="riot"></script>
-    <script src="https://cdn.jsdelivr.net/npm/riot@next/riot+compiler.min.js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/riot@next/riot+compiler.min.js"></script>
 
     <script>
-    riot.mount('todo', {
-      title: 'I want to behave!',
-      items: [
-        { title: 'Avoid excessive caffeine', done: true },
-        { title: 'Hidden item',  hidden: true },
-        { title: 'Be less provocative'  },
-        { title: 'Be nice to people' }
-      ]
-    })
+      riot.compile().then(() => {
+        riot.mount('todo', {
+          title: 'I want to behave!',
+          items: [
+            { title: 'Avoid excessive caffeine', done: true },
+            { title: 'Hidden item',  hidden: true },
+            { title: 'Be less provocative'  },
+            { title: 'Be nice to people' }
+          ]
+        })
+      })
     </script>
-
   </body>
-
 </html>

@@ -3,36 +3,9 @@
   <!-- the empty line causes editor start from second line (on purpose) -->
   <section></section>
 
-  <iframe src="stage.html" ref="preview" scrolling="no"></iframe>
+  <iframe src="stage.html" scrolling="no"></iframe>
 
   <script>
-    var self = this
-
-    self.on('mount', function() {
-      var editor = ace.edit(self.root.querySelector('section'))
-      var doc = editor.getSession()
-
-      editor.setTheme('ace/theme/monokai')
-      doc.setMode('ace/mode/html')
-      doc.setTabSize(2)
-      editor.session.setUseWorker(false)
-
-      doc.on('change', function(e) { mount(doc.getValue()) })
-      if (window.location.hash)
-        doc.setValue(decodeURIComponent(window.location.hash.substring(1)))
-      else
-        get(opts.src, function(tag) { doc.setValue(tag) })
-    })
-
-    function mount(tag) {
-      // reload the iframe
-      self.refs.preview.src = self.refs.preview.src
-      self.refs.preview.onload = function() {
-        window.location.hash = encodeURIComponent(tag)
-        self.refs.preview.contentWindow.postMessage(tag, '*')
-      }
-    }
-
     function get(url, fn) {
       var req = new XMLHttpRequest()
       req.onreadystatechange = function() {
@@ -42,14 +15,43 @@
       req.open('GET', url, true)
       req.send('')
     }
+
+    export default {
+      onMounted(props) {
+        const editor = ace.edit(this.$('section'))
+        const doc = editor.getSession()
+
+        editor.setTheme('ace/theme/monokai')
+        doc.setMode('ace/mode/html')
+        doc.setTabSize(2)
+        editor.session.setUseWorker(false)
+
+        doc.on('change', () => { this.reloadIframe(doc.getValue()) })
+
+        if (window.location.hash)
+          doc.setValue(decodeURIComponent(window.location.hash.substring(1)))
+        else
+          get(props.src, function(code) { doc.setValue(code) })
+      },
+      reloadIframe(code) {
+        const iframe = this.$('iframe')
+        // reload the iframe
+        iframe.src = iframe.src
+        iframe.onload = function() {
+          window.location.hash = encodeURIComponent(code)
+          iframe.contentWindow.postMessage(code, '*')
+        }
+      }
+    }
   </script>
 
   <style>
-    :scope {
+    :host {
       display: block;
       height: 100vh;
       overflow: hidden;
     }
+
     iframe {
       display: inline-block;
       vertical-align: top;
@@ -58,9 +60,11 @@
       border: none;
       height: 100vh;
     }
+
     section {
       height: 150px;
     }
+
     @media (min-width: 500px) {
       iframe {
         width: 45%;

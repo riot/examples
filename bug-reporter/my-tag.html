@@ -1,7 +1,11 @@
 <my-tag>
-  <h1>{ message }</h1>
+  <h1>{ state.message }</h1>
 
   <script>
-    this.message = 'hello there'
+    export default {
+      state: {
+        message: 'hello there'
+      }
+    }
   </script>
 </my-tag>

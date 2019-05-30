@@ -10,16 +10,16 @@
     <app></app>
 
     <!-- riot tags -->
-    <script type="riot" src="app.tag"></script>
+    <script type="riot" src="app.riot"></script>
 
     <!-- scripts we need -->
-    <script src="http://cdn.jsdelivr.net/es6-promise/3.0.2/es6-promise.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/riot@next/riot+compiler.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/riot/riot+compiler.min.js"></script>
 
     <!-- mount this app -->
     <script>
-      window.Promise = Promise || ES6Promise
-      riot.mount('app')
+      riot.compile().then(() => {
+        riot.mount('app')
+      })
     </script>
   </body>
 

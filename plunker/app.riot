@@ -1,0 +1,64 @@
+<app>
+  <p>Now opening Plunker...</p>
+
+  <form ref="form" method="post" action="https://plnkr.co/edit/?p=preview">
+    <input type="hidden" name="description" value={ state.manifest.title || 'Riot Example' }>
+    <input type="hidden" name="private" value="true">
+    <input type="hidden" name="tags[0]" value="riotjs">
+    <input type="hidden" name="tags[1]" value="example">
+    <input each={ file in state.files }
+      type="hidden"
+      name="files[{ file.name }]"
+      value={ file.content }>
+  </form>
+
+  <script>
+    var query = location.search
+      .replace(/^\?/, '')
+      .split('&').reduce(function(obj, current){
+        var arr = current.split('=')
+        if (arr[0]) obj[arr[0]] = arr[1]
+        return obj
+      }, {})
+
+
+    export default {
+      state: {
+        files: [],
+        manifest: {},
+      },
+      onMounted() {
+        fetch('../' + query.app + '/plunker.json')
+          .then(res => res.json())
+          .then(manifest => {
+            this.update({ manifest })
+            return Promise.all(manifest.files.map(function(name) {
+              return fetch('../' + query.app + '/' + name)
+                .then(res => res.text())
+                .then(function(content){
+                  return { name: name, content }
+                })
+            }))
+          })
+          .then(files => {
+            this.update({ files: files })
+            this.$('form').submit()
+          })
+      }
+    }
+  </script>
+
+  <style>
+    :host {
+      display: block;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 1em;
+      text-align: center;
+      color: #ccc;
+    }
+    form {
+      display: none;
+    }
+  </style>
+</app>

@@ -4,18 +4,12 @@ module.exports = function(config) {
     frameworks: ['mocha', 'riot'],
     plugins: [
       'karma-mocha',
-      'karma-mocha-reporter',
-      'karma-phantomjs-launcher',
-      'karma-riot'
+      'karma-mocha-reporter'
     ],
     files: [
       'node_modules/expect.js/index.js',
-      '*.tag',
       'test/**/*.js'
     ],
-    preprocessors: {
-      '**/*.tag': ['riot']
-    },
     browsers: ['PhantomJS'],
     reporters: ['mocha'],
     singleRun: true

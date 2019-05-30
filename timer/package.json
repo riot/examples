@@ -4,17 +4,16 @@
   "description": "Riot example",
   "private": true,
   "scripts": {
-    "test": "karma start"
+    "test": "mocha -r esm -r test/register test/*.spec.js"
   },
   "devDependencies": {
-    "expect.js": "^0.3.1",
-    "mocha": "^5.0.5",
-    "karma": "^2.0.0",
-    "karma-mocha": "^1.3.0",
-    "karma-mocha-reporter": "^2.2.5",
-    "karma-phantomjs-launcher": "^1.0.4",
-    "karma-riot": "^2.0.0",
-    "riot": "^3.9.2"
+    "@riotjs/ssr": "^4.0.0-rc.4",
+    "chai": "^4.2.0",
+    "esm": "^3.2.25",
+    "jsdom": "15.1.1",
+    "jsdom-global": "3.0.2",
+    "mocha": "^6.1.4",
+    "riot": "^4.0.0"
   },
   "license": "MIT"
 }

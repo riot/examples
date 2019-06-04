@@ -1,7 +1,7 @@
-import riot from 'riot'
-import 'riot-hot-reload'
-import './random.tag'
+import '@riotjs/hot-reload'
+import {component} from 'riot'
+import Random from './random.riot'
 
-riot.mount('random', {
+component(Random)(document.getElementById('app'), {
   title: 'Hi there!'
 })

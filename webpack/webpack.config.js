@@ -12,13 +12,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tag$/,
+        test: /\.riot$/,
         exclude: /node_modules/,
         use: [{
-          loader: 'riot-tag-loader',
+          loader: '@riotjs/webpack-loader',
           options: {
-            hot: true,
-            type: 'es6'
+            hot: true
           }
         }]
       },

@@ -17,15 +17,15 @@
     "webpack"
   ],
   "devDependencies": {
-    "@babel/core": "7.1.2",
-    "@babel/preset-env": "7.1.0",
-    "babel-loader": "^8.0.4",
-    "riot": "^3.13.0",
-    "riot-compiler": "^3.5.1",
-    "riot-hot-reload": "1.0.0",
-    "riot-tag-loader": "^2.1.0",
-    "webpack": "^4.23.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "@babel/core": "7.4.5",
+    "@babel/preset-env": "7.4.5",
+    "babel-loader": "^8.0.6",
+    "riot": "^4.0.5",
+    "@riotjs/compiler": "^4.2.5",
+    "@riotjs/hot-reload": "4.0.0",
+    "@riotjs/webpack-loader": "^4.0.0",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.5.1"
   }
 }

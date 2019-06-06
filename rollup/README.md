@@ -28,20 +28,9 @@ $ npm run build
 
 The code in this example is written in ES6 syntax. Rollup is an module bundler for ES6. Typically, we use these plugins. [See detail](rollup.config.js):
 
-- `rollup-plugin-buble`: transpiles ES6 into ES5
 - `rollup-plugin-commonjs`: converts CommonJS to ES6
 - `rollup-plugin-node-resolve`: finds modules in `node_modules`
 - `rollup-plugin-riot`: compiles Riot tag files
-
-Additionally, we're using PostCSS to compile css. To write in the next standard of CSS, use the plugin below:
-
-- `postcss-cssnext`: transforms new CSS specs into more compatible CSS
-
-## Flow of transpiling / bundling
-
-Actually, a bit complicated. But I'd like to try to show you in the figure below. Check it out:
-
-![flow](../_assets/rollup.png)
 
 ## Use imported modules
 
@@ -68,5 +57,3 @@ $ npm start
 See more detail:
 
 - [browser-sync](https://browsersync.io/)
-- [chokidar](https://github.com/paulmillr/chokidar)
-- [chokidar-cli](https://github.com/kimmobrunfeldt/chokidar-cli)

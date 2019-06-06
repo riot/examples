@@ -6,24 +6,20 @@
   "scripts": {
     "start": "npm run watch & npm run server",
     "build": "rollup -c",
-    "watch": "chokidar 'src/**' -c 'npm run build'",
+    "watch": "rollup -c -w 'src/**'",
     "server": "browser-sync start --files 'dist/*, index.html' --server"
   },
   "dependencies": {
-    "marked": "^0.3.12",
-    "riot": "^3.8.1"
+    "marked": "^0.6.2",
+    "riot": "^4.0.8"
   },
   "devDependencies": {
-    "browser-sync": "^2.23.5",
-    "chokidar-cli": "^1.2.0",
-    "postcss": "^6.0.16",
-    "postcss-cssnext": "^3.1.0",
-    "riot-compiler": "^3.4.0",
-    "rollup": "^0.55.0",
-    "rollup-plugin-buble": "^0.18.0",
-    "rollup-plugin-commonjs": "^8.2.6",
-    "rollup-plugin-node-resolve": "^3.0.2",
-    "rollup-plugin-riot": "^2.0.0"
+    "browser-sync": "^2.26.5",
+    "@riotjs/compiler": "^4.2.6",
+    "rollup": "^1.14.3",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.0.1",
+    "rollup-plugin-riot": "^4.0.0"
   },
   "license": "MIT"
 }

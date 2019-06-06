@@ -1,5 +1,4 @@
-import riot from 'riot'
-import './app.tag'
-import './md.tag'
+import {component} from 'riot'
+import App from './app.riot'
 
-riot.mount('app')
+component(App)(document.getElementById('root'))

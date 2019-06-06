@@ -3,12 +3,20 @@
   <md content={ content } />
 
   <script>
+    import Md from './md.riot'
+
     const name = 'Rollup'
-    this.content = `Hello **${ name }**!`
+
+    export default {
+      components: {
+        Md
+      },
+      content: `Hello **${ name }**!`
+    }
   </script>
 
   <style>
-    :scope {
+    :host {
       --riot-color: #f04;
       display: block;
     }

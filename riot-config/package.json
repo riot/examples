@@ -5,19 +5,14 @@
   "private": true,
   "scripts": {
     "start": "npm run watch & npm run server",
-    "build": "riot --config riot.config.js tag/* dist/",
-    "watch": "riot --config riot.config.js -w tag/* dist/",
-    "server": "browser-sync start --files 'dist/*, index.html' --server"
-  },
-  "dependencies": {
-    "riot": "^3.0.1"
+    "build": "npx riot --config riot.config.js src/main.js",
+    "watch": "npx riot --config riot.config.js -w src/main.js",
+    "server": "serve"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.2",
-    "buble": "^0.14.2",
-    "postcss": "^5.2.6",
-    "postcss-cssnext": "^2.9.0",
-    "riot": "^3.0.1"
+    "@riotjs/cli": "^4.0.2",
+    "@riotjs/compiler": "^4.2.6",
+    "serve": "^11.0.1"
   },
   "license": "MIT"
 }

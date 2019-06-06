@@ -1,0 +1,23 @@
+<app>
+  <h1>{ title }</h1>
+  <p>This example shows how to use the riot.config.js:</p>
+
+  <script>
+    const name = 'there'
+
+    export default {
+      title: `Hello ${ name }!`
+    }
+  </script>
+
+  <style>
+    :host {
+      --riot-color: #f04;
+    }
+
+    h1 {
+      color: var(--riot-color);
+      border-bottom: 1px solid var(--riot-color);
+    }
+  </style>
+</app>

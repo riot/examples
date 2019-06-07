@@ -1,10 +1,6 @@
 # How to use riot.config.js
 
-This is an example for showing how to use [riot.config.js](https://riot.js.org/guide/compiler/#es6-config-file). It also an example with bublé and cssnext:
-
-- bublé: https://buble.surge.sh
-- cssnext: http://cssnext.io
-- postcss: https://postcss.org
+This is an example for showing how to use the `@riotjs/cli` together with a `riot.config.js` file.
 
 ## Run locally
 
@@ -22,7 +18,7 @@ Then `dist` directory will be made in your project.
 *Note*  if you installed `riot` globally in your environment. You can use the command bellow instead of `$ npm run build`:
 
 ```bash
-$ riot --config riot.config.js tag/* dist/
+$ riot --config riot.config.js stc/main.js dist/main.js
 ```
 
 This says "compile `tag/*` files into `dist/` directory with the config file `riot.config.js`".
@@ -34,7 +30,3 @@ To watch your tag file and check it in your browser, run the command below:
 ```bash
 $ npm start
 ```
-
-See more detail:
-
-- [browser-sync](https://browsersync.io/)

@@ -1,0 +1,38 @@
+{
+  "name": "riot-typescript",
+  "version": "1.0.0",
+  "description": "Typescript and riot",
+  "repository": "riot/examples",
+  "main": "app/main.ts",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "check-types": "tsc",
+    "start": "webpack-dev-server --inline --watch --hot --colors -d --port 3000"
+  },
+  "keywords": [
+    "riot",
+    "typescript"
+  ],
+  "devDependencies": {
+    "@babel/core": "7.4.5",
+    "@babel/preset-env": "7.4.5",
+    "@babel/preset-typescript": "^7.3.3",
+    "@riotjs/compiler": "^4.2.6",
+    "@riotjs/hot-reload": "4.0.0",
+    "@riotjs/webpack-loader": "^4.0.0",
+    "@typescript-eslint/eslint-plugin": "^1.10.1",
+    "@typescript-eslint/parser": "^1.10.1",
+    "babel-loader": "^8.0.6",
+    "eslint": "^5.16.0",
+    "eslint-config-riot": "^2.0.0",
+    "riot": "^4.1.0",
+    "strip-indent": "^3.0.0",
+    "typescript": "3.5.1",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.3",
+    "webpack-dev-server": "^3.7.1"
+  }
+}

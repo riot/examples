@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
 const {registerPreprocessor} = require('@riotjs/compiler')
+const checkTypes = require('./check-types')
 const { transformSync } = require('@babel/core')
-const {resolve, basename} = require('path')
+const {resolve, basename, dirname} = require('path')
 const {CLIEngine} = require('eslint')
 const eslintRules = require('./.eslintrc.json')
 const stripIndent = require('strip-indent')
@@ -13,8 +14,11 @@ const formatter = cli.getFormatter()
 // types check is not yet supported...
 registerPreprocessor('javascript', 'ts', (source, {options}) => {
   const filename = `${basename(options.file)}.ts`
-
+  const fileRoot = dirname(options.file)
   const {results} = cli.executeOnText(stripIndent(source), options.file)
+
+
+  checkTypes(filename, source, fileRoot)
 
   if (results.length) {
     console.log(formatter(results)) // eslint-disable-line

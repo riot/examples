@@ -13,6 +13,6 @@
         "sourceType": "module"
     },
     "rules": {
-        "@typescript-eslint/indent": "2"
+        "@typescript-eslint/indent": 2
     }
 }

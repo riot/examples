@@ -9,10 +9,7 @@
     { state.number }
   </h1>
 
-  <logs logs={ state.logs } onclear={ clearLogs }></logs>
-
   <script type="ts">
-    import Logs from '../logs/logs.riot'
     import {RandomComponent} from './types'
 
     function Random(): RandomComponent {
@@ -35,10 +32,6 @@
           })
         }
       }
-    }
-
-    Random.components = {
-      Logs
     }
 
     export default Random

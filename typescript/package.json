@@ -17,8 +17,8 @@
     "typescript"
   ],
   "devDependencies": {
-    "@babel/core": "7.4.5",
-    "@babel/preset-env": "7.4.5",
+    "@babel/core": "7.5.4",
+    "@babel/preset-env": "7.5.4",
     "@babel/preset-typescript": "^7.3.3",
     "@riotjs/compiler": "^4.2.6",
     "@riotjs/hot-reload": "4.0.0",
@@ -26,10 +26,10 @@
     "@typescript-eslint/eslint-plugin": "^1.10.1",
     "@typescript-eslint/parser": "^1.10.1",
     "babel-loader": "^8.0.6",
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.1",
     "eslint-config-riot": "^2.0.0",
     "strip-indent": "^3.0.0",
-    "typescript": "3.5.1",
+    "typescript": "3.5.3",
     "webpack": "^4.33.0",
     "webpack-cli": "^3.3.3",
     "webpack-dev-server": "^3.7.1"

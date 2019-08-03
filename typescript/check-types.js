@@ -71,6 +71,7 @@ const config = ts.parseConfigFileWithSystem('tsconfig.json', {}, ts.sys)
 const compilerOptions = config.options
 
 module.exports = function check(sourceFile, contents, fileRoot) {
+  const output = []
   // Create a compilerHost object to allow the compiler to read and write files
   const compilerHost = {
     getSourceFile: function(filename, languageVersion) {
@@ -82,7 +83,9 @@ module.exports = function check(sourceFile, contents, fileRoot) {
         ? ts.createSourceFile(filename, sourceText, languageVersion)
         : undefined
     },
-    writeFile: () => {/* noop */},
+    writeFile: (name, text) => {
+      output.push(text)
+    },
     getCurrentDirectory: ts.sys.getCurrentDirectory,
     getCompilationSettings: () => compilerOptions,
     getDefaultLibFileName: ts.getDefaultLibFilePath,
@@ -111,6 +114,6 @@ module.exports = function check(sourceFile, contents, fileRoot) {
 
   allDiagnostics.forEach(e => reportDiagnostic(e, compilerHost))
 
-  return allDiagnostics
+  return { diagnostics: allDiagnostics, code: output[0] }
 }
 

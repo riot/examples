@@ -1,15 +1,16 @@
 import {RiotComponentExport} from 'riot'
 
+export interface RandomComponentState {
+  number: number | null;
+  logs: { text: string }[];
+}
+
 export interface RandomComponentProps {
   title: string;
 }
 
-export interface RandomComponent extends RiotComponentExport {
+export interface RandomComponent extends RiotComponentExport<RandomComponentProps, RandomComponentState> {
   generate(event: MouseEvent): void;
   clearLogs(): void;
-  readonly props?: RandomComponentProps;
-  state: {
-    number: number | null;
-    logs: { text: string }[];
-  };
+  state: RandomComponentState;
 }

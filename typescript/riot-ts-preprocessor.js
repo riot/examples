@@ -11,13 +11,13 @@ const stripIndent = require('strip-indent')
 const cli = new CLIEngine(eslintRules)
 const formatter = cli.getFormatter()
 
-// types check is not yet supported...
 registerPreprocessor('javascript', 'ts', (source, {options}) => {
   const filename = `${basename(options.file)}.ts`
   const fileRoot = dirname(options.file)
   const {results} = cli.executeOnText(stripIndent(source), options.file)
 
-
+  // basic type checking
+  // please feel free to customize it at your wish
   checkTypes(filename, source, fileRoot)
 
   if (results.length) {

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
 const {registerPreprocessor} = require('@riotjs/compiler')
-const checkTypes = require('./check-types')
+const transform = require('./riot-typescript-transformer')
 const {basename, dirname} = require('path')
 const {CLIEngine} = require('eslint')
 const eslintRules = require('./.eslintrc.json')
@@ -15,9 +15,9 @@ registerPreprocessor('javascript', 'ts', (source, {options}) => {
   const fileRoot = dirname(options.file)
   const {results} = cli.executeOnText(stripIndent(source), options.file)
 
-  // basic type checking
+  // basic type checking and transformation
   // please feel free to customize it at your wish
-  const { code, map } = checkTypes(filename, source, fileRoot)
+  const { code, map } = transform(filename, source, fileRoot)
 
   if (results.length) {
     console.log(formatter(results)) // eslint-disable-line

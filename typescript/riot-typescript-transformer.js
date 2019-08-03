@@ -71,8 +71,10 @@ const config = ts.parseConfigFileWithSystem('tsconfig.json', {}, ts.sys)
 const compilerOptions = config.options
 
 module.exports = function check(sourceFile, contents, fileRoot) {
+  /* eslint-disable */
   let output
   let map
+  /* eslint-enable */
   const sourceFileWithoutExtension = sourceFile.replace('ts', '')
   // Create a compilerHost object to allow the compiler to read and write files
   const compilerHost = {

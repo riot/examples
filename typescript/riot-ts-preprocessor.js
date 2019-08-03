@@ -2,8 +2,7 @@
 
 const {registerPreprocessor} = require('@riotjs/compiler')
 const checkTypes = require('./check-types')
-const { transformSync } = require('@babel/core')
-const {resolve, basename, dirname} = require('path')
+const {basename, dirname} = require('path')
 const {CLIEngine} = require('eslint')
 const eslintRules = require('./.eslintrc.json')
 const stripIndent = require('strip-indent')
@@ -18,19 +17,11 @@ registerPreprocessor('javascript', 'ts', (source, {options}) => {
 
   // basic type checking
   // please feel free to customize it at your wish
-  checkTypes(filename, source, fileRoot)
+  const { code, map } = checkTypes(filename, source, fileRoot)
 
   if (results.length) {
     console.log(formatter(results)) // eslint-disable-line
   }
-
-  const { code, map } = transformSync(source, {
-    sourceMaps: true,
-    retainLines: true,
-    filename,
-    babelrc: false,
-    configFile: resolve(process.cwd(), 'babel.config.js')
-  })
 
   return {code, map}
 })

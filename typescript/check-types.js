@@ -71,7 +71,9 @@ const config = ts.parseConfigFileWithSystem('tsconfig.json', {}, ts.sys)
 const compilerOptions = config.options
 
 module.exports = function check(sourceFile, contents, fileRoot) {
-  const output = []
+  let output
+  let map
+  const sourceFileWithoutExtension = sourceFile.replace('ts', '')
   // Create a compilerHost object to allow the compiler to read and write files
   const compilerHost = {
     getSourceFile: function(filename, languageVersion) {
@@ -84,7 +86,12 @@ module.exports = function check(sourceFile, contents, fileRoot) {
         : undefined
     },
     writeFile: (name, text) => {
-      output.push(text)
+      if (name.replace('js', '') === sourceFileWithoutExtension) {
+        output = text
+      }
+      if (name.replace('js.map', '') === sourceFileWithoutExtension) {
+        map = text
+      }
     },
     getCurrentDirectory: ts.sys.getCurrentDirectory,
     getCompilationSettings: () => compilerOptions,
@@ -114,6 +121,6 @@ module.exports = function check(sourceFile, contents, fileRoot) {
 
   allDiagnostics.forEach(e => reportDiagnostic(e, compilerHost))
 
-  return { diagnostics: allDiagnostics, code: output[0] }
+  return { diagnostics: allDiagnostics, code: output, map }
 }
 

@@ -1,0 +1,50 @@
+<app>
+  <div class="app">
+    <h3>Riot with GraphQL</h3>
+
+    <pre>{ state.data }</pre>
+
+    <button onclick={ initialize } type="button" class="ak-button ak-button__appearance-primary">
+      Initial GraphQL fetch
+    </button>
+  </div>
+
+  <script>
+    import gql from 'graphql-tag';
+
+    export default {
+      state: {
+        data: 'Before GraphQL',
+      },
+      async initialize() {
+        this.update({
+          data: 'Loading...'
+        })
+
+        const query = gql`{
+  twitter {
+    user (identifier: name, identity: "gianlucaguarini") {
+      created_at
+      description
+      id
+      screen_name
+      name
+      profile_image_url
+      url
+      tweets_count
+      followers_count
+      tweets(limit: 1) {
+        text
+      }
+    }
+  }
+}`
+        const {data} = await this.props.apollo.query({query})
+
+        this.update({
+          data: JSON.stringify(data.twitter.user, '\n', 2)
+        })
+      }
+    }
+  </script>
+</app>

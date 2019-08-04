@@ -37,7 +37,7 @@ TypeScript | [Source](typescript) |
 Webpack | [Source](webpack) |
 Rollup | [Source](rollup) |
 🚧 Redux | [Source](redux) |
-🚧 GraphQL | [Source](graphql) |
+GraphQL | [Source](graphql) |
 
 ## Extra
 

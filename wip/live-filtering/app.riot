@@ -1,41 +1,41 @@
 <app>
-
   <header>
-    <input type="search" value={ keyword } onkeyup={ keyup } placeholder="search">
+    <input type="search" value={ state.keyword } onkeyup={ change } placeholder="search">
   </header>
 
-  <currency each={ filtered.slice(0, max) } title={ title } price={ price } />
+  <currency each={ rate in filtered.slice(0, state.max) } title={ rate.title } price={ rate.price } />
 
-  <footer if={ filtered.length > max }>
-    and { filtered.length - max } more currencies
+  <footer if={ filtered.length > state.max }>
+    and { filtered.length - state.max } more currencies
   </footer>
 
   <script>
-    var self = this
+    export default {
+      state: {
+        keyword: '',
+        rates: [],
+        max: 15,
+      },
+      get filtered() {
+        return this.state.rates.filter((c) => !this.state.keyword || c.title.indexOf(this.state.keyword.toUpperCase()) === 0)
+      },
+      onBeforeMount() {
+        fetch('https://api.exchangeratesapi.io/latest?base=USD')
+          .then((res) => res.json())
+          .then((data) => {
+            const rates = Object.keys(data.rates)
+              .map((key) => ({ title: key, price: data.rates[key] }))
+              .sort((a, b) => a.price - b.price)
 
-    self.max = 15
-    self.keyword = ''
-    self.rates = []
-    self.filtered = []
-
-    window.fetch('https://api.exchangeratesapi.io/latest?base=USD')
-      .then(function(response) { return response.json() })
-      .then(function(data) {
-        var rates = Object.keys(data.rates)
-          .map(function (key) { return { title: key, price: data.rates[key] }})
-          .sort(function(a, b) { return a.price - b.price })
-        self.update({ rates: rates })
-      })
-
-    keyup (e) {
-      self.keyword  = e.target.value
+            this.update({ rates })
+          })
+      },
+      change(e) {
+        this.update({
+          keyword: e.target.value,
+        })
+      }
     }
-
-    self.on('update', function() {
-      self.filtered = self.rates.filter(function(c) {
-        return !self.keyword || c.title.indexOf(self.keyword.toUpperCase()) == 0
-      })
-    })
   </script>
 
   <style>
@@ -70,5 +70,4 @@
       box-shadow: 0 1px 5px rgba(0,0,0,.3);
     }
   </style>
-
 </app>

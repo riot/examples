@@ -17,7 +17,7 @@ Example | | |
 Timer | [Source](timer) | [Demo](https://riot.js.org/examples/plunker/?app=timer)
 Todo | [Source](todo-app) | [Demo](https://riot.js.org/examples/plunker/?app=todo-app)
 Todo (pre-compiled) | [Source](todo-app-precompiled) | [Demo](https://riot.js.org/examples/todo-app-precompiled/)
-🚧 Live filtering | [Source](live-filtering) | [Demo](https://riot.js.org/examples/plunker/?app=live-filtering)
+Live filtering | [Source](live-filtering) | [Demo](https://riot.js.org/examples/plunker/?app=live-filtering)
 🚧 Mixins | [Source](mixins) | [Demo](https://riot.js.org/examples/plunker/?app=mixins)
 🚧 Observables | [Source](observables) | [Demo](https://riot.js.org/examples/plunker/?app=observables)
 🚧 Router - Page switcher | [Source](router-page-switcher) | [Demo](https://riot.js.org/examples/plunker/?app=router-page-switcher)

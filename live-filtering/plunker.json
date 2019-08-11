@@ -3,7 +3,7 @@
   "files": [
     "index.html",
     "README.md",
-    "app.tag",
-    "currency.tag"
+    "app.riot",
+    "currency.riot"
   ]
 }

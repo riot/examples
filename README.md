@@ -30,7 +30,6 @@ Live filtering | [Source](live-filtering) | [Demo](https://riot.js.org/examples/
 Example | | |
 :-- | :-- | :--
 TypeScript | [Source](typescript) |
-🚧 ES6 | [Source](es6) | [Demo](https://riot.js.org/examples/plunker/?app=es6)
 🚧 Pre-process LESS | [Source](pre-process-less) | [Demo](https://riot.js.org/examples/plunker/?app=pre-process-less)
 🚧 Router - Complex | [Source](router-complex) | [Demo](https://riot.js.org/examples/plunker/?app=router-complex)
 🚧 Router - History API | [Source](router-history-api) |

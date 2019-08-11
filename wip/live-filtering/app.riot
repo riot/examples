@@ -18,7 +18,7 @@
     self.rates = []
     self.filtered = []
 
-    window.fetch('http://api.fixer.io/latest?base=USD')
+    window.fetch('https://api.exchangeratesapi.io/latest?base=USD')
       .then(function(response) { return response.json() })
       .then(function(data) {
         var rates = Object.keys(data.rates)

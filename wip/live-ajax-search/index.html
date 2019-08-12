@@ -25,7 +25,11 @@
         };
       }
 
-      riot.mount('search')
+      (async () => {
+        await riot.compile()
+
+        riot.mount('search')
+      })
     </script>
 
   </body>

@@ -1,93 +1,70 @@
 <search>
-  <form onsubmit={ search }>
-    <label>
-      <span>
-        Search a movie
-      </span>
-      <input
-        oninput={ search }
-        onchange={ search }
-        ref='s'
-        placeholder='28 Days Later..'
-        type='search' />
-    </label>
-  <form>
+  <label>
+    <span>Search a movie</span>
+    <input type="input" oninput={ search } placeholder="28 Days Later..">
+  </label>
 
-  <div if={ isLoading } class='loader'>
-    <img src='puff.svg' />
+  <div if={ state.loading } class="loader">
+    <img src="puff.svg">
   </div>
 
-  <p class='error' if={ error }>{ error }</p>
+  <p if={ state.error } class="error">{ state.error }</p>
 
-  <div if={ results.length }>
-    <ul>
-      <li each={ results }>
-        <a href="http://www.imdb.com/title/{ imdbID }" target="_blank">{ Title }</a>
-        <span>{ Year }</span>
-      </li>
-    </ul>
-  </div>
+  <ul if={ state.results }>
+    <li each={ result in state.results }>
+      <a href="http://www.imdb.com/title/{ result.imdbID }" target="_blank">{ result.Title }</a>
+      <span>{ result.Year }</span>
+    </li>
+  </ul>
 
   <script>
-
-  var lastSearch = null,
-    /**
-     * Reset tag attributes to hide the errors and cleaning the results list
-     */
-    reset = function() {
-      this.results = []
-      this.error = false
-    }.bind(this)
-
-    /**
-     * Debounce the api requests
-     */
-    doApiRequest = debounce(function(search) {
-      fetch('http://www.omdbapi.com/?s=' + search)
-        .then(function(res) {
-          return res.json()
+    export default {
+      state: {
+        loading: false,
+        lastSearch: null,
+        error: null,
+        results: [],
+      },
+      reset() {
+        this.update({
+          loading: false,
+          error: null,
+          results: [],
         })
-        .then(function(data) {
-          reset()
+      },
+      search(e) {
+        const search = e.target.value
 
-          if (this.refs.s.value) {
-            if (data.Search) this.results = data.Search
-            else this.error = data.Error
-          }
+        this.reset()
 
-          this.isLoading = false
-          this.update()
-        }.bind(this))
-    }.bind(this), 300, false)
+        if (this.state.lastSearch !== search) {
+          this.update({ loading: true })
+          this.doApiRequest(search)
+        }
 
-  /**
-   * Public api/methods
-   */
+        this.state.lastSearch = search
+      },
+      doApiRequest(search) {
+        return debounce((search) => {
+          fetch(`https://www.omdbapi.com/?apikey=2fcb2848&s=${search}`)
+            .then((res) => res.json())
+            .then((data) => {
+              if (this.$('input').value) {
+                this.update({
+                  error: data.Error,
+                  results: data.Search,
+                })
+              }
 
-  this.results = []
-
-  /**
-   * Search callback
-   */
-  search(e) {
-
-    var search = this.refs.s.value
-
-    if (!search) {
-      reset()
-    } else if (lastSearch != search)  {
-      reset()
-      this.isLoading = true
-      doApiRequest(search)
+              this.update({ loading: false })
+            })
+        }, 500)(search)
+      },
     }
-
-    lastSearch = search
-  }
-
   </script>
 
   <style>
-    :scope {
+    :host {
       position: absolute;
       top: 2rem;
       left: 50%;

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+    <search></search>
+
+    <script src="https://cdn.jsdelivr.net/npm/riot@4/riot+compiler.min.js"></script>
+
+    <script type="riot" src="./search.riot"></script>
+
+    <script type="text/javascript">
+
+      // Returns a function, that, as long as it continues to be invoked, will not
+      // be triggered. The function will be called after it stops being called for
+      // N milliseconds.
+      function debounce(fn, wait) {
+        let timeout;
+
+        return (...args) => {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => fn(...args), wait);
+        };
+      }
+
+      (async () => {
+        await riot.compile()
+
+        riot.mount('search')
+      })
+    </script>
+
+  </body>
+</html>

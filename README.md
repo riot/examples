@@ -23,7 +23,7 @@ Live filtering | [Source](live-filtering) | [Demo](https://riot.js.org/examples/
 🚧 Router - Page switcher | [Source](router-page-switcher) | [Demo](https://riot.js.org/examples/plunker/?app=router-page-switcher)
 🚧 Animated list reordering | [Source](animated-list-reordering) | [Demo](https://riot.js.org/examples/plunker/?app=animated-list-reordering)
 🚧 Simple modal | [Source](modal) | [Demo](https://riot.js.org/examples/plunker/?app=modal)
-🚧 Live Ajax Search | [Source](live-ajax-search) | [Demo](https://riot.js.org/examples/plunker/?app=live-ajax-search)
+Live Ajax Search | [Source](live-ajax-search) | [Demo](https://riot.js.org/examples/plunker/?app=live-ajax-search)
 
 ## Advanced
 

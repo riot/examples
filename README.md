@@ -4,11 +4,11 @@
 
 This is a series of examples designed to showcase the benefits of adopting [Riot](https://riot.js.org). It is made possible by the Riot open source community.
 
-**Important**: Not all the examples were migrated to Riot.js 4. The exampled prefixed 🚧 are not yet ported to Riot.js 4 and they are located in the `wip` folder. Please be patient
+**Important**: Not all the examples were migrated to Riot.js 4. The examples prefixed 🚧 are not yet ported to Riot.js 4 and they are located in the `wip` folder. Please be patient
 
 **Note**: The Riot.js 3 examples are available [here](https://github.com/riot/examples/tree/v3) .
 
-We have several examples to choose from; each one demonstrates different aspects Riot:
+We have several examples to choose from; each one demonstrates different aspects of Riot:
 
 ## Basics
 

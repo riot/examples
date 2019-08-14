@@ -40,7 +40,10 @@
       // make a new Car instance
       var car = Car('Ford', 'Focus')
 
-      riot.mount('*')
+      riot.compile()
+        .then(() => {
+          riot.mount('car-key, car-headlights')
+        })
     </script>
   </body>
 

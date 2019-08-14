@@ -1,6 +1,8 @@
 # Observables
 
-This is a simple example for showing how to use Riot Observables to communicate between tags.
+This is a simple example for showing how to use Observables to communicate between tags.  
+It uses the [riot/observable](https://github.com/riot/observable) package, from Riot.js 4
+observables are no longer built into the framework by default.
 
 ## Have a play
 

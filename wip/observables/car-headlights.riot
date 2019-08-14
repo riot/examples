@@ -3,11 +3,14 @@
   <div class="light" if={ engineOn }></div>
 
   <script>
-    var self = this
-    car.on('start', function () {
-      self.engineOn = true
-      self.update()
-    })
+    export default {
+      get engineOn() { return car.started },
+      onMounted() {
+        car.on('start', () => {
+          this.update()
+        })
+      }
+    }
   </script>
 
   <style>

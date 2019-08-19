@@ -16,7 +16,10 @@
     <script type="riot" src="./cool-modal.riot"></script>
 
     <script type="text/javascript">
-      riot.mount('*')
+      riot.compile()
+        .then(() => {
+          riot.mount('cool-modal')
+        })
     </script>
 
   </body>

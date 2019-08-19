@@ -1,24 +1,14 @@
 <modal>
-  <div class="modal" 
-    if={isVisible}
-    data-is="animore" 
-    mount={{ duration: 1000, scale: [0, 1] }}
-    unmount={{ duration: 1000, scale: [1, 0] }}
-    >
-    <div class="modal-title">{ opts.title }</div>
+  <div class="modal">
+    <div class="modal-title">{ props.title }</div>
+
     <div class="modal-body">  
-      <yield />
+      <slot />
     </div>
   </div>
   
   <script>
-    riot.mixin(inheritFromParentMixin)
-    
-    this.isVisible = true
-    
-    close() {
-      this.isVisible = false 
-    }
+    export default {}
   </script>
   
   

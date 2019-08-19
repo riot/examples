@@ -1,0 +1,29 @@
+<!-- A "concrete" modal which uses the layout -->
+<cool-modal>
+  <modal state={ state.modal } title="My Cool Modal" if={ state.modal.visible }>
+    <p>{ state.modal.message }</p>
+    <button onclick={ sayHello }>Say hello!</button>
+    <button onclick={ closeModal }>Close modal</button>
+  </modal>
+  
+  <script>
+    export default {
+      state: {
+        modal: observable({
+          visible: true,
+          message: 'Goodbye',
+        }),
+      },
+      sayHello() {
+        this.state.modal.message = 'Hello'
+        this.update()
+      },
+      closeModal() {
+        this.state.modal.trigger('close', () => {
+          this.state.modal.visible = false
+          this.update()
+        })
+      }
+    }
+  </script>
+</cool-modal>

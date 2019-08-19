@@ -2,8 +2,8 @@
   "title": "Riot Bug Reporter",
   "files": [
     "index.html",
-    "modal.html",
-    "cool-modal.html",
+    "modal.riot",
+    "cool-modal.riot",
     "inherit-from-parent.js",
     "README.md"
   ]

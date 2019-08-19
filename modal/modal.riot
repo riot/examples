@@ -16,7 +16,7 @@
         this.update({ animation: 'pulse' })
 
         this.props.state.on('close', (callback) => {
-          self.update({ animation: 'zoomOut' })
+          this.update({ animation: 'zoomOut' })
 
           setTimeout(() => {
             callback()

@@ -1,5 +1,5 @@
 <modal>
-  <div class="modal">
+  <div class="modal animated faster { state.animation }">
     <div class="modal-title">{ props.title }</div>
 
     <div class="modal-body">  
@@ -8,7 +8,22 @@
   </div>
   
   <script>
-    export default {}
+    export default {
+      state: {
+        animation: '',
+      },
+      onMounted() {
+        this.update({ animation: 'pulse' })
+
+        this.props.state.on('close', (callback) => {
+          self.update({ animation: 'zoomOut' })
+
+          setTimeout(() => {
+            callback()
+          }, 500)
+        })
+      },
+    }
   </script>
   
   

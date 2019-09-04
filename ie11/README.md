@@ -25,7 +25,3 @@ To watch your tag file and check it in your browser, run the command below:
 ```bash
 $ npm start
 ```
-
-See more detail:
-
-- [browser-sync](https://browsersync.io/)

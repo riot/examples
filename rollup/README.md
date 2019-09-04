@@ -12,7 +12,7 @@ Download or clone this repo:
 
 ```bash
 $ git clone https://github.com/riot/examples
-$ cd example/rollup
+$ cd examples/rollup
 ```
 
 Then run these commands:

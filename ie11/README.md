@@ -8,7 +8,7 @@ Download or clone this repo:
 
 ```bash
 $ git clone https://github.com/riot/examples
-$ cd example/ie11
+$ cd examples/ie11
 ```
 
 Then run these commands:

@@ -1,0 +1,28 @@
+<app>
+  <h1>Hi Riot!</h1>
+  <md content={ content } />
+
+  <script>
+    import Md from './md.riot'
+
+    const name = 'Rollup'
+
+    export default {
+      components: {
+        Md
+      },
+      content: `Hello **${ name }**!`
+    }
+  </script>
+
+  <style>
+    :host {
+      display: block;
+    }
+
+    h1 {
+      color: #f04;
+      border-bottom: 1px solid #f04;
+    }
+  </style>
+</app>

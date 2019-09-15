@@ -21,7 +21,7 @@
           number: null,
           logs: []
         },
-        generate(event: MouseEvent) {
+        generate(event: MouseEvent): void {
           this.update({
             number: Math.floor(Math.random() * 10000),
             logs: this.state.logs.concat({
@@ -29,7 +29,7 @@
             })
           })
         },
-        clearLogs() {
+        clearLogs(): void {
           this.update({
             logs: []
           })

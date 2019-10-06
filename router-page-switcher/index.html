@@ -10,18 +10,17 @@
     <app></app>
 
     <!-- riot tags -->
-    <script type="riot" src="app.tag"></script>
+    <script type="riot" src="app.riot"></script>
 
     <!-- scripts we need -->
-    <script src="https://cdn.jsdelivr.net/npm/riot@4/riot+compiler.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/riot/route/dist/route.min.js"></script>
+    <script src="https://unpkg.com/riot@4/riot+compiler.min.js"></script>
+    <script src="https://unpkg.com/@riotjs/route@4.0.0-beta.1/route.js"></script>
 
     <!-- mount this app -->
     <script>
 
-    riot.compile(function() {
+    riot.compile().then(function() {
       riot.mount('app')
-      route.start(true)
     })
 
     </script>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Riot Router Example: History API</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+  </head>
+
+  <body>
+    <app></app>
+
+    <!-- riot tags -->
+    <script type="riot" src="app.riot"></script>
+
+    <!-- scripts we need -->
+    <script src="https://unpkg.com/riot@4/riot+compiler.min.js"></script>
+    <script src="https://unpkg.com/@riotjs/route@4.0.0-beta.1/route.js"></script>
+
+    <!-- mount this app -->
+    <script>
+
+    riot.compile().then(function() {
+      riot.mount('app')
+    })
+
+    </script>
+  </body>
+
+</html>

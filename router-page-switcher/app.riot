@@ -1,0 +1,59 @@
+<app>
+  <router base={state.base}>
+    <nav>
+      <a each={ page in state.pages } href="/#{ page.id }">
+        { page.title }
+      </a>
+    </nav>
+
+    <route path="(.*)">
+      <h1>{getPageById(route).title}</h1>
+      <p>{getPageById(route).body}</p>
+    </route>
+  </router>
+  <script>
+    const pages = [
+      { id: "", title: "Home", body: "Click the link above." },
+      { id: "1", title: "First", body: "This is the first page." },
+      { id: "2", title: "Second", body: "This is the second page." }
+    ]
+
+    export default {
+      components: {
+        router: route.Router,
+        route: route.Route,
+      },
+      state: {
+        pages,
+        base: `${window.location.protocol}//${window.location.host}/#`
+      },
+      getPageById(route) {
+        const [id] = route.params
+        return pages.find(page => page.id === id) || pages[0]
+      }
+    }
+  </script>
+
+  <style>
+    :host {
+      display: block;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 1em;
+      text-align: center;
+      color: #666;
+    }
+    nav {
+      display: block;
+      border-bottom: 1px solid #666;
+      padding: 0 0 1em;
+    }
+    nav > a {
+      display: inline-block;
+      padding: 0 .8em;
+    }
+    nav > a:not(:first-child) {
+      border-left: 1px solid #eee;
+    }
+  </style>
+</app>

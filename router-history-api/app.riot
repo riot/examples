@@ -1,28 +1,40 @@
 <app>
-  <nav><a each={ data } href="#{ id }">{ title }</a></nav>
+  <router>
+    <nav>
+      <a each={ page in state.pages } href="/{ page.id }">
+        { page.title }
+      </a>
+    </nav>
 
-  <article>
-    <h1>{ page.title || 'Not found' }</h1>
-    <p>{ page.body || 'Specified id is not found.' }</p>
-  </article>
-
+    <route path="/(.*)">
+      <h1>{getPageById(route).title}</h1>
+      <p>{getPageById(route).body}</p>
+    </route>
+  </router>
   <script>
-    var self = this
-    self.data = [
+    const pages = [
       { id: "", title: "Home", body: "Click the link above." },
       { id: "1", title: "First", body: "This is the first page." },
       { id: "2", title: "Second", body: "This is the second page." }
     ]
-    self.page = self.data[0]
 
-    route(function(id) {
-      self.page = self.data.filter(function(r) { return r.id == id })[0] || {}
-      self.update()
-    })
+    export default {
+      components: {
+        router: route.Router,
+        route: route.Route,
+      },
+      state: {
+        pages
+      },
+      getPageById(route) {
+        const [id] = route.params
+        return pages.find(page => page.id === id) || pages[0]
+      }
+    }
   </script>
 
   <style>
-    :scope {
+    :host {
       display: block;
       font-family: sans-serif;
       margin: 0;

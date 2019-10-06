@@ -1,29 +1,26 @@
 <app-navi>
-
-  <a each={ links } href="#{ url }" class={ selected: parent.selectedId === url }>
-    { name }
-  </a>
+  <route path="/:id?/(.*)?">
+    <a each={ link in state.links }
+      href="#/{ link.url }"
+      class={ link.url === (route.params[0] || '') ? 'selected' : '' }>
+      { link.name }
+    </a>
+  </route>
 
   <script>
-    var self = this
-
-    this.links = [
-      { name: "H", url: "" },
-      { name: "F", url: "first" },
-      { name: "S", url: "second" }
-    ]
-
-    var r = route.create()
-    r(highlightCurrent)
-
-    function highlightCurrent(id) {
-      self.selectedId = id
-      self.update()
+    export default {
+      state: {
+        links: [
+          { name: "H", url: "" },
+          { name: "F", url: "first" },
+          { name: "S", url: "second" }
+        ]
+      }
     }
   </script>
 
   <style>
-    :scope {
+    :host {
       position: fixed;
       top: 0;
       left: 0;
@@ -36,7 +33,7 @@
       width: 50px;
       transition: width .2s;
     }
-    :scope:hover {
+    :host:hover {
       width: 60px;
     }
     a {

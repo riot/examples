@@ -1,0 +1,89 @@
+<app-main>
+
+  <article>
+    <route path="/first(.*)">
+      <ul>
+        <li each={ item in state.data }>
+          <a href="/#/first/{ item.id }">{ item.title }</a>
+        </li>
+      </ul>
+    </route>
+    <route each={ page in state.mainPages } path={page.path}>
+      <h1>{ page.title }</h1>
+      <p>{ page.body }</p>
+    </route>
+    <route path="/first/:id">
+      <h1>{getSubPageDataById(route).title}</h1>
+      <p>{getSubPageDataById(route).body}</p>
+    </route>
+  </article>
+
+  <script>
+    export default {
+      state: {
+        data: [
+          { id: 'apple', title: 'Apple', body: "The world biggest fruit company." },
+          { id: 'orange', title: 'Orange', body: "I don't have the word for it..." }
+        ],
+        mainPages: [{
+          path: '(/#)?',
+          title: "Home of the great app",
+          body: "Timeline or dashboard as you like!"
+        }, {
+          path: '/first',
+          title: "First feature of your app",
+          body: "It could be a list of something for example."
+        },{
+          path: '/second',
+          title: "Second feature of your app",
+          body: "It could be a config page for example."
+        }]
+      },
+      getSubPageDataById(route) {
+        const [id] = route.params
+        return this.state.data.find(data => data.id === id)
+      }
+    }
+  </script>
+
+  <style>
+    :host {
+      display: block;
+      font-family: sans-serif;
+      margin-right: 0;
+      margin-bottom: 130px;
+      margin-left: 50px;
+      padding: 1em;
+      text-align: center;
+      color: #666;
+    }
+    ul {
+      padding: 10px;
+      list-style: none;
+    }
+    li {
+      display: inline-block;
+      margin: 5px;
+    }
+    a {
+      display: block;
+      background: #f7f7f7;
+      text-decoration: none;
+      width: 150px;
+      height: 150px;
+      line-height: 150px;
+      color: inherit;
+    }
+    a:hover {
+      background: #eee;
+      color: #000;
+    }
+    @media (min-width: 480px) {
+      :scope {
+        margin-right: 200px;
+        margin-bottom: 0;
+      }
+    }
+  </style>
+
+</app-main>

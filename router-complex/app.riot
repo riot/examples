@@ -1,0 +1,15 @@
+<app>
+  <router base={state.base}>
+    <app-main></app-main>
+    <app-navi ></app-navi>
+    <app-help></app-help>
+  </router>
+
+  <script>
+    export default {
+      state: {
+        base: `${window.location.protocol}//${window.location.host}/#`
+      }
+    }
+  </script>
+</app>

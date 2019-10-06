@@ -1,28 +1,32 @@
 <app-help>
-
   <h2>Help</h2>
-  <p>{ helptext }</p>
-
+  <route path="/:id/(.*)?">
+    <p>
+      { getHelpText(route) }
+    </p>
+  </route>
+  <route path="/">
+    <p>
+      Click the navigation on the left edge.
+    </p>
+  </route>
   <script>
-    var self = this
-    self.data = {
-      first: "This is the help for the first page.",
-      second: "This is the help for the second page."
+    export default {
+      state: {
+        data: {
+          first: "This is the help for the first page.",
+          second: "This is the help for the second page."
+        }
+      },
+      getHelpText(route) {
+        const [id] = route.params
+        return this.state.data[id] || 'Help not found.'
+      }
     }
-
-    var r = route.create()
-    r('*', function(id) {
-      self.helptext = self.data[id] || 'Help not found.'
-      self.update()
-    })
-    r(function() {
-      self.helptext = "Click the navigation on the left edge."
-      self.update()
-    })
   </script>
 
   <style>
-    :scope {
+    :host {
       position: fixed;
       top: auto;
       right: 0;
@@ -39,7 +43,7 @@
       background: #f7f7f7;
     }
     @media (min-width: 480px) {
-      :scope {
+      :host {
         top: 0;
         right: 0;
         bottom: auto;
@@ -49,5 +53,4 @@
       }
     }
   </style>
-
 </app-help>

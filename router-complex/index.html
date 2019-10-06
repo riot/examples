@@ -4,30 +4,27 @@
   <head>
     <title>Riot Router: Complex example</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--[if IE]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-history-api/4.2.4/history.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
-    <app-main></app-main>
-    <app-navi></app-navi>
-    <app-help></app-help>
-
+    <app></app>
     <!-- riot tags -->
-    <script type="riot" src="app-main.tag"></script>
-    <script type="riot" src="app-navi.tag"></script>
-    <script type="riot" src="app-help.tag"></script>
+    <script type="riot" src="app-main.riot"></script>
+    <script type="riot" src="app-navi.riot"></script>
+    <script type="riot" src="app-help.riot"></script>
+    <script type="riot" src="app.riot"></script>
 
     <!-- scripts we need -->
-    <script src="https://cdn.jsdelivr.net/npm/riot@4/riot+compiler.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/riot/route/dist/route.min.js"></script>
+    <script src="https://unpkg.com/riot@4/riot+compiler.min.js"></script>
+    <script src="https://unpkg.com/@riotjs/route/route.js"></script>
 
     <!-- mount this app -->
     <script>
-      riot.compile(function() {
-        riot.mount('*')
-        route.start(true)
+      riot.register('router', route.Router)
+      riot.register('route', route.Route)
+
+      riot.compile().then(function() {
+        riot.mount('app')
       })
     </script>
 

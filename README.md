@@ -19,7 +19,7 @@ Todo | [Source](todo-app) | [Demo](https://riot.js.org/examples/plunker/?app=tod
 Todo (pre-compiled) | [Source](todo-app-precompiled) | [Demo](https://riot.js.org/examples/todo-app-precompiled/)
 Live filtering | [Source](live-filtering) | [Demo](https://riot.js.org/examples/plunker/?app=live-filtering)
 Observables | [Source](observables) | [Demo](https://riot.js.org/examples/plunker/?app=observables)
-🚧 Router - Page switcher | [Source](router-page-switcher) | [Demo](https://riot.js.org/examples/plunker/?app=router-page-switcher)
+Router - Page switcher | [Source](router-page-switcher) | [Demo](https://riot.js.org/examples/plunker/?app=router-page-switcher)
 🚧 Animated list reordering | [Source](animated-list-reordering) | [Demo](https://riot.js.org/examples/plunker/?app=animated-list-reordering)
 Simple modal | [Source](modal) | [Demo](https://riot.js.org/examples/plunker/?app=modal)
 Live Ajax Search | [Source](live-ajax-search) | [Demo](https://riot.js.org/examples/plunker/?app=live-ajax-search)
@@ -31,7 +31,7 @@ Example | | |
 TypeScript | [Source](typescript) |
 🚧 Pre-process LESS | [Source](pre-process-less) | [Demo](https://riot.js.org/examples/plunker/?app=pre-process-less)
 🚧 Router - Complex | [Source](router-complex) | [Demo](https://riot.js.org/examples/plunker/?app=router-complex)
-🚧 Router - History API | [Source](router-history-api) |
+Router - History API | [Source](router-history-api) |
 Webpack | [Source](webpack) |
 Rollup | [Source](rollup) |
 🚧 Redux | [Source](redux) |

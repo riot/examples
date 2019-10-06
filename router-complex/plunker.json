@@ -3,8 +3,8 @@
   "files": [
     "index.html",
     "README.md",
-    "app-main.tag",
-    "app-navi.tag",
-    "app-help.tag"
+    "app-main.riot",
+    "app-navi.riot",
+    "app-help.riot"
   ]
 }

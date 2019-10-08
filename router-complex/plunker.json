@@ -3,6 +3,7 @@
   "files": [
     "index.html",
     "README.md",
+    "app.riot",
     "app-main.riot",
     "app-navi.riot",
     "app-help.riot"

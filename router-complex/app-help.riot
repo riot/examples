@@ -1,6 +1,6 @@
 <app-help>
   <h2>Help</h2>
-  <route path="/:id/(.*)?">
+  <route path="/#/(.*)?/(.*)?">
     <p>
       { getHelpText(route) }
     </p>
@@ -20,6 +20,7 @@
       },
       getHelpText(route) {
         const [id] = route.params
+
         return this.state.data[id] || 'Help not found.'
       }
     }

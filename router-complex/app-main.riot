@@ -1,21 +1,27 @@
 <app-main>
-
   <article>
-    <route path="/first(.*)">
+    <!-- subroutes blocks -->
+    <route path="/#/first(.*)">
       <ul>
         <li each={ item in state.data }>
           <a href="/#/first/{ item.id }">{ item.title }</a>
         </li>
       </ul>
     </route>
-    <route each={ page in state.mainPages } path={page.path}>
-      <h1>{ page.title }</h1>
-      <p>{ page.body }</p>
-    </route>
-    <route path="/first/:id">
-      <h1>{getSubPageDataById(route).title}</h1>
-      <p>{getSubPageDataById(route).body}</p>
-    </route>
+
+    <main>
+      <!-- main content -->
+      <route each={ page in state.mainPages } path={page.path}>
+        <h1>{ page.title }</h1>
+        <p>{ page.body }</p>
+      </route>
+
+      <!-- subroutes contents -->
+      <route path="/#/first/:id">
+        <h1>{getSubPageDataById(route).title}</h1>
+        <p>{getSubPageDataById(route).body}</p>
+      </route>
+    </main>
   </article>
 
   <script>
@@ -30,11 +36,11 @@
           title: "Home of the great app",
           body: "Timeline or dashboard as you like!"
         }, {
-          path: '/first',
+          path: '/#/first',
           title: "First feature of your app",
           body: "It could be a list of something for example."
         },{
-          path: '/second',
+          path: '/#/second',
           title: "Second feature of your app",
           body: "It could be a config page for example."
         }]

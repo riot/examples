@@ -1,0 +1,174 @@
+<list>
+  <h1>Sorting options</h1>
+  <button class="secondary" onclick={ shuffle }>
+    Shuffle
+  </button>
+  <button class="secondary" onclick={ () => sortBy('age') }>
+    Sort by age
+  </button>
+  <button class="secondary" onclick={ () => sortBy('name') }>
+    Sort by Name
+  </button>
+  <button class="secondary" onclick={ add }>
+    Add person
+  </button>
+
+  <h2>People Collection</h2>
+  <ol>
+    <li each={ person in state.people } key={ person.id }>
+      <div>
+        { person.name } - { person.age }
+      </div>
+      <button onclick={ () => remove(person.id) }>
+        Remove person
+      </button>
+    </li>
+  </ol>
+
+  <script>
+    // some private random variables
+    const amount = 50
+    const names = [
+      'Jack', 'Susy', 'Mel', 'Fred', 'George',
+      'Bob', 'Roger', 'Lucy', 'Tino', 'Lucy',
+      'Nina', 'Rudy', 'Greg', 'Albert', 'Rick'
+    ]
+
+    const uid = ((id) => () => id++)(0)
+
+    // helper to create a random entry in the collection
+    const createPerson = () => ({
+      name: names[~~(Math.random() * names.length)],
+      age: ~~(Math.random() * 100) + 1, // avoid 0,
+      id: uid()
+    })
+
+    // helper function to shuffle the items in the array
+    function shuffle(o) {
+      var j, x, i
+      for (i = o.length; i; i -= 1) {
+        j = Math.floor(Math.random() * i)
+        x = o[i-1]
+        o[i-1] = o[j]
+        o[j] = x
+      }
+
+      return o
+    }
+
+    export default {
+      state: {
+        people: Array.from({ length: amount }, createPerson)
+      },
+      onBeforeUpdate() {
+        this.animations = animore(this.$$('li'), {
+          duration: 500,
+          easing: 'cubic-bezier(0.860, 0.000, 0.070, 1.000)'
+        })
+
+        this.animations.forEach(({ stash }) => stash())
+      },
+      // run the animation when the DOM
+      // is updated
+      onUpdated() {
+        this.animations.forEach(({ apply }) => apply())
+      },
+      // Ui public methods
+
+      /**
+       * Shuffle the people order without any logic
+       */
+      shuffle() {
+        this.update({ people: shuffle(this.state.people) })
+      },
+
+      /**
+       * Sort the people array by a single property
+       * @param {string} prop - property we want use to sort the collection
+       */
+      sortBy(prop) {
+        this.update({
+          people: this.state.people.sort(function(a, b) {
+            if (a[prop] < b[prop])
+                return -1
+              else if (a[prop] > b[prop])
+                return 1
+              else
+                return 0
+          })
+        })
+      },
+
+      add() {
+        const { people } = this.state
+
+        // add randomply a new person
+        people.splice(~~(Math.random() * people.length), 0, createPerson())
+
+        this.update({ people })
+      },
+
+      remove(id) {
+        const { people } = this.state
+
+        this.update({ people: people.filter(p => p.id !== id) })
+      }
+    }
+  </script>
+
+  <style>
+    :host {
+      --primary-color: #0f1731;
+      --secondary-color: #fb0d48;
+
+      font: 1.2rem 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      display: inline-block;
+      color: var(--primary-color);
+    }
+
+    ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    ol li {
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 50%;
+      float: left;
+      box-sizing: border-box;
+      background: white;
+      border: 1px solid #9fdeff;
+    }
+
+    button {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      background: var(--primary-color);
+      color: #fff;
+      border: 1px solid #9fdeff;
+      padding: 0.8rem 1.6rem;
+      border-radius: 0.4rem;
+    }
+
+    button.secondary {
+      background: var(--secondary-color);
+    }
+
+    @media screen and (max-width: 768px) {
+      :host {
+        font-size: 75%;
+      }
+
+      button {
+        font-size: 0.6rem;
+        padding: 0.4rem 0.8rem;
+      }
+      ol li {
+        width: 100%;
+      }
+    }
+  </style>
+</list>

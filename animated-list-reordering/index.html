@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+    <list></list>
+
+    <script src="https://unpkg.com/animore/animore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/riot@4/riot+compiler.min.js"></script>
+
+    <script type="riot" src="./list.riot"></script>
+
+    <script type="text/javascript">
+      riot.compile().then(() => {
+        riot.mount('list')
+      })
+    </script>
+
+  </body>
+</html>

@@ -20,7 +20,7 @@ Todo (pre-compiled) | [Source](todo-app-precompiled) | [Demo](https://riot.js.or
 Live filtering | [Source](live-filtering) | [Demo](https://riot.js.org/examples/plunker/?app=live-filtering)
 Observables | [Source](observables) | [Demo](https://riot.js.org/examples/plunker/?app=observables)
 Router - Page switcher | [Source](router-page-switcher) | [Demo](https://riot.js.org/examples/plunker/?app=router-page-switcher)
-🚧 Animated list reordering | [Source](animated-list-reordering) | [Demo](https://riot.js.org/examples/plunker/?app=animated-list-reordering)
+Animated list reordering | [Source](animated-list-reordering) | [Demo](https://riot.js.org/examples/plunker/?app=animated-list-reordering)
 Simple modal | [Source](modal) | [Demo](https://riot.js.org/examples/plunker/?app=modal)
 Live Ajax Search | [Source](live-ajax-search) | [Demo](https://riot.js.org/examples/plunker/?app=live-ajax-search)
 

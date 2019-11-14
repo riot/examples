@@ -1,13 +1,8 @@
 <app-help>
-  <h2>Help</h2>
-  <route path="/#/(.*)?/(.*)?">
+  <route path="#/:id/(.*)?">
+    <h2>Help</h2>
     <p>
       { getHelpText(route) }
-    </p>
-  </route>
-  <route path="/">
-    <p>
-      Click the navigation on the left edge.
     </p>
   </route>
   <script>

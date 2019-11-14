@@ -1,10 +1,10 @@
 <app-main>
   <article>
     <!-- subroutes blocks -->
-    <route path="/#/first(.*)">
+    <route path="#/first(.*)">
       <ul>
         <li each={ item in state.data }>
-          <a href="/#/first/{ item.id }">{ item.title }</a>
+          <a href="#/first/{ item.id }">{ item.title }</a>
         </li>
       </ul>
     </route>
@@ -17,7 +17,7 @@
       </route>
 
       <!-- subroutes contents -->
-      <route path="/#/first/:id">
+      <route path="#/first/:id">
         <h1>{getSubPageDataById(route).title}</h1>
         <p>{getSubPageDataById(route).body}</p>
       </route>
@@ -32,15 +32,15 @@
           { id: 'orange', title: 'Orange', body: "I don't have the word for it..." }
         ],
         mainPages: [{
-          path: '(/#)?',
+          path: '(#)?',
           title: "Home of the great app",
           body: "Timeline or dashboard as you like!"
         }, {
-          path: '/#/first',
+          path: '#/first',
           title: "First feature of your app",
           body: "It could be a list of something for example."
         },{
-          path: '/#/second',
+          path: '#/second',
           title: "Second feature of your app",
           body: "It could be a config page for example."
         }]

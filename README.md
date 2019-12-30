@@ -34,6 +34,7 @@ Router - Complex | [Source](router-complex) | [Demo](https://riot.js.org/example
 Router - History API | [Source](router-history-api) |
 Webpack | [Source](webpack) |
 Rollup | [Source](rollup) |
+SSR | [Source](ssr) |
 🚧 Redux | [Source](redux) |
 GraphQL | [Source](graphql) |
 

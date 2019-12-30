@@ -1,0 +1,39 @@
+{
+  "name": "ssr",
+  "version": "0.0.1",
+  "description": "SSR",
+  "repository": "riot/examples",
+  "main": "app/main.js",
+  "author": "Gianluca Guarini",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "npm run build && node index",
+    "build": "webpack -c"
+  },
+  "keywords": [
+    "riot",
+    "webpack"
+  ],
+  "devDependencies": {
+    "@babel/core": "7.7.7",
+    "@babel/preset-env": "7.7.7",
+    "@riotjs/compiler": "^4.5.4",
+    "@riotjs/hot-reload": "4.0.0",
+    "@riotjs/webpack-loader": "^4.0.1",
+    "babel-loader": "^8.0.6",
+    "koa": "^2.11.0",
+    "koa-static": "^5.0.0",
+    "lodash": "^4.17.15",
+    "riot": "^4.8.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "@riotjs/hydrate": "^4.0.0",
+    "@riotjs/route": "^5.0.3",
+    "@riotjs/ssr": "^4.2.0"
+  }
+}

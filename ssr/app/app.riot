@@ -1,0 +1,58 @@
+<app>
+  <router>
+    <nav>
+      <a each={page in state.pages} href={page.path}>
+        {page.label}
+      </a>
+    </nav>
+    <route each={page in state.pages} path={page.path}>
+      <main is={page.component}/>
+    </route>
+  </router>
+  <script>
+    import { Router, Route, router } from '@riotjs/route'
+    import Home from './pages/home.riot'
+    import NotFound from './pages/not-found.riot'
+    import About from './pages/about.riot'
+
+    const pages = [{
+      path: '/',
+      label: 'Home',
+      component: 'home'
+    }, {
+      path: '/about',
+      label: 'About',
+      component: 'about'
+    }, /*{
+      TODO: support not found
+      path: '(.*)',
+      component: 'not-found'
+    }*/]
+
+    export default {
+      components: {
+        Router,
+        Route,
+        Home,
+        About,
+        NotFound
+      },
+      state: {
+        pages
+      },
+      onAsyncRendering(resolve) {
+        router.on.value(resolve)
+      }
+    }
+  </script>
+
+  <style>
+    :host {
+      font-family: Helvetica Neue, Helvetica, Arial;
+    }
+
+    nav a {
+      margin: 0 0.2rem;
+    }
+  </style>
+</app>

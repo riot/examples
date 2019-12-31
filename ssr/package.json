@@ -11,7 +11,8 @@
   },
   "scripts": {
     "start": "npm run build && node index",
-    "build": "webpack -c"
+    "build": "webpack -c",
+    "dev": "webpack -w -c -d"
   },
   "keywords": [
     "riot",
@@ -27,13 +28,14 @@
     "koa": "^2.11.0",
     "koa-static": "^5.0.0",
     "lodash": "^4.17.15",
-    "riot": "^4.8.0",
+    "riot": "^4.8.1",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
     "@riotjs/hydrate": "^4.0.0",
-    "@riotjs/route": "^5.0.3",
-    "@riotjs/ssr": "^4.2.0"
+    "@riotjs/route": "^5.2.0",
+    "@riotjs/ssr": "^4.2.0",
+    "erre": "^2.2.0"
   }
 }

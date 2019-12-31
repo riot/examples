@@ -5,12 +5,16 @@
         {page.label}
       </a>
     </nav>
+
+    <not-found if={state.showNotFound}/>
+
     <route each={page in state.pages} path={page.path}>
       <main is={page.component}/>
     </route>
   </router>
+
   <script>
-    import { Router, Route, router } from '@riotjs/route'
+    import { Router, Route, route, toRegexp, match } from '@riotjs/route'
     import Home from './pages/home.riot'
     import NotFound from './pages/not-found.riot'
     import About from './pages/about.riot'
@@ -23,11 +27,7 @@
       path: '/about',
       label: 'About',
       component: 'about'
-    }, /*{
-      TODO: support not found
-      path: '(.*)',
-      component: 'not-found'
-    }*/]
+    }]
 
     export default {
       components: {
@@ -38,10 +38,36 @@
         NotFound
       },
       state: {
-        pages
+        pages,
+        showNotFound: false
       },
+      // the isServer property is automatically injected by @riotjs/ssr
+      onBeforeMount({ isServer }) {
+        // create a stream on all routes
+        this.anyRouteStream = route('(.*)')
+
+        if (!isServer) {
+          this.anyRouteStream.on.value(this.onAnyRoute)
+        }
+      },
+      // Needed only for SSR
       onAsyncRendering(resolve) {
-        router.on.value(resolve)
+        const onReady = (path) => {
+          this.onAnyRoute(path)
+          this.anyRouteStream.off.value(onReady)
+          resolve()
+        }
+
+        this.anyRouteStream.on.value(onReady)
+      },
+      onAnyRoute(path) {
+        // show the not found page if none of the page paths are matched
+        this.update({
+          showNotFound: !pages.some(p => match(path.pathname, toRegexp(p.path)))
+        })
+      },
+      onBeforeUnmout() {
+        this.anyRouteStream.end()
       }
     }
   </script>

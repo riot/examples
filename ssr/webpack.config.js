@@ -4,12 +4,12 @@ const webpack = require('webpack')
 module.exports = {
   entry: './app/main.js',
   mode: 'production',
+  devtool: 'inline',
   output: {
     path: path.resolve(__dirname, 'public'),
     publicPath: '/public/',
     filename: 'bundle.js'
   },
-  devtool: 'inline',
   module: {
     rules: [
       {

@@ -3,8 +3,8 @@
   "files": [
     "index.html",
     "README.md",
-    "live-editor.tag",
+    "live-editor.riot",
     "stage.html",
-    "sample.tag"
+    "sample.riot"
   ]
 }

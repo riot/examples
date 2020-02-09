@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Color Palette</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+
+  <body>
+    <app></app>
+
+    <!-- riot tags -->
+    <script type="riot" src="color-palette.riot"></script>
+    <script type="riot" src="app.riot"></script>
+
+    <!-- scripts we need -->
+    <script src="https://cdn.jsdelivr.net/npm/riot@4/riot+compiler.min.js"></script>
+    <script src="mixin.js"></script>
+
+    <!-- mount this app -->
+    <script>
+      riot.compile().then(() => {
+        riot.mount('app')
+      })
+    </script>
+
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+  </body>
+
+</html>

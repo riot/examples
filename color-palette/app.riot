@@ -1,0 +1,30 @@
+<app style="background: { state.color }">
+
+  <color-palette value={ state.color } onchange={ onChange } />
+
+  <p>Click the color.</p>
+
+  <script>
+    export default {
+      state: {
+        color: '',
+      },
+      onChange(event) {
+        this.update({
+          color: event.target.value
+        })
+      }
+    }
+  </script>
+
+  <style>
+    :host {
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      padding: 1em;
+      text-align: center;
+      background: #eee;
+    }
+  </style>
+
+</app>

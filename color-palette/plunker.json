@@ -1,0 +1,9 @@
+{
+  "title": "Color Palette",
+  "files": [
+    "index.html",
+    "README.md",
+    "app.riot",
+    "color-palette.riot"
+  ]
+}

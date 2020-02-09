@@ -1,0 +1,65 @@
+<color-palette>
+  <div
+    each={ color in state.colors }
+    style="background: { color }"
+    class={ color === props.value ? 'selected' : '' }
+    onclick={ () => onClick(color) }/>
+
+  <script>
+    export default {
+      state: {
+        colors: [
+          '#edc951',
+          '#eb6841',
+          '#cc2a36',
+          '#4f372d',
+          '#00a0b0'
+        ],
+      },
+      onBeforeMount(props) {
+        this.root.value = props.value
+      },
+      onClick(color) {
+        this.root.value = color
+        this.root.dispatchEvent(new Event('change'))
+      }
+    }
+  </script>
+
+  <style>
+    :host {
+      display: inline-block;
+      padding: .5em;
+      line-height: 0;
+      background: white;
+      transition: box-shadow .2s;
+    }
+
+    :host:hover {
+      box-shadow: 0 1px 5px rgba(0,0,0,.5);
+    }
+
+    div {
+      display: inline-block;
+      width: 2em;
+      height: 2em;
+      position: relative;
+      cursor: pointer;
+      z-index: 1;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      transition: box-shadow .2s;
+    }
+    div:hover {
+      z-index: 2;
+      box-shadow: 0 2px 10px rgba(0,0,0,.5);
+    }
+
+    div:hover,
+    div.selected {
+      border: 3px solid rgba(255,255,255,.7);
+    }
+
+  </style>
+
+</color-palette>

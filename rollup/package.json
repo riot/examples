@@ -10,15 +10,15 @@
     "server": "browser-sync start --files 'dist/*, index.html' --server"
   },
   "dependencies": {
-    "marked": "^0.6.2",
-    "riot": "^4.0.8"
+    "marked": "^0.8.0",
+    "riot": "^4.8.9"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.5",
-    "@riotjs/compiler": "^4.2.6",
-    "rollup": "^1.14.3",
-    "rollup-plugin-commonjs": "^10.0.0",
-    "rollup-plugin-node-resolve": "^5.0.1",
+    "browser-sync": "^2.26.7",
+    "@riotjs/compiler": "^4.5.5",
+    "rollup": "^1.31.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-riot": "^4.0.0"
   },
   "license": "MIT"

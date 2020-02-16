@@ -33,6 +33,7 @@ TypeScript | [Source](typescript) |
 🚧 Pre-process LESS | [Source](pre-process-less) | [Demo](https://riot.js.org/examples/plunker/?app=pre-process-less)
 Router - Complex | [Source](router-complex) | [Demo](https://riot.js.org/examples/plunker/?app=router-complex)
 Router - History API | [Source](router-history-api) |
+Router - Lazy Routes | [Source](lazy-routes) |
 Webpack | [Source](webpack) |
 Rollup | [Source](rollup) |
 SSR | [Source](ssr) |

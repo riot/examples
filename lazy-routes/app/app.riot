@@ -1,0 +1,51 @@
+<app>
+  <h1>{props.message}</h1>
+
+  <router>
+    <nav>
+      <ul>
+        <li><a href='/'>Home</a></li>
+        <li><a href='/about'>About</a></li>
+      </ul>
+    </nav>
+    <route path='/'>
+      <home/>
+    </route>
+    <route path='/about'>
+      <about name="Gianluca"/>
+    </route>
+  </router>
+
+  <script>
+    import lazy from '@riotjs/lazy'
+    import { Router, Route } from '@riotjs/route'
+    import Loader from './loader.riot'
+
+    export default {
+      components: {
+        Router,
+        Route,
+        Home: lazy(Loader, () => import('./home.riot')),
+        About: lazy(Loader, () => import('./about.riot')),
+      }
+    }
+  </script>
+
+  <style>
+    :host {
+      font-family: Helvetica Neue, Helvetica, Arial;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul li a {
+      padding: 16px;
+    }
+
+  </style>
+</app>

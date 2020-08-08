@@ -31,7 +31,7 @@ Open the URL shown in your browser.
 If you modify the files, you need to recompile it.
 
 ```bash
-$ riot todo.tag
+$ riot todo.riot
 ```
 
 Then reload the page on your browser.

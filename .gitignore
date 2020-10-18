@@ -33,3 +33,6 @@ build/Release
 node_modules
 .npm-debug.log
 
+# editor file
+.idea
+

@@ -4,6 +4,9 @@
 # Logs
 *.log
 
+# Editor Files
+.idea
+
 # Runtime data
 pids
 *.pid
@@ -20,6 +23,7 @@ coverage
 
 # node-waf configuration
 .lock-wscript
+
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release

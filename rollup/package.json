@@ -11,11 +11,11 @@
   },
   "dependencies": {
     "marked": "^0.8.0",
-    "riot": "^4.8.9"
+    "riot": "ˆ5.0.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "@riotjs/compiler": "^4.5.5",
+    "@riotjs/compiler": "ˆ5.0.0",
     "rollup": "^1.31.1",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",

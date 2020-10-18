@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@riotjs/route": "^5.2.0",
-    "riot": "^4.8.2"
+    "riot": "ˆ5.0.0"
   },
   "author": {
     "name": "kkeeth",

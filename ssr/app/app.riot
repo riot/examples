@@ -1,33 +1,24 @@
 <app>
-  <router>
+  <router on-started={onRouterStarted} initial-route={props.initialRoute}>
     <nav>
-      <a each={page in state.pages} href={page.path}>
+      <a each={page in props.pages} href={page.path}>
         {page.label}
       </a>
     </nav>
 
     <not-found if={state.showNotFound}/>
 
-    <route each={page in state.pages} path={page.path}>
+    <route each={page in props.pages} path={page.path}>
       <main is={page.component}/>
     </route>
   </router>
 
   <script>
-    import { Router, Route, route, toRegexp, match } from '@riotjs/route'
+    import {Router, Route, route, toRegexp, match} from '@riotjs/route'
+    import erre from 'erre'
     import Home from './pages/home.riot'
     import NotFound from './pages/not-found.riot'
     import About from './pages/about.riot'
-
-    const pages = [{
-      path: '/',
-      label: 'Home',
-      component: 'home'
-    }, {
-      path: '/about',
-      label: 'About',
-      component: 'about'
-    }]
 
     export default {
       components: {
@@ -38,35 +29,44 @@
         NotFound
       },
       state: {
-        pages,
         showNotFound: false
       },
       // the isServer property is automatically injected by @riotjs/ssr
-      onBeforeMount({ isServer }) {
+      onBeforeMount({isServer, initialRoute}) {
         // create a stream on all routes
         this.anyRouteStream = route('(.*)')
-
-        if (!isServer) {
-          this.anyRouteStream.on.value(this.onAnyRoute)
-        }
+        // create a stream to check the riot-router state
+        this.routerStateStream = erre()
+        // update the state of the not found component depending on the initial route
+        this.state.showNotFound = this.isNotFoundVisible(initialRoute)
+        // check any route change to understand if the not found site should be displayed
+        this.anyRouteStream.on.value(this.onAnyRoute)
+      },
+      onRouterStarted() {
+        // broadcast the router started event
+        this.routerStateStream.push('started')
       },
       // Needed only for SSR
       onAsyncRendering(resolve) {
-        const onReady = (path) => {
-          this.onAnyRoute(path)
-          this.anyRouteStream.off.value(onReady)
+        const onReady = () => {
+          this.routerStateStream.on.value(onReady)
           resolve()
         }
 
-        this.anyRouteStream.on.value(onReady)
+        // wait the router started event
+        this.routerStateStream.on.value(onReady)
+      },
+      isNotFoundVisible(path) {
+        return !this.props.pages.some(p => match(path, toRegexp(p.path)))
       },
       onAnyRoute(path) {
         // show the not found page if none of the page paths are matched
         this.update({
-          showNotFound: !pages.some(p => match(path.pathname, toRegexp(p.path)))
+          showNotFound: this.isNotFoundVisible(path.pathname)
         })
       },
       onBeforeUnmout() {
+        this.routerStateStream.end()
         this.anyRouteStream.end()
       }
     }

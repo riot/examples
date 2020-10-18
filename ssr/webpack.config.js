@@ -4,7 +4,10 @@ const webpack = require('webpack')
 module.exports = {
   entry: './app/main.js',
   mode: 'production',
-  devtool: 'inline',
+  devtool: 'inline-source-map',
+  externals: {
+    'url': 'URL'
+  },
   output: {
     path: path.resolve(__dirname, 'public'),
     publicPath: '/public/',

@@ -20,7 +20,7 @@
     "@babel/core": "7.6.0",
     "@babel/preset-env": "7.6.0",
     "@babel/preset-typescript": "^7.6.0",
-    "@riotjs/compiler": "ˆ5.0.0",
+    "@riotjs/compiler": "^5.0.0",
     "@riotjs/hot-reload": "4.0.0",
     "@riotjs/webpack-loader": "^4.0.1",
     "@typescript-eslint/eslint-plugin": "^2.2.0",

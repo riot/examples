@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "marked": "^0.7.0",
-    "riot": "ˆ5.0.0"
+    "riot": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
-    "@riotjs/compiler": "ˆ5.0.0",
+    "@riotjs/compiler": "^5.0.0",
     "browser-sync": "^2.26.7",
     "rollup": "^1.20.3",
     "rollup-plugin-babel": "^4.3.3",

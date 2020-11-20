@@ -18,12 +18,12 @@
   ],
   "devDependencies": {
     "@atlaskit/reduced-ui-pack": "^12.0.3",
-    "@riotjs/compiler": "ˆ5.0.0",
+    "@riotjs/compiler": "^5.0.0",
     "@riotjs/hot-reload": "4.0.0",
     "@riotjs/webpack-loader": "^4.0.1",
     "apollo-client": "^2.6.3",
     "graphql-tag": "^2.10.1",
-    "riot": "ˆ5.0.0",
+    "riot": "^5.0.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2"

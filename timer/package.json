@@ -13,7 +13,7 @@
     "jsdom": "15.1.1",
     "jsdom-global": "3.0.2",
     "mocha": "^6.1.4",
-    "riot": "ˆ5.0.0"
+    "riot": "^5.0.0"
   },
   "license": "MIT"
 }

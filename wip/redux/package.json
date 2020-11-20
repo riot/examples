@@ -25,7 +25,7 @@
     "redux": "^3.7.2",
     "redux-promise-middleware": "4.2.1",
     "redux-thunk": "^2.2.0",
-    "riot": "ˆ5.0.0",
+    "riot": "^5.0.0",
     "riot-hot-reload": "0.0.2",
     "riot-tag-loader": "1.0.0",
     "webpack": "^1.14.0",

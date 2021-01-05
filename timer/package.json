@@ -7,13 +7,13 @@
     "test": "mocha -r esm -r test/register test/*.spec.js"
   },
   "devDependencies": {
-    "@riotjs/ssr": "^4.0.0-rc.4",
+    "@riotjs/ssr": "^6.0.0",
     "chai": "^4.2.0",
     "esm": "^3.2.25",
     "jsdom": "15.1.1",
     "jsdom-global": "3.0.2",
     "mocha": "^6.1.4",
-    "riot": "^5.0.0"
+    "riot": "^5.1.2"
   },
   "license": "MIT"
 }

@@ -10,7 +10,8 @@
     "node": ">=4.0.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --inline --watch --hot --colors -d --port 3000"
+    "start": "webpack-dev-server --inline --watch --hot --colors -d --port 3000",
+    "build": "webpack --mode production"
   },
   "keywords": [
     "riot",

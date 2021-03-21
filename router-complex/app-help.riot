@@ -14,7 +14,7 @@
         }
       },
       getHelpText(route) {
-        const [id] = route.params
+        const {id} = route.params
 
         return this.state.data[id] || 'Help not found.'
       }

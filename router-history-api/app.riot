@@ -27,7 +27,7 @@
         pages
       },
       getPageById(route) {
-        const [id] = route.params
+        const {id} = route.params
         return pages.find(page => page.id === id) || pages[0]
       }
     }

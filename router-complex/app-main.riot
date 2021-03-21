@@ -46,7 +46,7 @@
         }]
       },
       getSubPageDataById(route) {
-        const [id] = route.params
+        const {id} = route.params
         return this.state.data.find(data => data.id === id)
       }
     }

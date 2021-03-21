@@ -1,22 +1,24 @@
 <app>
-  <router base={state.base}>
+  <router initial-route={state.initialRoute} base={state.base}>
     <nav>
       <a each={ page in state.pages } href="/#{ page.id }">
         { page.title }
       </a>
     </nav>
 
-    <route path="(.*)">
+    <route path=":id?">
       <h1>{getPageById(route).title}</h1>
       <p>{getPageById(route).body}</p>
     </route>
   </router>
   <script>
     const pages = [
-      { id: "", title: "Home", body: "Click the link above." },
-      { id: "1", title: "First", body: "This is the first page." },
-      { id: "2", title: "Second", body: "This is the second page." }
+      { id: "home", title: "Home", body: "Click the link above." },
+      { id: "first", title: "First", body: "This is the first page." },
+      { id: "second", title: "Second", body: "This is the second page." }
     ]
+
+    const initialRoute = `${window.location.hash ? window.location.hash.replace('#', '') : 'home'}`
 
     export default {
       components: {
@@ -25,7 +27,8 @@
       },
       state: {
         pages,
-        base: `${window.location.protocol}//${window.location.host}/#`
+        initialRoute,
+        base: `/#`
       },
       getPageById(route) {
         const {id} = route.params

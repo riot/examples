@@ -6,7 +6,7 @@
       </a>
     </nav>
 
-    <route path="/(.*)">
+    <route path="/:id?">
       <h1>{getPageById(route).title}</h1>
       <p>{getPageById(route).body}</p>
     </route>

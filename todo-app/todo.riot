@@ -2,7 +2,7 @@
   <h3>{ props.title }</h3>
 
   <ul>
-    <li each={ item in state.items }>
+    <li each={ item in state.items } hidden={ item.hidden }>
       <label class={ item.done ? 'completed' : null }>
         <input
           type="checkbox"

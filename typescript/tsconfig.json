@@ -1,23 +1,14 @@
 {
-    "compilerOptions": {
-        "target": "esnext",
-        "module": "es2015",
-        "declaration": false,
-        "declarationMap": false,
-        "sourceMap": true,
-        "downlevelIteration": true,
-        "strict": true,
-        "noImplicitAny": true,
-        "strictNullChecks": true,
-        "strictFunctionTypes": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noImplicitReturns": true,
-        "moduleResolution": "node",
-        "baseUrl": "./",
-        "esModuleInterop": true
-    },
-    "include": [
-        "app"
-    ]
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "es2015",
+    "strict": true,
+    "sourceMap": true,
+    "noUnusedLocals": false,
+    "moduleResolution": "node",
+    "esModuleInterop": true
+  },
+  "include": [
+    "app"
+  ]
 }

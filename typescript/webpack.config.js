@@ -1,8 +1,5 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-
-require('./riot-ts-preprocessor')
-
 const {resolve} = require('path')
+const isDevelopment = process.env.NODE_ENV === 'development'
 
 module.exports = {
   entry: './app/main.ts',
@@ -11,32 +8,38 @@ module.exports = {
     publicPath: '/public/',
     filename: 'bundle.js'
   },
-  devtool: 'inline',
+  mode: 'development',
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
         test: /\.riot$/,
         exclude: /node_modules/,
         use: [{
+          loader: 'ts-loader',
+          options: {
+            transpileOnly: isDevelopment,
+            appendTsSuffixTo: [/\.riot$/]
+          }
+        }, {
           loader: '@riotjs/webpack-loader',
           options: {
-            hot: true
+            hot: isDevelopment
           }
         }]
       },
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
+        test: /\.ts$/,
+        use: [{
+          loader: 'ts-loader',
           options: {
-            presets: ['@babel/preset-env']
+            transpileOnly: isDevelopment
           }
-        }
+        }]
       }
     ]
   },
   resolve: {
-    extensions: ['.ts', '.riot', '.js']
+    extensions: ['.ts', '.js', '.riot']
   }
 }

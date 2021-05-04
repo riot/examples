@@ -17,5 +17,11 @@ And then run the server using `webpack-dev-server` or any possible way you know
 $ npm start
 ```
 
+Compile the source code enabling the type check 
+
+```bash
+$ npm run build
+```
+
 - Open [http://localhost:3000/](http://localhost:3000/)
 - Open [http://localhost:3000/webpack-dev-server/](http://localhost:3000/webpack-dev-server/) for dev server with hot reloading.

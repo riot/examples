@@ -1,5 +1,5 @@
 <logs>
-  <h4>Logs</h4>
+  <h4>{title}</h4>
 
   <button onclick={props.onclear}>
     Clear logs
@@ -8,4 +8,20 @@
   <ul>
     <li each={ log in props.logs }>{ log.text }</li>
   </ul>
+
+  <script lang="ts">
+    import {RiotComponent, withTypes} from 'riot'
+    import {LogComponentProps} from './types'
+
+    export type LogsComponent =
+      RiotComponent<LogComponentProps> &
+      { title: string } &
+      // notice that the code below is needed because the "log" key in the template doesn't belong the the component
+      // scope and it gets generated in runtime via Each binding
+      Record<string, any>
+
+    export default withTypes<LogsComponent>({
+      title: 'Logs',
+    })
+  </script>
 </logs>

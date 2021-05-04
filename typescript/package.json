@@ -9,32 +9,32 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "check-types": "tsc",
-    "start": "webpack-dev-server --inline --watch --hot --colors -d --port 3000"
+    "start": "webpack serve --inline --hot --port 3000"
   },
   "keywords": [
     "riot",
     "typescript"
   ],
   "devDependencies": {
-    "@babel/core": "7.6.0",
-    "@babel/preset-env": "7.6.0",
-    "@babel/preset-typescript": "^7.6.0",
-    "@riotjs/compiler": "^5.0.0",
-    "@riotjs/hot-reload": "4.0.0",
-    "@riotjs/webpack-loader": "^4.0.1",
-    "@typescript-eslint/eslint-plugin": "^2.2.0",
-    "@typescript-eslint/parser": "^2.2.0",
-    "babel-loader": "^8.0.6",
-    "eslint": "^6.4.0",
+    "@babel/core": "7.14.0",
+    "@babel/preset-env": "7.14.1",
+    "@babel/preset-typescript": "^7.13.0",
+    "@riotjs/compiler": "^5.4.1",
+    "@riotjs/hot-reload": "5.0.0",
+    "@riotjs/webpack-loader": "^5.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.25.0",
     "eslint-config-riot": "^3.0.0",
-    "strip-indent": "^3.0.0",
-    "typescript": "3.6.3",
-    "webpack": "^4.40.2",
-    "webpack-cli": "^3.3.8",
-    "webpack-dev-server": "^3.8.0"
+    "strip-indent": "^4.0.0",
+    "ts-loader": "^9.1.1",
+    "typescript": "4.2.4",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "riot": "^5.0.0"
+    "riot": "^5.4.0"
   }
 }

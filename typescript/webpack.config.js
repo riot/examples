@@ -1,7 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-
-require('./riot-ts-preprocessor')
-
 const {resolve} = require('path')
 
 module.exports = {
@@ -11,7 +7,8 @@ module.exports = {
     publicPath: '/public/',
     filename: 'bundle.js'
   },
-  devtool: 'inline',
+  mode: 'development',
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -21,6 +18,17 @@ module.exports = {
           loader: '@riotjs/webpack-loader',
           options: {
             hot: true
+          }
+        }]
+      },
+      // you might want to enable this plugin only in production mode
+      // it can be really slow and it's needed only for typechecking
+      {
+        test: /\.ts$/,
+        use: [{
+          loader: 'ts-loader',
+          options: {
+            appendTsSuffixTo: [/\.riot$/]
           }
         }]
       },
@@ -37,6 +45,6 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.ts', '.riot', '.js']
+    extensions: ['.ts', '.js', '.riot']
   }
 }

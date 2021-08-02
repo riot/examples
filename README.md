@@ -4,8 +4,6 @@
 
 This is a series of examples designed to showcase the benefits of adopting [Riot](https://riot.js.org). It is made possible by the Riot open source community.
 
-**Important**: Not all the examples were migrated to Riot.js 4. The examples prefixed 🚧 are not yet ported to Riot.js 4 and they are located in the `wip` folder. Please be patient
-
 **Note**: The Riot.js 3 examples are available [here](https://github.com/riot/examples/tree/v3) .
 
 We have several examples to choose from; each one demonstrates different aspects of Riot:
@@ -30,21 +28,13 @@ Live Ajax Search | [Source](live-ajax-search) | [Demo](https://riot.js.org/examp
 Example | | |
 :-- | :-- | :--
 TypeScript | [Source](typescript) |
-🚧 Pre-process LESS | [Source](pre-process-less) | [Demo](https://riot.js.org/examples/plunker/?app=pre-process-less)
 Router - Complex | [Source](router-complex) | [Demo](https://riot.js.org/examples/plunker/?app=router-complex)
 Router - History API | [Source](router-history-api) |
 Router - Lazy Routes | [Source](lazy-routes) |
 Webpack | [Source](webpack) |
 Rollup | [Source](rollup) |
 SSR | [Source](ssr) |
-🚧 Redux | [Source](redux) |
 GraphQL | [Source](graphql) |
-
-## Extra
-
-Example | | |
-:-- | :-- | :--
-🚧 If, then, elseif | [Source](if-else-elseif) | [Demo](https://riot.js.org/examples/plunker/?app=if-else-elseif)
 
 ## Contribute
 
@@ -52,8 +42,7 @@ If you have an example that you think others could benefit from and you'd like t
 
 ## Bugs
 
-If you find something that isn't expected please [raise an issue](https://github.com/riot/examples/issues) and we'll get on it. To make it easier to debug please use the [Bug Reporter](https://riot.js.org/examples/plunker/?app=bug-reporter).
-
+If you find something that isn't expected please [create an issue](https://github.com/riot/examples/issues) and we'll get on it. To make it easier to debug please use the [Bug Reporter](https://riot.js.org/examples/plunker/?app=bug-reporter).
 
 [travis-image]:https://img.shields.io/travis/riot/examples.svg?style=flat-square
 [travis-url]:https://travis-ci.org/riot/examples

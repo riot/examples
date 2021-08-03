@@ -10,9 +10,9 @@
     "server": "serve"
   },
   "devDependencies": {
-    "@riotjs/cli": "^4.0.2",
-    "@riotjs/compiler": "^6.0.0",
-    "serve": "^11.0.1"
+    "@riotjs/cli": "^6.0.5",
+    "@riotjs/compiler": "^6.0.2",
+    "serve": "^12.0.0"
   },
   "license": "MIT"
 }

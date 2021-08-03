@@ -7,26 +7,26 @@
   "author": "Gianluca Guarini",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --inline --watch --hot --colors -d --port 3000"
+    "start": "webpack serve --mode=development --port 3000"
   },
   "keywords": [
     "riot",
     "webpack"
   ],
   "devDependencies": {
-    "@babel/core": "7.8.4",
-    "@babel/preset-env": "7.8.4",
-    "babel-loader": "^8.0.6",
-    "@riotjs/compiler": "^6.0.0",
+    "@babel/core": "7.14.8",
+    "@babel/preset-env": "7.14.9",
+    "@riotjs/compiler": "^6.0.2",
     "@riotjs/hot-reload": "^6.0.0",
-    "@riotjs/webpack-loader": "^4.0.3",
-    "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "@riotjs/webpack-loader": "^6.0.0",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.48.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "riot": "^6.0.0",
-    "@riotjs/lazy": "0.0.0",
-    "@riotjs/route": "^5.2.1"
+    "@riotjs/lazy": "2.0.1",
+    "@riotjs/route": "^8.0.1",
+    "riot": "^6.0.2"
   }
 }

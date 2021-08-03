@@ -18,13 +18,13 @@
     "parcel-bundler"
   ],
   "devDependencies": {
-    "@riotjs/hot-reload": "^4.0.0",
-    "@riotjs/parcel-plugin-riot": "^4.0.1",
-    "parcel-bundler": "^1.12.4"
+    "@riotjs/hot-reload": "^6.0.0",
+    "@riotjs/parcel-plugin-riot": "^6.0.0",
+    "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
-    "@riotjs/route": "^5.2.0",
-    "riot": "^6.0.0"
+    "@riotjs/route": "^8.0.1",
+    "riot": "^6.0.2"
   },
   "author": {
     "name": "kkeeth",

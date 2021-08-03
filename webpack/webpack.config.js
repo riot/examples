@@ -8,7 +8,6 @@ module.exports = {
     publicPath: '/public/',
     filename: 'bundle.js'
   },
-  devtool: 'inline',
   module: {
     rules: [
       {

@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@riotjs/cli": "^4.0.2",
-    "@riotjs/compiler": "^5.0.0",
+    "@riotjs/compiler": "^6.0.0",
     "serve": "^11.0.1"
   },
   "license": "MIT"

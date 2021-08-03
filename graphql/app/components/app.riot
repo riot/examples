@@ -2,7 +2,7 @@
   <div class="app">
     <h3>Riot with GraphQL</h3>
 
-    <pre>{ state.data }</pre>
+    <pre>{ JSON.stringify(state.data, '\n', 2) }</pre>
 
     <button onclick={ initialize } type="button" class="ak-button ak-button__appearance-primary">
       Initial GraphQL fetch
@@ -21,29 +21,15 @@
           data: 'Loading...'
         })
 
-        const query = gql`{
-  twitter {
-    user (identifier: name, identity: "gianlucaguarini") {
-      created_at
-      description
-      id
-      screen_name
-      name
-      profile_image_url
-      url
-      tweets_count
-      followers_count
-      tweets(limit: 1) {
-        text
-      }
-    }
-  }
-}`
+        const query = gql`
+      query GetRates {
+        rates(currency: "USD") {
+          currency
+        }
+      }`
         const {data} = await this.props.apollo.query({query})
 
-        this.update({
-          data: JSON.stringify(data.twitter.user, '\n', 2)
-        })
+        this.update({ data })
       }
     }
   </script>

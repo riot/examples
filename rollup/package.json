@@ -11,15 +11,15 @@
   },
   "dependencies": {
     "marked": "^0.8.0",
-    "riot": "^5.0.0"
+    "riot": "^6.0.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "@riotjs/compiler": "^5.0.0",
+    "@riotjs/compiler": "^6.0.0",
     "rollup": "^1.31.1",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-riot": "^4.0.0"
+    "rollup-plugin-riot": "^6.0.0"
   },
   "license": "MIT"
 }

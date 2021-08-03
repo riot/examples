@@ -8,6 +8,9 @@ module.exports = {
   externals: {
     'url': 'URL'
   },
+  performance: {
+    hints: false
+  },
   output: {
     path: path.resolve(__dirname, 'public'),
     publicPath: '/public/',

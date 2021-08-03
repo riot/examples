@@ -14,11 +14,11 @@
   </router>
 
   <script>
-    import {Router, Route, route, toRegexp, match} from '@riotjs/route'
     import erre from 'erre'
     import Home from './pages/home.riot'
     import NotFound from './pages/not-found.riot'
     import About from './pages/about.riot'
+    import {Router, Route, route, toRegexp, match} from '@riotjs/route'
 
     export default {
       components: {
@@ -49,7 +49,7 @@
       // Needed only for SSR
       onAsyncRendering(resolve) {
         const onReady = () => {
-          this.routerStateStream.on.value(onReady)
+          this.routerStateStream.off.value(onReady)
           resolve()
         }
 
@@ -65,7 +65,7 @@
           showNotFound: this.isNotFoundVisible(path.pathname)
         })
       },
-      onBeforeUnmout() {
+      onBeforeUnmount() {
         this.routerStateStream.end()
         this.anyRouteStream.end()
       }

@@ -53,6 +53,14 @@ var todo = {
       'getKey': null,
       'condition': null,
       'template': template('<label expr2="expr2"><input expr3="expr3" type="checkbox"/> </label>', [{
+        'expressions': [{
+          'type': expressionTypes.ATTRIBUTE,
+          'name': 'hidden',
+          'evaluate': function (_scope) {
+            return _scope.item.hidden;
+          }
+        }]
+      }, {
         'redundantAttribute': 'expr2',
         'selector': '[expr2]',
         'expressions': [{

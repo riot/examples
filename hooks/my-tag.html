@@ -1,0 +1,53 @@
+<my-tag>
+  <h1>Counter</h1>
+  <p>{ count }</p>
+  <div class="buttons">
+    <button onclick="{ increment }">+</button>
+    <button onclick="{ decrement }">-</button>
+  </div>
+  <script>
+    const { useState } = uhooks
+
+    export default withHook((props) => {
+      const [count, setCount] = useState(Number(props.count))
+
+      const increment = () => setCount(count + 1)
+      const decrement = () => setCount(count - 1)
+
+      return {
+        count,
+        increment,
+        decrement
+      }
+    })
+  </script>
+  <style>
+    :host {
+      font-family: 'Helvetica Neue', Helvetica, Arial;
+    }
+
+    p {
+      font-size: 1.6rem;
+    }
+
+    .buttons {
+      display: flex;
+      grid-gap: 0.5rem;
+    }
+
+    button {
+      cursor: pointer;
+      color: white;
+      background: #0f1731;
+      border: none;
+      font-size: 1.8rem;
+      width: 4rem;
+      height: 4.2rem;
+      border-radius: 0.4rem;
+    }
+
+    button:hover, button:focus-visible {
+      background: #1FADC5;
+    }
+  </style>
+</my-tag>

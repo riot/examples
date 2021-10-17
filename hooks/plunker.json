@@ -1,0 +1,9 @@
+{
+  "title": "Riot.js hooks",
+  "files": [
+    "index.html",
+    "with-hooks.js",
+    "my-tag.html",
+    "README.md"
+  ]
+}

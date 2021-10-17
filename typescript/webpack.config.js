@@ -5,8 +5,11 @@ module.exports = {
   entry: './app/main.ts',
   output: {
     path: resolve(__dirname, 'public'),
-    publicPath: '/public/',
+    publicPath: '/public',
     filename: 'bundle.js'
+  },
+  devServer: {
+    port: 3000
   },
   mode: 'development',
   devtool: 'inline-source-map',

@@ -1,18 +1,15 @@
+const IS_MOUNTED = Symbol()
+
 function withHook(setup) {
+  const hooks = uhooks.hooked((props, component) => {
+    Object.assign(component, setup(props))
+    if (component[IS_MOUNTED]) component.update()
+  })
+
   return {
-    onBeforeMount() {
-      this.preventUpdate = true
-      this.hooks = uhooks.hooked(() => {
-        Object.assign(this, setup(this.props))
-        if (!this.preventUpdate) this.update()
-      })
-      this.hooks()
-      this.preventUpdate = false
-    },
-    onBeforeUpdate() {
-      this.preventUpdate = true
-      this.hooks()
-      this.preventUpdate = false
+    onBeforeMount(props) {
+      hooks(props, this)
+      this[IS_MOUNTED] = true
     }
   }
 }

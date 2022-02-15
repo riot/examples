@@ -1,6 +1,6 @@
 const IS_MOUNTED = Symbol()
 
-function withHook(setup) {
+const withHook = setup => () => {
   const hooks = uhooks.hooked((props, component) => {
     Object.assign(component, setup(props))
     if (component[IS_MOUNTED]) component.update()

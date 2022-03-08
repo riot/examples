@@ -11,6 +11,10 @@
     <route each={page in props.pages} path={page.path}>
       <main is={page.component}/>
     </route>
+
+    <div>
+      <button onclick="{ onClick }">Click me!</button>
+    </div>
   </router>
 
   <script>
@@ -33,6 +37,7 @@
       },
       // the isServer property is automatically injected by @riotjs/ssr
       onBeforeMount({isServer, initialRoute}) {
+        console.log('onBeforeMount, SSR mode: ' + (isServer ? '<YES>' : '<NO>'))
         // create a stream on all routes
         this.anyRouteStream = route('(.*)')
         // create a stream to check the riot-router state
@@ -68,6 +73,10 @@
       onBeforeUnmount() {
         this.routerStateStream.end()
         this.anyRouteStream.end()
+      },
+
+      onClick() {
+        alert('hello!')
       }
     }
   </script>

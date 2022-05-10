@@ -1,6 +1,5 @@
 import { Application } from 'https://deno.land/x/oak@v10.5.1/mod.ts'
 import { template } from 'https://cdn.pika.dev/lodash-es'
-// @ts-ignore
 import { renderAsyncFragments } from '@riotjs/ssr'
 import RootComponent from'./public/app.js'
 import importMap from './import_map.json' assert { type: 'json' }

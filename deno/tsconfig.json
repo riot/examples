@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "esModuleInterop": true,
+    "inlineSourceMap": true,
+    "isolatedModules": true,
+    "module": "esnext",
+    "strict": true,
+    "target": "esnext"
+  }
+}

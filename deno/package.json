@@ -1,0 +1,36 @@
+{
+  "name": "deno",
+  "version": "1.0.0",
+  "description": "Deno SSR Demo",
+  "repository": "riot/examples",
+  "main": "src/main.js",
+  "author": "Gianluca Guarini",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "npm run build && deno run  --import-map=import_map.json --no-check=remote --allow-net --watch --allow-read main.ts",
+    "build": "rm -rf public/*.{js,txt} && rollup -c",
+    "watch": "rollup -c -w"
+  },
+  "keywords": [
+    "riot",
+    "deno"
+  ],
+  "devDependencies": {
+    "@riotjs/cli": "^6.1.0",
+    "@riotjs/compiler": "^6.1.3",
+    "@riotjs/hot-reload": "6.0.0",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "rollup-plugin-riot": "^6.0.0"
+  },
+  "dependencies": {
+    "riot": "^6.1.2",
+    "@riotjs/hydrate": "^6.0.0",
+    "@riotjs/route": "^8.0.1",
+    "@riotjs/ssr": "^8.1.1",
+    "erre": "^2.2.0"
+  }
+}

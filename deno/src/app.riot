@@ -1,0 +1,168 @@
+<app>
+  <router on-started={onRouterStarted} base={props.base} initial-route={props.initialRoute}>
+    <nav>
+      <a each={page in getPages()} class={getLinkClass(page.path)} href={page.path}>
+        {page.label}
+      </a>
+    </nav>
+
+    <header>
+      <img width="111" height="116" src="https://riot.js.org/img/logo/square.svg" alt="Riot.js Logo"/>
+      🚀
+      <img width="110" height="110" src="https://deno.land/logo.svg" alt="Deno Logo"/>
+    </header>
+
+    <not-found if={state.showNotFound}/>
+
+    <main>
+      <route each={page in getPages()} path={page.path}>
+        <main is={page.component}/>
+      </route>
+    </main>
+  </router>
+
+  <script>
+    import erre from 'erre'
+    import Home from './pages/home.riot'
+    import NotFound from './pages/not-found.riot'
+    import About from './pages/about.riot'
+    import { Router, Route, route, toRegexp, match } from '@riotjs/route'
+
+    export default {
+      components: {
+        Router,
+        Route,
+        Home,
+        About,
+        NotFound
+      },
+      state: {
+        currentPath: null,
+        showNotFound: false
+      },
+      // the isServer property is automatically injected by @riotjs/ssr
+      onBeforeMount({ initialRoute }) {
+        // create a stream on all routes
+        this.anyRouteStream = route('(.*)')
+        // create a stream to check the riot-router state
+        this.routerStateStream = erre()
+        // update the state of the not found component depending on the initial route
+        this.state.showNotFound = this.isNotFoundVisible(initialRoute)
+        // check any route change to understand if the not found site should be displayed
+        // and to update the menu link classes
+        this.anyRouteStream.on.value(this.onAnyRoute)
+        // set the initial current path
+        this.state.currentPath = initialRoute
+      },
+      onRouterStarted() {
+        // broadcast the router started event
+        this.routerStateStream.push('started')
+      },
+      // Needed only for SSR
+      onAsyncRendering(resolve) {
+        const onReady = () => {
+          this.routerStateStream.off.value(onReady)
+          resolve()
+        }
+
+        // wait the router started event
+        this.routerStateStream.on.value(onReady)
+      },
+      getPages() {
+        return Object.values(this.props.routes)
+      },
+      isNotFoundVisible(path) {
+        return !this.getPages().some(p => match(path, toRegexp(p.path)))
+      },
+      onAnyRoute({ pathname }) {
+        // show the not found page if none of the page paths are matched
+        this.update({
+          currentPath: pathname,
+          showNotFound: this.isNotFoundVisible(pathname)
+        })
+      },
+      getLinkClass(path) {
+
+        return this.state?.currentPath === path ? 'active' : null
+      },
+      onBeforeUnmount() {
+        this.routerStateStream.end()
+        this.anyRouteStream.end()
+      }
+    }
+  </script>
+
+  <style>
+    :host {
+      --primary-color: rgba(96, 165, 254, 1);
+      --background-color: aliceblue;
+      --light-gray: #f4f4f4;
+
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      margin: 0 auto;
+      padding: 2rem 1rem 1rem;
+      min-height: 100vh;
+      text-align: center;
+      background-color: var(--background-color);
+    }
+
+    h1 {
+      font-weight: 300;
+      font-size: 1.6rem;
+      margin-bottom: 1.2rem;
+    }
+
+    h1 b {
+      font-weight: bold;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.2rem 1rem 1rem;
+      margin: 1rem 0;
+      gap: 2rem;
+    }
+
+    main {
+      margin: 0 auto;
+      max-width: 600px;
+      min-height: 200px;
+    }
+
+    main p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    a:focus, a:active, a:hover {
+      opacity: 0.7;
+    }
+
+    nav a {
+      padding: 0 0.4rem;
+    }
+
+    nav a.active {
+      text-decoration: underline;
+      pointer-events: none;
+    }
+  </style>
+</app>

@@ -3,7 +3,7 @@ const app = new Koa()
 const {readFileSync} = require('fs')
 const {template} = require('lodash')
 const {renderAsyncFragments} = require('@riotjs/ssr')
-const unregister = require('@riotjs/ssr/register')()
+const unregister = require('@riotjs/register')()
 const page = readFileSync('./index.html', 'utf8')
 
 const pages = [{

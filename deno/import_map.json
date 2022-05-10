@@ -1,0 +1,17 @@
+{
+  "imports": {
+    "riot": "./node_modules/riot/riot.esm.js",
+    "@riotjs/ssr": "./node_modules/@riotjs/ssr/src/index.js",
+    "@riotjs/util/objects": "./node_modules/@riotjs/util/objects.js",
+    "linkedom/worker": "https://esm.sh/linkedom/worker.js",
+    "curri": "./node_modules/curri/index.next.js",
+    "@riotjs/hydrate": "./node_modules/@riotjs/hydrate/src/index.js",
+    "@riotjs/route": "./node_modules/@riotjs/route/route.esm.js",
+    "erre": "./node_modules/erre/index.next.js",
+    "@riotjs/hot-reload": "./node_modules/@riotjs/hot-reload/src/index.js",
+    "ruit": "./node_modules/ruit/index.next.js",
+    "bianco.query": "./node_modules/bianco.query/index.next.js",
+    "bianco.dom-to-array": "./node_modules/bianco.dom-to-array/index.next.js",
+    "morphdom/src/specialElHandlers": "./node_modules/morphdom/src/specialElHandlers.js"
+  }
+}

@@ -1,0 +1,23 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Riot Deno App</title>
+  <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+  <style riot>
+    <%= css %>
+  </style>
+</head>
+<body>
+  <%= html %>
+  <script>
+    window.__INITIAL_STATE__ = <%= initialState %>
+  </script>
+
+  <script type="importmap">
+    <%= importMap %>
+  </script>
+  <script type="module">
+    import './public/app.js'
+  </script>
+</body>
+</html>

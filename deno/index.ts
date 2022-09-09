@@ -3,7 +3,7 @@ import { template } from 'https://cdn.pika.dev/lodash-es'
 import { renderAsyncFragments } from '@riotjs/ssr'
 import RootComponent from'./public/app.js'
 import importMap from './import_map.json' assert { type: 'json' }
-import routes from './src/routes.js'
+import routes from './src/routes.ts'
 import { toRegexp, match } from '@riotjs/route'
 
 const app = new Application()

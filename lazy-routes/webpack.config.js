@@ -8,6 +8,11 @@ module.exports = {
     publicPath: '/public/',
     filename: 'bundle.js'
   },
+  resolve: {
+    fallback: {
+      url: false
+    }
+  },
   module: {
     rules: [
       {

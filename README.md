@@ -30,11 +30,8 @@ TypeScript | [Source](typescript) |
 Router - Complex | [Source](router-complex) | [Demo](https://riot.js.org/examples/plunker/?app=router-complex)
 Router - History API | [Source](router-history-api) |
 Router - Lazy Routes | [Source](lazy-routes) |
-Webpack | [Source](webpack) |
-Rollup | [Source](rollup) |
 SSR | [Source](ssr) |
 Deno | [Source](deno) |
-GraphQL | [Source](graphql) |
 
 ## Contribute
 

@@ -1,12 +1,12 @@
 <modal>
   <div class="modal animated faster { state.animation }">
-    <div class="modal-title">{ props.title }</div>
+    <h2 class="modal-title">{ props.title }</h2>
 
-    <div class="modal-body">  
+    <div class="modal-body">
       <slot />
     </div>
   </div>
-  
+
   <script>
     export default {
       state: {
@@ -25,13 +25,29 @@
       },
     }
   </script>
-  
-  
+
+
   <style>
+    :host {
+      font-family: Helvetica Neue, Helvetica, Arial, serif;
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
     .modal {
-      padding: 16px;
-      background: #fafafa;
-      border: 1px solid #333;
+      padding: 24px;
+      background: #e3f5ff;
+      border: 4px solid #ffffff;
+      border-radius: 4px;
+      box-shadow: 0 0 4px rgba(0 0 0 / 0.2);
     }
   </style>
 </modal>

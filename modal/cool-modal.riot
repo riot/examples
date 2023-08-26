@@ -2,10 +2,12 @@
 <cool-modal>
   <modal state={ state.modal } title="My Cool Modal" if={ state.modal.visible }>
     <p>{ state.modal.message }</p>
-    <button onclick={ sayHello }>Say hello!</button>
-    <button onclick={ closeModal }>Close modal</button>
+    <div class="btn-group">
+      <button onclick={ sayHello }>Say hello!</button>
+      <button onclick={ closeModal }>Close modal</button>
+    </div>
   </modal>
-  
+
   <script>
     export default {
       state: {
@@ -26,4 +28,18 @@
       }
     }
   </script>
+
+  <style>
+    button {
+      cursor: pointer;
+      background: white;
+      border: 1px solid #2e6eb5;
+      padding: 8px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 12px;
+    }
+  </style>
 </cool-modal>

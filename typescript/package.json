@@ -17,22 +17,23 @@
     "typescript"
   ],
   "devDependencies": {
-    "@riotjs/compiler": "^6.3.2",
-    "@riotjs/hot-reload": "6.0.1",
-    "@riotjs/webpack-loader": "^6.0.0",
-    "@types/webpack-env": "^1.18.0",
-    "@typescript-eslint/eslint-plugin": "^5.36.2",
-    "@typescript-eslint/parser": "^5.36.2",
-    "eslint": "^8.23.0",
-    "eslint-config-riot": "^3.0.0",
+    "@riotjs/compiler": "^9.0.6",
+    "@riotjs/dom-bindings": "^9.0.3",
+    "@riotjs/hot-reload": "9.0.1",
+    "@riotjs/webpack-loader": "^9.0.1",
+    "@types/webpack-env": "^1.18.4",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "eslint": "^8.55.0",
+    "eslint-config-riot": "^4.1.1",
     "strip-indent": "^4.0.0",
-    "ts-loader": "^9.3.1",
-    "typescript": "4.8.3",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.11.0"
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "riot": "^7.0.6"
+    "riot": "^9.1.2"
   }
 }

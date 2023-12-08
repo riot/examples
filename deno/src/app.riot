@@ -9,7 +9,7 @@
     <header>
       <img width="111" height="116" src="https://riot.js.org/img/logo/square.svg" alt="Riot.js Logo"/>
       🚀
-      <img width="110" height="110" src="https://deno.land/logo.svg" alt="Deno Logo"/>
+      <img width="110" height="110" src="https://upload.wikimedia.org/wikipedia/commons/8/84/Deno.svg" alt="Deno Logo"/>
     </header>
 
     <not-found if={state.showNotFound}/>
@@ -21,14 +21,15 @@
     </main>
   </router>
 
-  <script>
+  <script lang="ts">
+    import { withTypes } from 'riot'
     import erre from 'erre'
     import Home from './pages/home.riot'
     import NotFound from './pages/not-found.riot'
     import About from './pages/about.riot'
     import { Router, Route, route, toRegexp, match } from '@riotjs/route'
 
-    export default {
+    export default withTypes({
       components: {
         Router,
         Route,
@@ -89,7 +90,7 @@
         this.routerStateStream.end()
         this.anyRouteStream.end()
       }
-    }
+    })
   </script>
 
   <style>

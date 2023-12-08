@@ -33,8 +33,7 @@ app.use(async (ctx, next) => {
   ctx.response.body = template(page)({
     html,
     css,
-    initialState: JSON.stringify(initialState),
-    importMap: JSON.stringify(importMap)
+    initialState: JSON.stringify(initialState)
   })
 })
 

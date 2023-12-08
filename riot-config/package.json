@@ -2,6 +2,7 @@
   "name": "riot-config-example",
   "version": "1.0.0",
   "description": "Riot with riot.config.js",
+  "type": "module",
   "private": true,
   "scripts": {
     "start": "npm run watch & npm run server",
@@ -10,9 +11,9 @@
     "server": "serve"
   },
   "devDependencies": {
-    "@riotjs/cli": "^6.1.0",
-    "@riotjs/compiler": "^6.3.2",
-    "serve": "^14.0.1"
+    "@riotjs/cli": "^9.0.5",
+    "@riotjs/compiler": "^9.0.6",
+    "serve": "^14.2.1"
   },
   "license": "MIT"
 }

@@ -11,6 +11,7 @@ Install packages.
 ```bash
 $ npm install
 ```
+
 And then run the server using `webpack-dev-server` or any possible way you know
 
 ```bash

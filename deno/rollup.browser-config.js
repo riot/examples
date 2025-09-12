@@ -9,18 +9,18 @@ export default {
     file: 'public/main.js',
     format: 'esm',
   },
-  onwarn: function(error) {
+  onwarn: function (error) {
     if (/Circular dependency/.test(error.message)) return
     console.error(error.message)
   },
   plugins: [
     commonjs({
-      ignore: ['url']
+      ignore: ['url'],
     }),
     nodeResolve(),
     riot(),
     typescript({
-      include: "./src/**"
-    })
-  ]
+      include: './src/**',
+    }),
+  ],
 }

@@ -16,12 +16,7 @@ looks like this:
 ```json
 {
   "title": "Todo App",
-  "files": [
-    "index.html",
-    "README.md",
-    "todo.css",
-    "todo.tag"
-  ]
+  "files": ["index.html", "README.md", "todo.css", "todo.tag"]
 }
 ```
 

@@ -1,10 +1,4 @@
 {
   "title": "Color Palette",
-  "files": [
-    "index.html",
-    "README.md",
-    "search.riot",
-    "style.css",
-    "puff.svg"
-  ]
+  "files": ["index.html", "README.md", "search.riot", "style.css", "puff.svg"]
 }

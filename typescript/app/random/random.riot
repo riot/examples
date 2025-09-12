@@ -19,6 +19,7 @@
     export interface RandomComponent extends RiotComponent<RandomComponentProps, RandomComponentState> {
       generate(event: MouseEvent): void
       clearLogs(): void
+      state: RandomComponentState
     }
 
     export default withTypes<RandomComponent>({

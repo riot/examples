@@ -1,7 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
     <style>
       body {
         overflow: hidden;
@@ -10,20 +13,20 @@
     </style>
   </head>
   <body>
-
     <cool-modal></cool-modal>
 
-    <script type="text/javascript" src="https://unpkg.com/riot@9/riot+compiler.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/riot@10/riot+compiler.min.js"
+    ></script>
     <script src="https://unpkg.com/@riotjs/observable@4.1.1/dist/observable.js"></script>
     <script type="riot" src="./modal.riot"></script>
     <script type="riot" src="./cool-modal.riot"></script>
 
     <script type="text/javascript">
-      riot.compile()
-        .then(() => {
-          riot.mount('cool-modal')
-        })
+      riot.compile().then(() => {
+        riot.mount('cool-modal')
+      })
     </script>
-
   </body>
 </html>

@@ -1,8 +1,7 @@
-import { Application } from 'https://deno.land/x/oak@v10.5.1/mod.ts'
+import { Application } from 'https://deno.land/x/oak@v17.1.6/mod.ts'
 import { template } from 'https://cdn.pika.dev/lodash-es'
 import { renderAsyncFragments } from '@riotjs/ssr'
-import RootComponent from'./public/app.js'
-import importMap from './import_map.json' assert { type: 'json' }
+import RootComponent from './public/app.js'
 import routes from './src/routes.ts'
 import { toRegexp, match } from '@riotjs/route'
 
@@ -22,10 +21,16 @@ app.use(async (ctx, next) => {
   }
 
   // generate the rendered html + css
-  const { html, css } = await renderAsyncFragments('app', RootComponent, initialState)
+  const { html, css } = await renderAsyncFragments(
+    'app',
+    RootComponent,
+    initialState,
+  )
 
   // send 404 if the current path doesn't match any of the routes
-  if (!pages.some(page => match(initialState.initialRoute, toRegexp(page.path)))) {
+  if (
+    !pages.some((page) => match(initialState.initialRoute, toRegexp(page.path)))
+  ) {
     ctx.response.status = 404
   }
 
@@ -33,14 +38,14 @@ app.use(async (ctx, next) => {
   ctx.response.body = template(page)({
     html,
     css,
-    initialState: JSON.stringify(initialState)
+    initialState: JSON.stringify(initialState),
   })
 })
 
 app.use(async (context, next) => {
   try {
     await context.send({
-      root: `${ Deno.cwd() }/`,
+      root: `${Deno.cwd()}/`,
       index: 'index.html',
     })
   } catch {
@@ -51,6 +56,3 @@ app.use(async (context, next) => {
 console.log('App running on: http://localhost:3000')
 
 await app.listen({ port: 3000 })
-
-
-

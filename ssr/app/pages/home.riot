@@ -1,4 +1,19 @@
 <home>
   <h1>I am the home page</h1>
   <p>Welcome</p>
+
+  <style>
+    :host {
+      display: block;
+      transition: all 0.5s ease-out;
+      opacity: 1;
+      translate: 0;
+
+      @starting-style {
+        opacity: 0;
+        translate: 0 1rem;
+      }
+    }
+  </style>
+
 </home>

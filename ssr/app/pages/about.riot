@@ -1,4 +1,18 @@
 <about>
   <h1>Something about me</h1>
   <p>Here I describe who I am and what I do</p>
+
+  <style>
+    :host {
+      display: block;
+      transition: all 0.5s ease-out;
+      opacity: 1;
+      translate: 0;
+
+      @starting-style {
+        opacity: 0;
+        translate: 0 1rem;
+      }
+    }
+  </style>
 </about>

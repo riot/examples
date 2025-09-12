@@ -1,9 +1,8 @@
 <!doctype html>
 <html>
-
   <head>
     <title>Riot Router: Complex example</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   </head>
 
   <body>
@@ -15,7 +14,7 @@
     <script type="riot" src="app.riot"></script>
 
     <!-- scripts we need -->
-    <script src="https://unpkg.com/riot@9/riot+compiler.min.js"></script>
+    <script src="https://unpkg.com/riot@10/riot+compiler.min.js"></script>
     <script src="https://unpkg.com/@riotjs/route/index.umd.js"></script>
 
     <!-- mount this app -->
@@ -23,14 +22,15 @@
       riot.register('router', route.Router)
       riot.register('route', route.Route)
 
-      riot.compile().then(function() {
+      riot.compile().then(function () {
         riot.mount('app')
       })
     </script>
 
     <style>
-      body { margin: 0 }
+      body {
+        margin: 0;
+      }
     </style>
   </body>
-
 </html>

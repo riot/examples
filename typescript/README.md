@@ -11,13 +11,14 @@ Install packages.
 ```bash
 $ npm install
 ```
+
 And then run the server using `webpack-dev-server` or any possible way you know
 
 ```bash
 $ npm start
 ```
 
-Compile the source code enabling the type check 
+Compile the source code enabling the type check
 
 ```bash
 $ npm run build

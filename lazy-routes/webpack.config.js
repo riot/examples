@@ -6,25 +6,27 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'public'),
     publicPath: '/public/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   resolve: {
     fallback: {
-      url: false
-    }
+      url: false,
+    },
   },
   module: {
     rules: [
       {
         test: /\.riot$/,
         exclude: /node_modules/,
-        use: [{
-          loader: '@riotjs/webpack-loader',
-          options: {
-            hot: true
-          }
-        }]
-      }
-    ]
-  }
+        use: [
+          {
+            loader: '@riotjs/webpack-loader',
+            options: {
+              hot: true,
+            },
+          },
+        ],
+      },
+    ],
+  },
 }

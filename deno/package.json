@@ -11,7 +11,7 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "npm run build && deno run --import-map=import_map.json --no-check=remote --allow-net --watch --allow-read index.ts",
+    "start": "npm run build && deno run --import-map=import_map.json -A index.ts",
     "clean": "rm -rf public/*",
     "build-browser": "rollup -c rollup.browser-config.js",
     "build-server": "rollup -c rollup.server-config.js",
@@ -23,18 +23,18 @@
     "deno"
   ],
   "devDependencies": {
-    "@riotjs/cli": "^9.0.5",
-    "@riotjs/compiler": "^9.0.6",
-    "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-typescript": "^11.1.5",
-    "rollup-plugin-riot": "^9.0.2"
+    "@riotjs/cli": "^10.0.0",
+    "@riotjs/compiler": "^10.0.0",
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.4",
+    "rollup-plugin-riot": "^10.0.0"
   },
   "dependencies": {
-    "@riotjs/hydrate": "^9.0.0",
-    "@riotjs/route": "^9.1.2",
-    "@riotjs/ssr": "^9.0.0",
+    "@riotjs/hydrate": "^10.0.0",
+    "@riotjs/route": "^10.0.0",
+    "@riotjs/ssr": "^10.0.0",
     "erre": "^3.0.1",
-    "riot": "^9.1.2"
+    "riot": "^10.0.0"
   }
 }

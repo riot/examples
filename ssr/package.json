@@ -5,6 +5,7 @@
   "repository": "riot/examples",
   "main": "app/main.js",
   "author": "Gianluca Guarini",
+  "type": "module",
   "license": "MIT",
   "engines": {
     "node": ">=10.0.0"
@@ -19,24 +20,21 @@
     "webpack"
   ],
   "devDependencies": {
-    "@babel/core": "7.19.0",
-    "@babel/preset-env": "7.19.0",
-    "@riotjs/compiler": "^6.3.2",
-    "@riotjs/hot-reload": "6.0.1",
-    "@riotjs/webpack-loader": "^6.0.0",
-    "babel-loader": "^8.2.5",
-    "koa": "^2.13.4",
+    "@riotjs/compiler": "^10.0.1",
+    "@riotjs/hot-reload": "10.0.0",
+    "@riotjs/webpack-loader": "^10.0.0",
+    "koa": "^3.0.1",
     "koa-static": "^5.0.0",
-    "lodash": "^4.17.21",
-    "riot": "^7.0.6",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "lodash-es": "^4.17.21",
+    "riot": "^10.0.1",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1"
   },
   "dependencies": {
-    "@riotjs/hydrate": "^6.0.1",
-    "@riotjs/register": "^6.0.1",
-    "@riotjs/route": "^8.0.2",
-    "@riotjs/ssr": "^8.1.2",
-    "erre": "^2.2.0"
+    "@riotjs/hydrate": "^10.0.0",
+    "@riotjs/register": "^10.0.0",
+    "@riotjs/route": "^10.0.0",
+    "@riotjs/ssr": "^10.0.0",
+    "erre": "^3.0.1"
   }
 }

@@ -2,7 +2,7 @@ body {
   font-family: 'myriad pro', sans-serif;
   font-size: 20px;
   border: 0;
-  background: rgba(64, 139, 194, .2);
+  background: rgba(64, 139, 194, 0.2);
   margin: 0;
   padding: 100px;
 }
@@ -11,7 +11,7 @@ timer {
   display: block;
   max-width: 300px;
   margin: 0 auto;
-  border: 1px solid rgba(64, 139, 194, .5);
+  border: 1px solid rgba(64, 139, 194, 0.5);
   border-radius: 6px;
   color: rgba(64, 139, 194, 1);
   height: 100px;

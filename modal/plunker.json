@@ -1,9 +1,4 @@
 {
   "title": "Riot Bug Reporter",
-  "files": [
-    "index.html",
-    "modal.riot",
-    "cool-modal.riot",
-    "README.md"
-  ]
+  "files": ["index.html", "modal.riot", "cool-modal.riot", "README.md"]
 }

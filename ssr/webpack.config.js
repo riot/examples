@@ -1,43 +1,36 @@
-const path = require('path')
-const webpack = require('webpack')
+import { fileURLToPath } from 'node:url'
+import { dirname, resolve } from 'path'
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
-module.exports = {
+export default {
   entry: './app/main.js',
   mode: 'production',
   devtool: 'inline-source-map',
   externals: {
-    'url': 'URL'
+    url: 'URL',
   },
   performance: {
-    hints: false
+    hints: false,
   },
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: resolve(__dirname, 'public'),
     publicPath: '/public/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     rules: [
       {
         test: /\.riot$/,
         exclude: /node_modules/,
-        use: [{
-          loader: '@riotjs/webpack-loader',
-          options: {
-            hot: true
-          }
-        }]
+        use: [
+          {
+            loader: '@riotjs/webpack-loader',
+            options: {
+              hot: true,
+            },
+          },
+        ],
       },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      }
-    ]
-  }
+    ],
+  },
 }

@@ -2,11 +2,11 @@ export default {
   HOME: {
     path: '/',
     label: 'Home',
-    component: 'home'
+    component: 'home',
   },
   ABOUT: {
     path: '/about',
-    label: 'What\'s Deno?',
-    component: 'about'
-  }
+    label: "What's Deno?",
+    component: 'about',
+  },
 }

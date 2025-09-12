@@ -1,8 +1,8 @@
 export interface RandomComponentState {
-  number: number | null;
-  logs: { text: string }[];
+  number: number | null
+  logs: { text: string }[]
 }
 
 export interface RandomComponentProps {
-  title: string;
+  title: string
 }

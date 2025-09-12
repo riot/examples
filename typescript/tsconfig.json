@@ -1,15 +1,13 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "es2015",
+    "module": "esnext",
     "strict": true,
     "sourceMap": true,
     "noUnusedLocals": false,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
     "noImplicitThis": true
   },
-  "include": [
-    "app"
-  ]
+  "include": ["app"]
 }

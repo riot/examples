@@ -1,5 +1,5 @@
 <app>
-  <router on-started={onRouterStarted} initial-route={props.initialRoute}>
+  <router on-started={onRouterStarted} base={props.base} initial-route={props.initialRoute}>
     <nav>
       <a each={page in props.pages} href={page.path}>
         {page.label}
@@ -74,7 +74,15 @@
 
   <style>
     :host {
+      display: block;
+      max-width: 575px;
+      margin: 0 auto;
       font-family: Helvetica Neue, Helvetica, Arial;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
     }
 
     nav a {

@@ -1,4 +1,3 @@
-
 body {
   font-family: 'myriad pro', sans-serif;
   font-size: 20px;
@@ -13,20 +12,20 @@ todo {
 
 form input {
   font-size: 85%;
-  padding: .4em;
+  padding: 0.4em;
   border: 1px solid #ccc;
   border-radius: 2px;
 }
 
 button {
-  background-color: #1FADC5;
-  border: 1px solid rgba(0,0,0,.2);
+  background-color: #1fadc5;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   font-size: 75%;
   color: #fff;
-  padding: .4em 1.2em;
+  padding: 0.4em 1.2em;
   border-radius: 2em;
   cursor: pointer;
-  margin: 0 .23em;
+  margin: 0 0.23em;
   outline: none;
 }
 
@@ -41,7 +40,7 @@ ul {
 
 li {
   list-style-type: none;
-  padding: .2em 0;
+  padding: 0.2em 0;
 }
 
 .completed {

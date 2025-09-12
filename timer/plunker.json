@@ -1,9 +1,4 @@
 {
   "title": "Timer",
-  "files": [
-    "index.html",
-    "README.md",
-    "style.css",
-    "timer.riot"
-  ]
+  "files": ["index.html", "README.md", "style.css", "timer.riot"]
 }

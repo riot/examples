@@ -15,7 +15,7 @@ $ npm run build
 
 Then `dist` directory will be made in your project.
 
-*Note*  if you installed `riot` globally in your environment. You can use the command bellow instead of `$ npm run build`:
+_Note_ if you installed `riot` globally in your environment. You can use the command bellow instead of `$ npm run build`:
 
 ```bash
 $ riot --config riot.config.js src/main.js dist/main.js

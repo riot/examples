@@ -3,16 +3,15 @@
 <html>
   <head>
     <title>Riot todo</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="todo.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="todo.css" />
   </head>
 
   <body>
-
     <todo></todo>
 
     <script src="todo.riot" type="riot"></script>
-    <script src="https://unpkg.com/riot@9/riot+compiler.min.js"></script>
+    <script src="https://unpkg.com/riot@10/riot+compiler.min.js"></script>
 
     <script>
       riot.compile().then(() => {
@@ -20,9 +19,9 @@
           title: 'I want to behave!',
           items: [
             { title: 'Avoid excessive caffeine', done: true },
-            { title: 'Be less provocative'  },
-            { title: 'Be nice to people' }
-          ]
+            { title: 'Be less provocative' },
+            { title: 'Be nice to people' },
+          ],
         })
       })
     </script>

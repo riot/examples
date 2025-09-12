@@ -11,7 +11,7 @@ export default {
   plugins: [
     riot(),
     typescript({
-      include: "./src/**"
-    })
-  ]
+      include: './src/**',
+    }),
+  ],
 }

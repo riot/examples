@@ -1,9 +1,4 @@
 {
   "title": "Color Palette",
-  "files": [
-    "index.html",
-    "README.md",
-    "list.riot",
-    "style.css"
-  ]
+  "files": ["index.html", "README.md", "list.riot", "style.css"]
 }

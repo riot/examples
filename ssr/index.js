@@ -1,38 +1,45 @@
-const Koa = require('koa')
-const app = new Koa()
-const {readFileSync} = require('fs')
-const {template} = require('lodash')
-const {renderAsyncFragments} = require('@riotjs/ssr')
-const unregister = require('@riotjs/register')()
+import Koa from 'koa'
+import { readFileSync } from 'node:fs'
+import { template } from 'lodash-es'
+import KoaStatic from 'koa-static'
+import { renderAsyncFragments } from '@riotjs/ssr'
+import { pathToFileURL } from 'node:url'
+import { register } from 'node:module'
+
+register('@riotjs/register', pathToFileURL('./'))
+
 const page = readFileSync('./index.html', 'utf8')
+const app = new Koa()
+const pages = [
+  {
+    path: '/',
+    label: 'Home',
+    component: 'home',
+  },
+  {
+    path: '/about',
+    label: 'About',
+    component: 'about',
+  },
+]
 
-const pages = [{
-  path: '/',
-  label: 'Home',
-  component: 'home'
-}, {
-  path: '/about',
-  label: 'About',
-  component: 'about'
-}]
+app.use(KoaStatic('./public'))
 
-app.use(require('koa-static')('./public'))
-
-app.use(async ctx => {
+app.use(async (ctx) => {
   const initialState = {
     initialRoute: ctx.request.url,
+    base: 'http://localhost:3000',
     pages,
   }
-  const App = require('./app/app.riot').default
-  const {html, css} = await renderAsyncFragments('app', App, initialState)
+
+  const { default: App } = await import('./app/app.riot')
+  const { html, css } = await renderAsyncFragments('app', App, initialState)
 
   ctx.body = template(page)({
     html,
     initialState: JSON.stringify(initialState),
-    css
+    css,
   })
-
-  unregister()
 })
 
 app.listen(3000)

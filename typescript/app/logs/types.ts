@@ -1,8 +1,8 @@
 export interface Log {
-  text: string;
+  text: string
 }
 
 export interface LogComponentProps {
-  logs: Log[];
+  logs: Log[]
   onclear: () => void
 }
